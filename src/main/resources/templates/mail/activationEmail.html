@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
     <head>
-        <title th:text="#{email.activation.title}">JHipster activation</title>
+        <title>Activation compte</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
     </head>
     <body>
-        <p th:text="#{email.activation.greeting(${user.login})}">
-            Dear
-        </p>
-        <p th:text="#{email.activation.text1}">
-            Your JHipster account has been created, please click on the URL below to activate it:
+        <p> Bonjour <span th:text="${user.firstName}"></span></p>
+    <!--   <p th:text="#{email.activation.greeting(${user.firstName})}"></p>  -->
+        <p>
+            Merci pour votre inscription sur le portail.
         </p>
         <p>
-            <a th:with="url=(@{|${baseUrl}/account/activate?key=${user.activationKey}|})" th:href="${url}"
-            th:text="${url}">Activation link</a>
+            Votre identifiant est <span th:text="${user.email}">email</span>
         </p>
+        <p>
+            Pour activer votre compte merci de cliquer sur le bouton suivant :
+        </p>
+
+        <!--  <a th:with="url=(@{|${baseUrl}/account/activate?key=${user.activationKey}|})" th:href="${url}"
+          th:text="${url}">Activation link</a> -->
+        <a th:href="@{http://localhost:4200/accueil(key=${user.activationKey})}">
+            <button style="margin-left:50px;border-radius:7px;background-color:orange;color:black;padding:10px;font-weight:bold;font-size:18px">
+                ACTIVER MON COMPTE
+            </button>
+        </a>
         <p>
             <span th:text="#{email.activation.text2}">Regards, </span>
             <br/>
-            <em th:text="#{email.signature}">JHipster.</em>
+            <em> L'équipe IPRES/CSS.</em>
         </p>
     </body>
 </html>
