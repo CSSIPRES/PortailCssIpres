@@ -1,0 +1,96 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="declaration">
+            <h2><span jhiTranslate="portailCssIpresApp.declaration.detail.title">Declaration</span> {{ declaration.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.idIdentifiant">Id Identifiant</span></dt>
+                <dd>
+                    <span>{{ declaration.idIdentifiant }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.raisonSociale">Raison Sociale</span></dt>
+                <dd>
+                    <span>{{ declaration.raisonSociale }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.adresse">Adresse</span></dt>
+                <dd>
+                    <span>{{ declaration.adresse }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.typeDeclaration">Type Declaration</span></dt>
+                <dd>
+                    <span>{{ declaration.typeDeclaration }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.dateDebutCotisation">Date Debut Cotisation</span></dt>
+                <dd>
+                    <span>{{ declaration.dateDebutCotisation }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.totalNouvSalaries">Total Nouv Salaries</span></dt>
+                <dd>
+                    <span>{{ declaration.totalNouvSalaries }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.totalSalaries">Total Salaries</span></dt>
+                <dd>
+                    <span>{{ declaration.totalSalaries }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssIpresRg">Cumul Tot Sal Ass Ipres Rg</span></dt>
+                <dd>
+                    <span>{{ declaration.cumulTotSalAssIpresRg }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssIpresRcc">Cumul Tot Sal Ass Ipres Rcc</span></dt>
+                <dd>
+                    <span>{{ declaration.cumulTotSalAssIpresRcc }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssCssPf">Cumul Tot Sal Ass Css Pf</span></dt>
+                <dd>
+                    <span>{{ declaration.cumulTotSalAssCssPf }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssCssAtmp">Cumul Tot Sal Ass Css Atmp</span></dt>
+                <dd>
+                    <span>{{ declaration.cumulTotSalAssCssAtmp }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.totalSalVerses">Total Sal Verses</span></dt>
+                <dd>
+                    <span>{{ declaration.totalSalVerses }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.mntCotPfCalcParEmployeur">Mnt Cot Pf Calc Par Employeur</span></dt>
+                <dd>
+                    <span>{{ declaration.mntCotPfCalcParEmployeur }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.mntCotAtMpCalcParEmployeur">Mnt Cot At Mp Calc Par Employeur</span></dt>
+                <dd>
+                    <span>{{ declaration.mntCotAtMpCalcParEmployeur }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.mntCotRgCalcParEmployeur">Mnt Cot Rg Calc Par Employeur</span></dt>
+                <dd>
+                    <span>{{ declaration.mntCotRgCalcParEmployeur }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.mntCotRccCalcParEmployeur">Mnt Cot Rcc Calc Par Employeur</span></dt>
+                <dd>
+                    <span>{{ declaration.mntCotRccCalcParEmployeur }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.declaration.employeur">Employeur</span></dt>
+                <dd>
+                    <div *ngIf="declaration.employeur">
+                        <a [routerLink]="['/immatriculation', declaration.employeur?.id, 'view']">{{ declaration.employeur?.employerName }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/declaration', declaration.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

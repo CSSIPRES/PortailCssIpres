@@ -1,0 +1,117 @@
+{
+    "name": "RepresentantLegal",
+    "fields": [
+        {
+            "fieldName": "legalRepPerson",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "firstName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "birthdate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nationality",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "placeOfBirth",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cityOfBirth",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "typeOfIdentity",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "identityIdNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ninCedeo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "issuedDate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "expiryDate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "region",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "department",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "arondissement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "commune",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "qartier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "landLineNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobileNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200319142400",
+    "entityTableName": "representant_legal",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

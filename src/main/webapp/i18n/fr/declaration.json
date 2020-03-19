@@ -1,0 +1,39 @@
+{
+  "portailCssIpresApp": {
+    "declaration": {
+      "home": {
+        "title": "Declarations",
+        "createLabel": "Créer un nouveau Declaration",
+        "createOrEditLabel": "Créer ou éditer un Declaration",
+        "notFound": "Aucun Declaration trouvé"
+      },
+      "created": "Un nouveau Declaration a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Declaration avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Declaration avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Declaration {{ id }} ?"
+      },
+      "detail": {
+        "title": "Declaration"
+      },
+      "idIdentifiant": "Id Identifiant",
+      "raisonSociale": "Raison Sociale",
+      "adresse": "Adresse",
+      "typeDeclaration": "Type Declaration",
+      "dateDebutCotisation": "Date Debut Cotisation",
+      "totalNouvSalaries": "Total Nouv Salaries",
+      "totalSalaries": "Total Salaries",
+      "cumulTotSalAssIpresRg": "Cumul Tot Sal Ass Ipres Rg",
+      "cumulTotSalAssIpresRcc": "Cumul Tot Sal Ass Ipres Rcc",
+      "cumulTotSalAssCssPf": "Cumul Tot Sal Ass Css Pf",
+      "cumulTotSalAssCssAtmp": "Cumul Tot Sal Ass Css Atmp",
+      "totalSalVerses": "Total Sal Verses",
+      "mntCotPfCalcParEmployeur": "Mnt Cot Pf Calc Par Employeur",
+      "mntCotAtMpCalcParEmployeur": "Mnt Cot At Mp Calc Par Employeur",
+      "mntCotRgCalcParEmployeur": "Mnt Cot Rg Calc Par Employeur",
+      "mntCotRccCalcParEmployeur": "Mnt Cot Rcc Calc Par Employeur",
+      "employe": "Employe",
+      "employeur": "Employeur"
+    }
+  }
+}

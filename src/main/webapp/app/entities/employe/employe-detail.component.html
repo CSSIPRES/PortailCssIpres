@@ -1,0 +1,354 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="employe">
+            <h2><span jhiTranslate="portailCssIpresApp.employe.detail.title">Employe</span> {{ employe.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="portailCssIpresApp.employe.rechercheEmploye">Recherche Employe</span></dt>
+                <dd>
+                    <span>{{ employe.rechercheEmploye }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nomEmploye">Nom Employe</span></dt>
+                <dd>
+                    <span>{{ employe.nomEmploye }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.prenomEmploye">Prenom Employe</span></dt>
+                <dd>
+                    <span>{{ employe.prenomEmploye }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.sexe">Sexe</span></dt>
+                <dd>
+                    <span>{{ employe.sexe }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.etatCivil">Etat Civil</span></dt>
+                <dd>
+                    <span>{{ employe.etatCivil }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.dateNaissance">Date Naissance</span></dt>
+                <dd>
+                    <span>{{ employe.dateNaissance }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.numRegNaiss">Num Reg Naiss</span></dt>
+                <dd>
+                    <span>{{ employe.numRegNaiss }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nomPere">Nom Pere</span></dt>
+                <dd>
+                    <span>{{ employe.nomPere }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.prenomPere">Prenom Pere</span></dt>
+                <dd>
+                    <span>{{ employe.prenomPere }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nomMere">Nom Mere</span></dt>
+                <dd>
+                    <span>{{ employe.nomMere }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.prenomMere">Prenom Mere</span></dt>
+                <dd>
+                    <span>{{ employe.prenomMere }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nationalite">Nationalite</span></dt>
+                <dd>
+                    <span>{{ employe.nationalite }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.typePieceIdentite">Type Piece Identite</span></dt>
+                <dd>
+                    <span>{{ employe.typePieceIdentite }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nin">Nin</span></dt>
+                <dd>
+                    <span>{{ employe.nin }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.ninCedeao">Nin Cedeao</span></dt>
+                <dd>
+                    <span>{{ employe.ninCedeao }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.numPieceIdentite">Num Piece Identite</span></dt>
+                <dd>
+                    <span>{{ employe.numPieceIdentite }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.delivreLe">Delivre Le</span></dt>
+                <dd>
+                    <span>{{ employe.delivreLe }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.lieuDelivrance">Lieu Delivrance</span></dt>
+                <dd>
+                    <span>{{ employe.lieuDelivrance }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.expireLe">Expire Le</span></dt>
+                <dd>
+                    <span>{{ employe.expireLe }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.villeNaissance">Ville Naissance</span></dt>
+                <dd>
+                    <span>{{ employe.villeNaissance }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.paysNaissance">Pays Naissance</span></dt>
+                <dd>
+                    <span>{{ employe.paysNaissance }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.employeurPrec">Employeur Prec</span></dt>
+                <dd>
+                    <span>{{ employe.employeurPrec }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.pays">Pays</span></dt>
+                <dd>
+                    <span>{{ employe.pays }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.region">Region</span></dt>
+                <dd>
+                    <span>{{ employe.region }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.department">Department</span></dt>
+                <dd>
+                    <span>{{ employe.department }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.arondissement">Arondissement</span></dt>
+                <dd>
+                    <span>{{ employe.arondissement }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.commune">Commune</span></dt>
+                <dd>
+                    <span>{{ employe.commune }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.qartier">Qartier</span></dt>
+                <dd>
+                    <span>{{ employe.qartier }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.address">Address</span></dt>
+                <dd>
+                    <span>{{ employe.address }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.boitePostale">Boite Postale</span></dt>
+                <dd>
+                    <span>{{ employe.boitePostale }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.typeMouvement">Type Mouvement</span></dt>
+                <dd>
+                    <span>{{ employe.typeMouvement }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.natureContrat">Nature Contrat</span></dt>
+                <dd>
+                    <span>{{ employe.natureContrat }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.dateDebutContrat">Date Debut Contrat</span></dt>
+                <dd>
+                    <span>{{ employe.dateDebutContrat }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.dateFinContrat">Date Fin Contrat</span></dt>
+                <dd>
+                    <span>{{ employe.dateFinContrat }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.profession">Profession</span></dt>
+                <dd>
+                    <span>{{ employe.profession }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.emploi">Emploi</span></dt>
+                <dd>
+                    <span>{{ employe.emploi }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nonCadre">Non Cadre</span></dt>
+                <dd>
+                    <span>{{ employe.nonCadre }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.ouiCadre">Oui Cadre</span></dt>
+                <dd>
+                    <span>{{ employe.ouiCadre }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.conventionApplicable">Convention Applicable</span></dt>
+                <dd>
+                    <span>{{ employe.conventionApplicable }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.salaireContractuel">Salaire Contractuel</span></dt>
+                <dd>
+                    <span>{{ employe.salaireContractuel }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.tempsTravail">Temps Travail</span></dt>
+                <dd>
+                    <span>{{ employe.tempsTravail }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.categorie">Categorie</span></dt>
+                <dd>
+                    <span>{{ employe.categorie }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.motifSortie">Motif Sortie</span></dt>
+                <dd>
+                    <span>{{ employe.motifSortie }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssPf1">Tot Sal Ass Css Pf 1</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssCssPf1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssAtmp1">Tot Sal Ass Css Atmp 1</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssCssAtmp1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRg1">Tot Sal Ass Ipres Rg 1</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssIpresRg1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRcc1">Tot Sal Ass Ipres Rcc 1</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssIpresRcc1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.salaireBrut1">Salaire Brut 1</span></dt>
+                <dd>
+                    <span>{{ employe.salaireBrut1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nombreJours1">Nombre Jours 1</span></dt>
+                <dd>
+                    <span>{{ employe.nombreJours1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nombreHeures1">Nombre Heures 1</span></dt>
+                <dd>
+                    <span>{{ employe.nombreHeures1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.tempsTravail1">Temps Travail 1</span></dt>
+                <dd>
+                    <span>{{ employe.tempsTravail1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.trancheTravail1">Tranche Travail 1</span></dt>
+                <dd>
+                    <span>{{ employe.trancheTravail1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.regimeGeneral1">Regime General 1</span></dt>
+                <dd>
+                    <span>{{ employe.regimeGeneral1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.regimCompCadre1">Regim Comp Cadre 1</span></dt>
+                <dd>
+                    <span>{{ employe.regimCompCadre1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.dateEffetRegimeCadre1">Date Effet Regime Cadre 1</span></dt>
+                <dd>
+                    <span>{{ employe.dateEffetRegimeCadre1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssPf2">Tot Sal Ass Css Pf 2</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssCssPf2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssAtmp2">Tot Sal Ass Css Atmp 2</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssCssAtmp2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRg2">Tot Sal Ass Ipres Rg 2</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssIpresRg2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRcc2">Tot Sal Ass Ipres Rcc 2</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssIpresRcc2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.salaireBrut2">Salaire Brut 2</span></dt>
+                <dd>
+                    <span>{{ employe.salaireBrut2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nombreJours2">Nombre Jours 2</span></dt>
+                <dd>
+                    <span>{{ employe.nombreJours2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nombreHeures2">Nombre Heures 2</span></dt>
+                <dd>
+                    <span>{{ employe.nombreHeures2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.tempsTravail2">Temps Travail 2</span></dt>
+                <dd>
+                    <span>{{ employe.tempsTravail2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.trancheTravail2">Tranche Travail 2</span></dt>
+                <dd>
+                    <span>{{ employe.trancheTravail2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.regimeGeneral2">Regime General 2</span></dt>
+                <dd>
+                    <span>{{ employe.regimeGeneral2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.regimCompCadre2">Regim Comp Cadre 2</span></dt>
+                <dd>
+                    <span>{{ employe.regimCompCadre2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.dateEffetRegimeCadre2">Date Effet Regime Cadre 2</span></dt>
+                <dd>
+                    <span>{{ employe.dateEffetRegimeCadre2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssPf3">Tot Sal Ass Css Pf 3</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssCssPf3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssAtmp3">Tot Sal Ass Css Atmp 3</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssCssAtmp3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRg3">Tot Sal Ass Ipres Rg 3</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssIpresRg3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRcc3">Tot Sal Ass Ipres Rcc 3</span></dt>
+                <dd>
+                    <span>{{ employe.totSalAssIpresRcc3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.salaireBrut3">Salaire Brut 3</span></dt>
+                <dd>
+                    <span>{{ employe.salaireBrut3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nombreJours3">Nombre Jours 3</span></dt>
+                <dd>
+                    <span>{{ employe.nombreJours3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.nombreHeures3">Nombre Heures 3</span></dt>
+                <dd>
+                    <span>{{ employe.nombreHeures3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.tempsTravail3">Temps Travail 3</span></dt>
+                <dd>
+                    <span>{{ employe.tempsTravail3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.trancheTravail3">Tranche Travail 3</span></dt>
+                <dd>
+                    <span>{{ employe.trancheTravail3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.regimeGeneral3">Regime General 3</span></dt>
+                <dd>
+                    <span>{{ employe.regimeGeneral3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.regimCompCadre3">Regim Comp Cadre 3</span></dt>
+                <dd>
+                    <span>{{ employe.regimCompCadre3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.dateEffetRegimeCadre3">Date Effet Regime Cadre 3</span></dt>
+                <dd>
+                    <span>{{ employe.dateEffetRegimeCadre3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.declaration">Declaration</span></dt>
+                <dd>
+                    <div *ngIf="employe.declaration">
+                        <a [routerLink]="['/declaration', employe.declaration?.id, 'view']">{{ employe.declaration?.raisonSociale }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employe.employeur">Employeur</span></dt>
+                <dd>
+                    <div *ngIf="employe.employeur">
+                        <a [routerLink]="['/immatriculation', employe.employeur?.id, 'view']">{{ employe.employeur?.employerName }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/employe', employe.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,369 @@
+{
+    "name": "Employe",
+    "fields": [
+        {
+            "fieldName": "rechercheEmploye",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomEmploye",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "prenomEmploye",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "sexe",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "etatCivil",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateNaissance",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "numRegNaiss",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nomPere",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenomPere",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomMere",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenomMere",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nationalite",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "typePieceIdentite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ninCedeao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numPieceIdentite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "delivreLe",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lieuDelivrance",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "expireLe",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "villeNaissance",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paysNaissance",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employeurPrec",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pays",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "region",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "department",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "arondissement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "commune",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "qartier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "boitePostale",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "typeMouvement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "natureContrat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateDebutContrat",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateFinContrat",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "profession",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "emploi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nonCadre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ouiCadre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "conventionApplicable",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "salaireContractuel",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "tempsTravail",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "categorie",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "motifSortie",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "totSalAssCssPf1",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totSalAssCssAtmp1",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totSalAssIpresRg1",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totSalAssIpresRcc1",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "salaireBrut1",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "nombreJours1",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nombreHeures1",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tempsTravail1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trancheTravail1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regimeGeneral1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regimCompCadre1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateEffetRegimeCadre1",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "totSalAssCssPf2",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totSalAssCssAtmp2",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totSalAssIpresRg2",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totSalAssIpresRcc2",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "salaireBrut2",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "nombreJours2",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nombreHeures2",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tempsTravail2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trancheTravail2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regimeGeneral2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regimCompCadre2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateEffetRegimeCadre2",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "totSalAssCssPf3",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totSalAssCssAtmp3",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totSalAssIpresRg3",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totSalAssIpresRcc3",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "salaireBrut3",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "nombreJours3",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nombreHeures3",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tempsTravail3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trancheTravail3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regimeGeneral3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regimCompCadre3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateEffetRegimeCadre3",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "declaration",
+            "otherEntityRelationshipName": "employe",
+            "relationshipName": "declaration",
+            "otherEntityField": "raisonSociale"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "immatriculation",
+            "otherEntityRelationshipName": "employe",
+            "relationshipName": "employeur",
+            "otherEntityField": "employerName"
+        }
+    ],
+    "changelogDate": "20200319142500",
+    "entityTableName": "employe",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

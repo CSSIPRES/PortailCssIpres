@@ -1,0 +1,582 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-employe-heading" jhiTranslate="portailCssIpresApp.employe.home.createOrEditLabel">Create or edit a Employe</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.rechercheEmploye" for="field_rechercheEmploye">Recherche Employe</label>
+                    <input type="text" class="form-control" name="rechercheEmploye" id="field_rechercheEmploye"
+                           formControlName="rechercheEmploye"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nomEmploye" for="field_nomEmploye">Nom Employe</label>
+                    <input type="text" class="form-control" name="nomEmploye" id="field_nomEmploye"
+                           formControlName="nomEmploye"/>
+                    <div *ngIf="editForm.get('nomEmploye')!.invalid && (editForm.get('nomEmploye')!.dirty || editForm.get('nomEmploye')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('nomEmploye')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.prenomEmploye" for="field_prenomEmploye">Prenom Employe</label>
+                    <input type="text" class="form-control" name="prenomEmploye" id="field_prenomEmploye"
+                           formControlName="prenomEmploye"/>
+                    <div *ngIf="editForm.get('prenomEmploye')!.invalid && (editForm.get('prenomEmploye')!.dirty || editForm.get('prenomEmploye')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('prenomEmploye')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.sexe" for="field_sexe">Sexe</label>
+                    <input type="text" class="form-control" name="sexe" id="field_sexe"
+                           formControlName="sexe"/>
+                    <div *ngIf="editForm.get('sexe')!.invalid && (editForm.get('sexe')!.dirty || editForm.get('sexe')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('sexe')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.etatCivil" for="field_etatCivil">Etat Civil</label>
+                    <input type="text" class="form-control" name="etatCivil" id="field_etatCivil"
+                           formControlName="etatCivil"/>
+                    <div *ngIf="editForm.get('etatCivil')!.invalid && (editForm.get('etatCivil')!.dirty || editForm.get('etatCivil')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('etatCivil')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.dateNaissance" for="field_dateNaissance">Date Naissance</label>
+                    <div class="input-group">
+                        <input id="field_dateNaissance" type="text" class="form-control" name="dateNaissance" ngbDatepicker #dateNaissanceDp="ngbDatepicker" formControlName="dateNaissance"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateNaissanceDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div *ngIf="editForm.get('dateNaissance')!.invalid && (editForm.get('dateNaissance')!.dirty || editForm.get('dateNaissance')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('dateNaissance')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.numRegNaiss" for="field_numRegNaiss">Num Reg Naiss</label>
+                    <input type="text" class="form-control" name="numRegNaiss" id="field_numRegNaiss"
+                           formControlName="numRegNaiss"/>
+                    <div *ngIf="editForm.get('numRegNaiss')!.invalid && (editForm.get('numRegNaiss')!.dirty || editForm.get('numRegNaiss')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('numRegNaiss')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nomPere" for="field_nomPere">Nom Pere</label>
+                    <input type="text" class="form-control" name="nomPere" id="field_nomPere"
+                           formControlName="nomPere"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.prenomPere" for="field_prenomPere">Prenom Pere</label>
+                    <input type="text" class="form-control" name="prenomPere" id="field_prenomPere"
+                           formControlName="prenomPere"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nomMere" for="field_nomMere">Nom Mere</label>
+                    <input type="text" class="form-control" name="nomMere" id="field_nomMere"
+                           formControlName="nomMere"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.prenomMere" for="field_prenomMere">Prenom Mere</label>
+                    <input type="text" class="form-control" name="prenomMere" id="field_prenomMere"
+                           formControlName="prenomMere"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nationalite" for="field_nationalite">Nationalite</label>
+                    <input type="text" class="form-control" name="nationalite" id="field_nationalite"
+                           formControlName="nationalite"/>
+                    <div *ngIf="editForm.get('nationalite')!.invalid && (editForm.get('nationalite')!.dirty || editForm.get('nationalite')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('nationalite')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.typePieceIdentite" for="field_typePieceIdentite">Type Piece Identite</label>
+                    <input type="text" class="form-control" name="typePieceIdentite" id="field_typePieceIdentite"
+                           formControlName="typePieceIdentite"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nin" for="field_nin">Nin</label>
+                    <input type="text" class="form-control" name="nin" id="field_nin"
+                           formControlName="nin"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.ninCedeao" for="field_ninCedeao">Nin Cedeao</label>
+                    <input type="text" class="form-control" name="ninCedeao" id="field_ninCedeao"
+                           formControlName="ninCedeao"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.numPieceIdentite" for="field_numPieceIdentite">Num Piece Identite</label>
+                    <input type="text" class="form-control" name="numPieceIdentite" id="field_numPieceIdentite"
+                           formControlName="numPieceIdentite"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.delivreLe" for="field_delivreLe">Delivre Le</label>
+                    <input type="text" class="form-control" name="delivreLe" id="field_delivreLe"
+                           formControlName="delivreLe"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.lieuDelivrance" for="field_lieuDelivrance">Lieu Delivrance</label>
+                    <input type="text" class="form-control" name="lieuDelivrance" id="field_lieuDelivrance"
+                           formControlName="lieuDelivrance"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.expireLe" for="field_expireLe">Expire Le</label>
+                    <input type="text" class="form-control" name="expireLe" id="field_expireLe"
+                           formControlName="expireLe"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.villeNaissance" for="field_villeNaissance">Ville Naissance</label>
+                    <input type="text" class="form-control" name="villeNaissance" id="field_villeNaissance"
+                           formControlName="villeNaissance"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.paysNaissance" for="field_paysNaissance">Pays Naissance</label>
+                    <input type="text" class="form-control" name="paysNaissance" id="field_paysNaissance"
+                           formControlName="paysNaissance"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.employeurPrec" for="field_employeurPrec">Employeur Prec</label>
+                    <input type="text" class="form-control" name="employeurPrec" id="field_employeurPrec"
+                           formControlName="employeurPrec"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.pays" for="field_pays">Pays</label>
+                    <input type="text" class="form-control" name="pays" id="field_pays"
+                           formControlName="pays"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.region" for="field_region">Region</label>
+                    <input type="text" class="form-control" name="region" id="field_region"
+                           formControlName="region"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.department" for="field_department">Department</label>
+                    <input type="text" class="form-control" name="department" id="field_department"
+                           formControlName="department"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.arondissement" for="field_arondissement">Arondissement</label>
+                    <input type="text" class="form-control" name="arondissement" id="field_arondissement"
+                           formControlName="arondissement"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.commune" for="field_commune">Commune</label>
+                    <input type="text" class="form-control" name="commune" id="field_commune"
+                           formControlName="commune"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.qartier" for="field_qartier">Qartier</label>
+                    <input type="text" class="form-control" name="qartier" id="field_qartier"
+                           formControlName="qartier"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.address" for="field_address">Address</label>
+                    <input type="text" class="form-control" name="address" id="field_address"
+                           formControlName="address"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.boitePostale" for="field_boitePostale">Boite Postale</label>
+                    <input type="text" class="form-control" name="boitePostale" id="field_boitePostale"
+                           formControlName="boitePostale"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.typeMouvement" for="field_typeMouvement">Type Mouvement</label>
+                    <input type="text" class="form-control" name="typeMouvement" id="field_typeMouvement"
+                           formControlName="typeMouvement"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.natureContrat" for="field_natureContrat">Nature Contrat</label>
+                    <input type="text" class="form-control" name="natureContrat" id="field_natureContrat"
+                           formControlName="natureContrat"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.dateDebutContrat" for="field_dateDebutContrat">Date Debut Contrat</label>
+                    <div class="input-group">
+                        <input id="field_dateDebutContrat" type="text" class="form-control" name="dateDebutContrat" ngbDatepicker #dateDebutContratDp="ngbDatepicker" formControlName="dateDebutContrat"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateDebutContratDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.dateFinContrat" for="field_dateFinContrat">Date Fin Contrat</label>
+                    <div class="input-group">
+                        <input id="field_dateFinContrat" type="text" class="form-control" name="dateFinContrat" ngbDatepicker #dateFinContratDp="ngbDatepicker" formControlName="dateFinContrat"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateFinContratDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.profession" for="field_profession">Profession</label>
+                    <input type="text" class="form-control" name="profession" id="field_profession"
+                           formControlName="profession"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.emploi" for="field_emploi">Emploi</label>
+                    <input type="text" class="form-control" name="emploi" id="field_emploi"
+                           formControlName="emploi"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nonCadre" for="field_nonCadre">Non Cadre</label>
+                    <input type="text" class="form-control" name="nonCadre" id="field_nonCadre"
+                           formControlName="nonCadre"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.ouiCadre" for="field_ouiCadre">Oui Cadre</label>
+                    <input type="text" class="form-control" name="ouiCadre" id="field_ouiCadre"
+                           formControlName="ouiCadre"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.conventionApplicable" for="field_conventionApplicable">Convention Applicable</label>
+                    <input type="text" class="form-control" name="conventionApplicable" id="field_conventionApplicable"
+                           formControlName="conventionApplicable"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.salaireContractuel" for="field_salaireContractuel">Salaire Contractuel</label>
+                    <input type="number" class="form-control" name="salaireContractuel" id="field_salaireContractuel"
+                           formControlName="salaireContractuel"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.tempsTravail" for="field_tempsTravail">Temps Travail</label>
+                    <input type="number" class="form-control" name="tempsTravail" id="field_tempsTravail"
+                           formControlName="tempsTravail"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.categorie" for="field_categorie">Categorie</label>
+                    <input type="text" class="form-control" name="categorie" id="field_categorie"
+                           formControlName="categorie"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.motifSortie" for="field_motifSortie">Motif Sortie</label>
+                    <input type="text" class="form-control" name="motifSortie" id="field_motifSortie"
+                           formControlName="motifSortie"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssCssPf1" for="field_totSalAssCssPf1">Tot Sal Ass Css Pf 1</label>
+                    <input type="number" class="form-control" name="totSalAssCssPf1" id="field_totSalAssCssPf1"
+                           formControlName="totSalAssCssPf1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssCssAtmp1" for="field_totSalAssCssAtmp1">Tot Sal Ass Css Atmp 1</label>
+                    <input type="number" class="form-control" name="totSalAssCssAtmp1" id="field_totSalAssCssAtmp1"
+                           formControlName="totSalAssCssAtmp1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRg1" for="field_totSalAssIpresRg1">Tot Sal Ass Ipres Rg 1</label>
+                    <input type="number" class="form-control" name="totSalAssIpresRg1" id="field_totSalAssIpresRg1"
+                           formControlName="totSalAssIpresRg1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRcc1" for="field_totSalAssIpresRcc1">Tot Sal Ass Ipres Rcc 1</label>
+                    <input type="number" class="form-control" name="totSalAssIpresRcc1" id="field_totSalAssIpresRcc1"
+                           formControlName="totSalAssIpresRcc1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.salaireBrut1" for="field_salaireBrut1">Salaire Brut 1</label>
+                    <input type="number" class="form-control" name="salaireBrut1" id="field_salaireBrut1"
+                           formControlName="salaireBrut1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nombreJours1" for="field_nombreJours1">Nombre Jours 1</label>
+                    <input type="number" class="form-control" name="nombreJours1" id="field_nombreJours1"
+                           formControlName="nombreJours1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nombreHeures1" for="field_nombreHeures1">Nombre Heures 1</label>
+                    <input type="number" class="form-control" name="nombreHeures1" id="field_nombreHeures1"
+                           formControlName="nombreHeures1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.tempsTravail1" for="field_tempsTravail1">Temps Travail 1</label>
+                    <input type="text" class="form-control" name="tempsTravail1" id="field_tempsTravail1"
+                           formControlName="tempsTravail1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.trancheTravail1" for="field_trancheTravail1">Tranche Travail 1</label>
+                    <input type="text" class="form-control" name="trancheTravail1" id="field_trancheTravail1"
+                           formControlName="trancheTravail1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.regimeGeneral1" for="field_regimeGeneral1">Regime General 1</label>
+                    <input type="text" class="form-control" name="regimeGeneral1" id="field_regimeGeneral1"
+                           formControlName="regimeGeneral1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.regimCompCadre1" for="field_regimCompCadre1">Regim Comp Cadre 1</label>
+                    <input type="text" class="form-control" name="regimCompCadre1" id="field_regimCompCadre1"
+                           formControlName="regimCompCadre1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.dateEffetRegimeCadre1" for="field_dateEffetRegimeCadre1">Date Effet Regime Cadre 1</label>
+                    <div class="input-group">
+                        <input id="field_dateEffetRegimeCadre1" type="text" class="form-control" name="dateEffetRegimeCadre1" ngbDatepicker #dateEffetRegimeCadre1Dp="ngbDatepicker" formControlName="dateEffetRegimeCadre1"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateEffetRegimeCadre1Dp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssCssPf2" for="field_totSalAssCssPf2">Tot Sal Ass Css Pf 2</label>
+                    <input type="number" class="form-control" name="totSalAssCssPf2" id="field_totSalAssCssPf2"
+                           formControlName="totSalAssCssPf2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssCssAtmp2" for="field_totSalAssCssAtmp2">Tot Sal Ass Css Atmp 2</label>
+                    <input type="number" class="form-control" name="totSalAssCssAtmp2" id="field_totSalAssCssAtmp2"
+                           formControlName="totSalAssCssAtmp2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRg2" for="field_totSalAssIpresRg2">Tot Sal Ass Ipres Rg 2</label>
+                    <input type="number" class="form-control" name="totSalAssIpresRg2" id="field_totSalAssIpresRg2"
+                           formControlName="totSalAssIpresRg2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRcc2" for="field_totSalAssIpresRcc2">Tot Sal Ass Ipres Rcc 2</label>
+                    <input type="number" class="form-control" name="totSalAssIpresRcc2" id="field_totSalAssIpresRcc2"
+                           formControlName="totSalAssIpresRcc2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.salaireBrut2" for="field_salaireBrut2">Salaire Brut 2</label>
+                    <input type="number" class="form-control" name="salaireBrut2" id="field_salaireBrut2"
+                           formControlName="salaireBrut2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nombreJours2" for="field_nombreJours2">Nombre Jours 2</label>
+                    <input type="number" class="form-control" name="nombreJours2" id="field_nombreJours2"
+                           formControlName="nombreJours2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nombreHeures2" for="field_nombreHeures2">Nombre Heures 2</label>
+                    <input type="number" class="form-control" name="nombreHeures2" id="field_nombreHeures2"
+                           formControlName="nombreHeures2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.tempsTravail2" for="field_tempsTravail2">Temps Travail 2</label>
+                    <input type="text" class="form-control" name="tempsTravail2" id="field_tempsTravail2"
+                           formControlName="tempsTravail2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.trancheTravail2" for="field_trancheTravail2">Tranche Travail 2</label>
+                    <input type="text" class="form-control" name="trancheTravail2" id="field_trancheTravail2"
+                           formControlName="trancheTravail2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.regimeGeneral2" for="field_regimeGeneral2">Regime General 2</label>
+                    <input type="text" class="form-control" name="regimeGeneral2" id="field_regimeGeneral2"
+                           formControlName="regimeGeneral2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.regimCompCadre2" for="field_regimCompCadre2">Regim Comp Cadre 2</label>
+                    <input type="text" class="form-control" name="regimCompCadre2" id="field_regimCompCadre2"
+                           formControlName="regimCompCadre2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.dateEffetRegimeCadre2" for="field_dateEffetRegimeCadre2">Date Effet Regime Cadre 2</label>
+                    <div class="input-group">
+                        <input id="field_dateEffetRegimeCadre2" type="text" class="form-control" name="dateEffetRegimeCadre2" ngbDatepicker #dateEffetRegimeCadre2Dp="ngbDatepicker" formControlName="dateEffetRegimeCadre2"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateEffetRegimeCadre2Dp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssCssPf3" for="field_totSalAssCssPf3">Tot Sal Ass Css Pf 3</label>
+                    <input type="number" class="form-control" name="totSalAssCssPf3" id="field_totSalAssCssPf3"
+                           formControlName="totSalAssCssPf3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssCssAtmp3" for="field_totSalAssCssAtmp3">Tot Sal Ass Css Atmp 3</label>
+                    <input type="number" class="form-control" name="totSalAssCssAtmp3" id="field_totSalAssCssAtmp3"
+                           formControlName="totSalAssCssAtmp3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRg3" for="field_totSalAssIpresRg3">Tot Sal Ass Ipres Rg 3</label>
+                    <input type="number" class="form-control" name="totSalAssIpresRg3" id="field_totSalAssIpresRg3"
+                           formControlName="totSalAssIpresRg3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRcc3" for="field_totSalAssIpresRcc3">Tot Sal Ass Ipres Rcc 3</label>
+                    <input type="number" class="form-control" name="totSalAssIpresRcc3" id="field_totSalAssIpresRcc3"
+                           formControlName="totSalAssIpresRcc3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.salaireBrut3" for="field_salaireBrut3">Salaire Brut 3</label>
+                    <input type="number" class="form-control" name="salaireBrut3" id="field_salaireBrut3"
+                           formControlName="salaireBrut3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nombreJours3" for="field_nombreJours3">Nombre Jours 3</label>
+                    <input type="number" class="form-control" name="nombreJours3" id="field_nombreJours3"
+                           formControlName="nombreJours3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.nombreHeures3" for="field_nombreHeures3">Nombre Heures 3</label>
+                    <input type="number" class="form-control" name="nombreHeures3" id="field_nombreHeures3"
+                           formControlName="nombreHeures3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.tempsTravail3" for="field_tempsTravail3">Temps Travail 3</label>
+                    <input type="text" class="form-control" name="tempsTravail3" id="field_tempsTravail3"
+                           formControlName="tempsTravail3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.trancheTravail3" for="field_trancheTravail3">Tranche Travail 3</label>
+                    <input type="text" class="form-control" name="trancheTravail3" id="field_trancheTravail3"
+                           formControlName="trancheTravail3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.regimeGeneral3" for="field_regimeGeneral3">Regime General 3</label>
+                    <input type="text" class="form-control" name="regimeGeneral3" id="field_regimeGeneral3"
+                           formControlName="regimeGeneral3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.regimCompCadre3" for="field_regimCompCadre3">Regim Comp Cadre 3</label>
+                    <input type="text" class="form-control" name="regimCompCadre3" id="field_regimCompCadre3"
+                           formControlName="regimCompCadre3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.dateEffetRegimeCadre3" for="field_dateEffetRegimeCadre3">Date Effet Regime Cadre 3</label>
+                    <div class="input-group">
+                        <input id="field_dateEffetRegimeCadre3" type="text" class="form-control" name="dateEffetRegimeCadre3" ngbDatepicker #dateEffetRegimeCadre3Dp="ngbDatepicker" formControlName="dateEffetRegimeCadre3"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateEffetRegimeCadre3Dp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.declaration" for="field_declaration">Declaration</label>
+                    <select class="form-control" id="field_declaration" name="declaration" formControlName="declaration">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="declarationOption.id === editForm.get('declaration')!.value?.id ? editForm.get('declaration')!.value : declarationOption" *ngFor="let declarationOption of declarations; trackBy: trackById">{{ declarationOption.raisonSociale }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employe.employeur" for="field_employeur">Employeur</label>
+                    <select class="form-control" id="field_employeur" name="employeur" formControlName="employeur">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="immatriculationOption.id === editForm.get('employeur')!.value?.id ? editForm.get('employeur')!.value : immatriculationOption" *ngFor="let immatriculationOption of immatriculations; trackBy: trackById">{{ immatriculationOption.employerName }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

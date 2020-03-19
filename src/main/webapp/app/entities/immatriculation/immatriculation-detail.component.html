@@ -1,0 +1,200 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="immatriculation">
+            <h2><span jhiTranslate="portailCssIpresApp.immatriculation.detail.title">Immatriculation</span> {{ immatriculation.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.regType">Reg Type</span></dt>
+                <dd>
+                    <span>{{ immatriculation.regType }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.employerType">Employer Type</span></dt>
+                <dd>
+                    <span>{{ immatriculation.employerType }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.typeEtablissement">Type Etablissement</span></dt>
+                <dd>
+                    <span>{{ immatriculation.typeEtablissement }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.employerName">Employer Name</span></dt>
+                <dd>
+                    <span>{{ immatriculation.employerName }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.hqId">Hq Id</span></dt>
+                <dd>
+                    <span>{{ immatriculation.hqId }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.nineaNumber">Ninea Number</span></dt>
+                <dd>
+                    <span>{{ immatriculation.nineaNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.ninetNumber">Ninet Number</span></dt>
+                <dd>
+                    <span>{{ immatriculation.ninetNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.compagnyOriginId">Compagny Origin Id</span></dt>
+                <dd>
+                    <span>{{ immatriculation.compagnyOriginId }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.legalStatus">Legal Status</span></dt>
+                <dd>
+                    <span>{{ immatriculation.legalStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.taxId">Tax Id</span></dt>
+                <dd>
+                    <span>{{ immatriculation.taxId }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.taxIdDate">Tax Id Date</span></dt>
+                <dd>
+                    <span>{{ immatriculation.taxIdDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.tradeRegisterNumber">Trade Register Number</span></dt>
+                <dd>
+                    <span>{{ immatriculation.tradeRegisterNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.tradeRegisterDate">Trade Register Date</span></dt>
+                <dd>
+                    <span>{{ immatriculation.tradeRegisterDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.dateOfInpsection">Date Of Inpsection</span></dt>
+                <dd>
+                    <span>{{ immatriculation.dateOfInpsection }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.dateOfFirtHire">Date Of Firt Hire</span></dt>
+                <dd>
+                    <span>{{ immatriculation.dateOfFirtHire }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.shortName">Short Name</span></dt>
+                <dd>
+                    <span>{{ immatriculation.shortName }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.businessSector">Business Sector</span></dt>
+                <dd>
+                    <span>{{ immatriculation.businessSector }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.mainLineOfBusiness">Main Line Of Business</span></dt>
+                <dd>
+                    <span>{{ immatriculation.mainLineOfBusiness }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.noOfWorkersInGenScheme">No Of Workers In Gen Scheme</span></dt>
+                <dd>
+                    <span>{{ immatriculation.noOfWorkersInGenScheme }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.noOfWorkersInBasicScheme">No Of Workers In Basic Scheme</span></dt>
+                <dd>
+                    <span>{{ immatriculation.noOfWorkersInBasicScheme }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.region">Region</span></dt>
+                <dd>
+                    <span>{{ immatriculation.region }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.department">Department</span></dt>
+                <dd>
+                    <span>{{ immatriculation.department }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.arondissement">Arondissement</span></dt>
+                <dd>
+                    <span>{{ immatriculation.arondissement }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.commune">Commune</span></dt>
+                <dd>
+                    <span>{{ immatriculation.commune }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.qartier">Qartier</span></dt>
+                <dd>
+                    <span>{{ immatriculation.qartier }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.address">Address</span></dt>
+                <dd>
+                    <span>{{ immatriculation.address }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.postboxNo">Postbox No</span></dt>
+                <dd>
+                    <span>{{ immatriculation.postboxNo }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.telephone">Telephone</span></dt>
+                <dd>
+                    <span>{{ immatriculation.telephone }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.email">Email</span></dt>
+                <dd>
+                    <span>{{ immatriculation.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.website">Website</span></dt>
+                <dd>
+                    <span>{{ immatriculation.website }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.zoneCss">Zone Css</span></dt>
+                <dd>
+                    <span>{{ immatriculation.zoneCss }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.zoneIpres">Zone Ipres</span></dt>
+                <dd>
+                    <span>{{ immatriculation.zoneIpres }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.sectorCss">Sector Css</span></dt>
+                <dd>
+                    <span>{{ immatriculation.sectorCss }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.sectorIpres">Sector Ipres</span></dt>
+                <dd>
+                    <span>{{ immatriculation.sectorIpres }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.agencyCss">Agency Css</span></dt>
+                <dd>
+                    <span>{{ immatriculation.agencyCss }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.agencyIpres">Agency Ipres</span></dt>
+                <dd>
+                    <span>{{ immatriculation.agencyIpres }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.employerRegistrationFormId">Employer Registration Form Id</span></dt>
+                <dd>
+                    <span>{{ immatriculation.employerRegistrationFormId }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.employeeRegistrationFormId">Employee Registration Form Id</span></dt>
+                <dd>
+                    <span>{{ immatriculation.employeeRegistrationFormId }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.processFlowId">Process Flow Id</span></dt>
+                <dd>
+                    <span>{{ immatriculation.processFlowId }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.statutDossier">Statut Dossier</span></dt>
+                <dd>
+                    <span>{{ immatriculation.statutDossier }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.statutImmatriculation">Statut Immatriculation</span></dt>
+                <dd>
+                    <span>{{ immatriculation.statutImmatriculation }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.representantLegal">Representant Legal</span></dt>
+                <dd>
+                    <div *ngIf="immatriculation.representantLegal">
+                        <a [routerLink]="['/representant-legal', immatriculation.representantLegal?.id, 'view']">{{ immatriculation.representantLegal?.firstName }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.user">User</span></dt>
+                <dd>
+                    {{ immatriculation.user?.login }}
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/immatriculation', immatriculation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

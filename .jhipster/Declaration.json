@@ -1,0 +1,108 @@
+{
+    "name": "Declaration",
+    "fields": [
+        {
+            "fieldName": "idIdentifiant",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "raisonSociale",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "adresse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "typeDeclaration",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateDebutCotisation",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "totalNouvSalaries",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "totalSalaries",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "cumulTotSalAssIpresRg",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "cumulTotSalAssIpresRcc",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "cumulTotSalAssCssPf",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "cumulTotSalAssCssAtmp",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "totalSalVerses",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "mntCotPfCalcParEmployeur",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "mntCotAtMpCalcParEmployeur",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "mntCotRgCalcParEmployeur",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "mntCotRccCalcParEmployeur",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "employe",
+            "otherEntityRelationshipName": "declaration",
+            "relationshipName": "employe"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "immatriculation",
+            "otherEntityRelationshipName": "declaration",
+            "relationshipValidateRules": "required",
+            "relationshipName": "employeur",
+            "otherEntityField": "employerName"
+        }
+    ],
+    "changelogDate": "20200319142600",
+    "entityTableName": "declaration",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

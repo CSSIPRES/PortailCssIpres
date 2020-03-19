@@ -1,0 +1,255 @@
+{
+    "name": "Immatriculation",
+    "fields": [
+        {
+            "fieldName": "regType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employerType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "typeEtablissement",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "employerName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "hqId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nineaNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ninetNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "compagnyOriginId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "legalStatus",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "taxId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "taxIdDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "tradeRegisterNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tradeRegisterDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateOfInpsection",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateOfFirtHire",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "shortName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "businessSector",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "mainLineOfBusiness",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "noOfWorkersInGenScheme",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "noOfWorkersInBasicScheme",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "region",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "department",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "arondissement",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "commune",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "qartier",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "postboxNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "website",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zoneCss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zoneIpres",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sectorCss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sectorIpres",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "agencyCss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "agencyIpres",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employerRegistrationFormId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employeeRegistrationFormId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "processFlowId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "statutDossier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "statutImmatriculation",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "representantLegal",
+            "otherEntityRelationshipName": "immatriculation",
+            "relationshipName": "representantLegal",
+            "otherEntityField": "firstName",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "immatriculation",
+            "relationshipName": "user",
+            "otherEntityField": "login",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "declaration",
+            "otherEntityRelationshipName": "employeur",
+            "relationshipName": "declaration"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "employe",
+            "otherEntityRelationshipName": "employeur",
+            "relationshipName": "employe"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "document",
+            "otherEntityRelationshipName": "employeur",
+            "relationshipName": "document"
+        }
+    ],
+    "changelogDate": "20200319142200",
+    "entityTableName": "immatriculation",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

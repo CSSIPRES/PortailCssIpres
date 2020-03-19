@@ -1,0 +1,239 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="portailCssIpresApp.employe.home.title">Employes</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-employe" [routerLink]="['/employe/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="portailCssIpresApp.employe.home.createLabel">
+            Create a new Employe
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="employes?.length === 0">
+        <span jhiTranslate="portailCssIpresApp.employe.home.notFound">No employes found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="employes?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="rechercheEmploye"><span jhiTranslate="portailCssIpresApp.employe.rechercheEmploye">Recherche Employe</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nomEmploye"><span jhiTranslate="portailCssIpresApp.employe.nomEmploye">Nom Employe</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="prenomEmploye"><span jhiTranslate="portailCssIpresApp.employe.prenomEmploye">Prenom Employe</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="sexe"><span jhiTranslate="portailCssIpresApp.employe.sexe">Sexe</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="etatCivil"><span jhiTranslate="portailCssIpresApp.employe.etatCivil">Etat Civil</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dateNaissance"><span jhiTranslate="portailCssIpresApp.employe.dateNaissance">Date Naissance</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="numRegNaiss"><span jhiTranslate="portailCssIpresApp.employe.numRegNaiss">Num Reg Naiss</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nomPere"><span jhiTranslate="portailCssIpresApp.employe.nomPere">Nom Pere</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="prenomPere"><span jhiTranslate="portailCssIpresApp.employe.prenomPere">Prenom Pere</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nomMere"><span jhiTranslate="portailCssIpresApp.employe.nomMere">Nom Mere</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="prenomMere"><span jhiTranslate="portailCssIpresApp.employe.prenomMere">Prenom Mere</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nationalite"><span jhiTranslate="portailCssIpresApp.employe.nationalite">Nationalite</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="typePieceIdentite"><span jhiTranslate="portailCssIpresApp.employe.typePieceIdentite">Type Piece Identite</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nin"><span jhiTranslate="portailCssIpresApp.employe.nin">Nin</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="ninCedeao"><span jhiTranslate="portailCssIpresApp.employe.ninCedeao">Nin Cedeao</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="numPieceIdentite"><span jhiTranslate="portailCssIpresApp.employe.numPieceIdentite">Num Piece Identite</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="delivreLe"><span jhiTranslate="portailCssIpresApp.employe.delivreLe">Delivre Le</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="lieuDelivrance"><span jhiTranslate="portailCssIpresApp.employe.lieuDelivrance">Lieu Delivrance</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="expireLe"><span jhiTranslate="portailCssIpresApp.employe.expireLe">Expire Le</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="villeNaissance"><span jhiTranslate="portailCssIpresApp.employe.villeNaissance">Ville Naissance</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="paysNaissance"><span jhiTranslate="portailCssIpresApp.employe.paysNaissance">Pays Naissance</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="employeurPrec"><span jhiTranslate="portailCssIpresApp.employe.employeurPrec">Employeur Prec</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="pays"><span jhiTranslate="portailCssIpresApp.employe.pays">Pays</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="region"><span jhiTranslate="portailCssIpresApp.employe.region">Region</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="department"><span jhiTranslate="portailCssIpresApp.employe.department">Department</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="arondissement"><span jhiTranslate="portailCssIpresApp.employe.arondissement">Arondissement</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="commune"><span jhiTranslate="portailCssIpresApp.employe.commune">Commune</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="qartier"><span jhiTranslate="portailCssIpresApp.employe.qartier">Qartier</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="address"><span jhiTranslate="portailCssIpresApp.employe.address">Address</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="boitePostale"><span jhiTranslate="portailCssIpresApp.employe.boitePostale">Boite Postale</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="typeMouvement"><span jhiTranslate="portailCssIpresApp.employe.typeMouvement">Type Mouvement</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="natureContrat"><span jhiTranslate="portailCssIpresApp.employe.natureContrat">Nature Contrat</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dateDebutContrat"><span jhiTranslate="portailCssIpresApp.employe.dateDebutContrat">Date Debut Contrat</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dateFinContrat"><span jhiTranslate="portailCssIpresApp.employe.dateFinContrat">Date Fin Contrat</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="profession"><span jhiTranslate="portailCssIpresApp.employe.profession">Profession</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="emploi"><span jhiTranslate="portailCssIpresApp.employe.emploi">Emploi</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nonCadre"><span jhiTranslate="portailCssIpresApp.employe.nonCadre">Non Cadre</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="ouiCadre"><span jhiTranslate="portailCssIpresApp.employe.ouiCadre">Oui Cadre</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="conventionApplicable"><span jhiTranslate="portailCssIpresApp.employe.conventionApplicable">Convention Applicable</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="salaireContractuel"><span jhiTranslate="portailCssIpresApp.employe.salaireContractuel">Salaire Contractuel</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tempsTravail"><span jhiTranslate="portailCssIpresApp.employe.tempsTravail">Temps Travail</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="categorie"><span jhiTranslate="portailCssIpresApp.employe.categorie">Categorie</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="motifSortie"><span jhiTranslate="portailCssIpresApp.employe.motifSortie">Motif Sortie</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssCssPf1"><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssPf1">Tot Sal Ass Css Pf 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssCssAtmp1"><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssAtmp1">Tot Sal Ass Css Atmp 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssIpresRg1"><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRg1">Tot Sal Ass Ipres Rg 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssIpresRcc1"><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRcc1">Tot Sal Ass Ipres Rcc 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="salaireBrut1"><span jhiTranslate="portailCssIpresApp.employe.salaireBrut1">Salaire Brut 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nombreJours1"><span jhiTranslate="portailCssIpresApp.employe.nombreJours1">Nombre Jours 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nombreHeures1"><span jhiTranslate="portailCssIpresApp.employe.nombreHeures1">Nombre Heures 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tempsTravail1"><span jhiTranslate="portailCssIpresApp.employe.tempsTravail1">Temps Travail 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="trancheTravail1"><span jhiTranslate="portailCssIpresApp.employe.trancheTravail1">Tranche Travail 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="regimeGeneral1"><span jhiTranslate="portailCssIpresApp.employe.regimeGeneral1">Regime General 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="regimCompCadre1"><span jhiTranslate="portailCssIpresApp.employe.regimCompCadre1">Regim Comp Cadre 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dateEffetRegimeCadre1"><span jhiTranslate="portailCssIpresApp.employe.dateEffetRegimeCadre1">Date Effet Regime Cadre 1</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssCssPf2"><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssPf2">Tot Sal Ass Css Pf 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssCssAtmp2"><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssAtmp2">Tot Sal Ass Css Atmp 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssIpresRg2"><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRg2">Tot Sal Ass Ipres Rg 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssIpresRcc2"><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRcc2">Tot Sal Ass Ipres Rcc 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="salaireBrut2"><span jhiTranslate="portailCssIpresApp.employe.salaireBrut2">Salaire Brut 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nombreJours2"><span jhiTranslate="portailCssIpresApp.employe.nombreJours2">Nombre Jours 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nombreHeures2"><span jhiTranslate="portailCssIpresApp.employe.nombreHeures2">Nombre Heures 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tempsTravail2"><span jhiTranslate="portailCssIpresApp.employe.tempsTravail2">Temps Travail 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="trancheTravail2"><span jhiTranslate="portailCssIpresApp.employe.trancheTravail2">Tranche Travail 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="regimeGeneral2"><span jhiTranslate="portailCssIpresApp.employe.regimeGeneral2">Regime General 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="regimCompCadre2"><span jhiTranslate="portailCssIpresApp.employe.regimCompCadre2">Regim Comp Cadre 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dateEffetRegimeCadre2"><span jhiTranslate="portailCssIpresApp.employe.dateEffetRegimeCadre2">Date Effet Regime Cadre 2</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssCssPf3"><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssPf3">Tot Sal Ass Css Pf 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssCssAtmp3"><span jhiTranslate="portailCssIpresApp.employe.totSalAssCssAtmp3">Tot Sal Ass Css Atmp 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssIpresRg3"><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRg3">Tot Sal Ass Ipres Rg 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totSalAssIpresRcc3"><span jhiTranslate="portailCssIpresApp.employe.totSalAssIpresRcc3">Tot Sal Ass Ipres Rcc 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="salaireBrut3"><span jhiTranslate="portailCssIpresApp.employe.salaireBrut3">Salaire Brut 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nombreJours3"><span jhiTranslate="portailCssIpresApp.employe.nombreJours3">Nombre Jours 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nombreHeures3"><span jhiTranslate="portailCssIpresApp.employe.nombreHeures3">Nombre Heures 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tempsTravail3"><span jhiTranslate="portailCssIpresApp.employe.tempsTravail3">Temps Travail 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="trancheTravail3"><span jhiTranslate="portailCssIpresApp.employe.trancheTravail3">Tranche Travail 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="regimeGeneral3"><span jhiTranslate="portailCssIpresApp.employe.regimeGeneral3">Regime General 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="regimCompCadre3"><span jhiTranslate="portailCssIpresApp.employe.regimCompCadre3">Regim Comp Cadre 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dateEffetRegimeCadre3"><span jhiTranslate="portailCssIpresApp.employe.dateEffetRegimeCadre3">Date Effet Regime Cadre 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="declaration.raisonSociale"><span jhiTranslate="portailCssIpresApp.employe.declaration">Declaration</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="employeur.employerName"><span jhiTranslate="portailCssIpresApp.employe.employeur">Employeur</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employe of employes ;trackBy: trackId">
+                    <td><a [routerLink]="['/employe', employe.id, 'view']">{{ employe.id }}</a></td>
+                    <td>{{ employe.rechercheEmploye }}</td>
+                    <td>{{ employe.nomEmploye }}</td>
+                    <td>{{ employe.prenomEmploye }}</td>
+                    <td>{{ employe.sexe }}</td>
+                    <td>{{ employe.etatCivil }}</td>
+                    <td>{{ employe.dateNaissance | date:'mediumDate' }}</td>
+                    <td>{{ employe.numRegNaiss }}</td>
+                    <td>{{ employe.nomPere }}</td>
+                    <td>{{ employe.prenomPere }}</td>
+                    <td>{{ employe.nomMere }}</td>
+                    <td>{{ employe.prenomMere }}</td>
+                    <td>{{ employe.nationalite }}</td>
+                    <td>{{ employe.typePieceIdentite }}</td>
+                    <td>{{ employe.nin }}</td>
+                    <td>{{ employe.ninCedeao }}</td>
+                    <td>{{ employe.numPieceIdentite }}</td>
+                    <td>{{ employe.delivreLe }}</td>
+                    <td>{{ employe.lieuDelivrance }}</td>
+                    <td>{{ employe.expireLe }}</td>
+                    <td>{{ employe.villeNaissance }}</td>
+                    <td>{{ employe.paysNaissance }}</td>
+                    <td>{{ employe.employeurPrec }}</td>
+                    <td>{{ employe.pays }}</td>
+                    <td>{{ employe.region }}</td>
+                    <td>{{ employe.department }}</td>
+                    <td>{{ employe.arondissement }}</td>
+                    <td>{{ employe.commune }}</td>
+                    <td>{{ employe.qartier }}</td>
+                    <td>{{ employe.address }}</td>
+                    <td>{{ employe.boitePostale }}</td>
+                    <td>{{ employe.typeMouvement }}</td>
+                    <td>{{ employe.natureContrat }}</td>
+                    <td>{{ employe.dateDebutContrat | date:'mediumDate' }}</td>
+                    <td>{{ employe.dateFinContrat | date:'mediumDate' }}</td>
+                    <td>{{ employe.profession }}</td>
+                    <td>{{ employe.emploi }}</td>
+                    <td>{{ employe.nonCadre }}</td>
+                    <td>{{ employe.ouiCadre }}</td>
+                    <td>{{ employe.conventionApplicable }}</td>
+                    <td>{{ employe.salaireContractuel }}</td>
+                    <td>{{ employe.tempsTravail }}</td>
+                    <td>{{ employe.categorie }}</td>
+                    <td>{{ employe.motifSortie }}</td>
+                    <td>{{ employe.totSalAssCssPf1 }}</td>
+                    <td>{{ employe.totSalAssCssAtmp1 }}</td>
+                    <td>{{ employe.totSalAssIpresRg1 }}</td>
+                    <td>{{ employe.totSalAssIpresRcc1 }}</td>
+                    <td>{{ employe.salaireBrut1 }}</td>
+                    <td>{{ employe.nombreJours1 }}</td>
+                    <td>{{ employe.nombreHeures1 }}</td>
+                    <td>{{ employe.tempsTravail1 }}</td>
+                    <td>{{ employe.trancheTravail1 }}</td>
+                    <td>{{ employe.regimeGeneral1 }}</td>
+                    <td>{{ employe.regimCompCadre1 }}</td>
+                    <td>{{ employe.dateEffetRegimeCadre1 | date:'mediumDate' }}</td>
+                    <td>{{ employe.totSalAssCssPf2 }}</td>
+                    <td>{{ employe.totSalAssCssAtmp2 }}</td>
+                    <td>{{ employe.totSalAssIpresRg2 }}</td>
+                    <td>{{ employe.totSalAssIpresRcc2 }}</td>
+                    <td>{{ employe.salaireBrut2 }}</td>
+                    <td>{{ employe.nombreJours2 }}</td>
+                    <td>{{ employe.nombreHeures2 }}</td>
+                    <td>{{ employe.tempsTravail2 }}</td>
+                    <td>{{ employe.trancheTravail2 }}</td>
+                    <td>{{ employe.regimeGeneral2 }}</td>
+                    <td>{{ employe.regimCompCadre2 }}</td>
+                    <td>{{ employe.dateEffetRegimeCadre2 | date:'mediumDate' }}</td>
+                    <td>{{ employe.totSalAssCssPf3 }}</td>
+                    <td>{{ employe.totSalAssCssAtmp3 }}</td>
+                    <td>{{ employe.totSalAssIpresRg3 }}</td>
+                    <td>{{ employe.totSalAssIpresRcc3 }}</td>
+                    <td>{{ employe.salaireBrut3 }}</td>
+                    <td>{{ employe.nombreJours3 }}</td>
+                    <td>{{ employe.nombreHeures3 }}</td>
+                    <td>{{ employe.tempsTravail3 }}</td>
+                    <td>{{ employe.trancheTravail3 }}</td>
+                    <td>{{ employe.regimeGeneral3 }}</td>
+                    <td>{{ employe.regimCompCadre3 }}</td>
+                    <td>{{ employe.dateEffetRegimeCadre3 | date:'mediumDate' }}</td>
+                    <td>
+                        <div *ngIf="employe.declaration">
+                            <a [routerLink]="['/declaration', employe.declaration?.id, 'view']" >{{ employe.declaration?.raisonSociale }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="employe.employeur">
+                            <a [routerLink]="['/immatriculation', employe.employeur?.id, 'view']" >{{ employe.employeur?.employerName }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/employe', employe.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/employe', employe.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(employe)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="employes?.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

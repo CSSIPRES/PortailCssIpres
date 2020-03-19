@@ -1,0 +1,107 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="portailCssIpresApp.declaration.home.title">Declarations</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-declaration" [routerLink]="['/declaration/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="portailCssIpresApp.declaration.home.createLabel">
+            Create a new Declaration
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="declarations?.length === 0">
+        <span jhiTranslate="portailCssIpresApp.declaration.home.notFound">No declarations found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="declarations?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="idIdentifiant"><span jhiTranslate="portailCssIpresApp.declaration.idIdentifiant">Id Identifiant</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="raisonSociale"><span jhiTranslate="portailCssIpresApp.declaration.raisonSociale">Raison Sociale</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="adresse"><span jhiTranslate="portailCssIpresApp.declaration.adresse">Adresse</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="typeDeclaration"><span jhiTranslate="portailCssIpresApp.declaration.typeDeclaration">Type Declaration</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dateDebutCotisation"><span jhiTranslate="portailCssIpresApp.declaration.dateDebutCotisation">Date Debut Cotisation</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totalNouvSalaries"><span jhiTranslate="portailCssIpresApp.declaration.totalNouvSalaries">Total Nouv Salaries</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totalSalaries"><span jhiTranslate="portailCssIpresApp.declaration.totalSalaries">Total Salaries</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="cumulTotSalAssIpresRg"><span jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssIpresRg">Cumul Tot Sal Ass Ipres Rg</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="cumulTotSalAssIpresRcc"><span jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssIpresRcc">Cumul Tot Sal Ass Ipres Rcc</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="cumulTotSalAssCssPf"><span jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssCssPf">Cumul Tot Sal Ass Css Pf</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="cumulTotSalAssCssAtmp"><span jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssCssAtmp">Cumul Tot Sal Ass Css Atmp</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="totalSalVerses"><span jhiTranslate="portailCssIpresApp.declaration.totalSalVerses">Total Sal Verses</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mntCotPfCalcParEmployeur"><span jhiTranslate="portailCssIpresApp.declaration.mntCotPfCalcParEmployeur">Mnt Cot Pf Calc Par Employeur</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mntCotAtMpCalcParEmployeur"><span jhiTranslate="portailCssIpresApp.declaration.mntCotAtMpCalcParEmployeur">Mnt Cot At Mp Calc Par Employeur</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mntCotRgCalcParEmployeur"><span jhiTranslate="portailCssIpresApp.declaration.mntCotRgCalcParEmployeur">Mnt Cot Rg Calc Par Employeur</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mntCotRccCalcParEmployeur"><span jhiTranslate="portailCssIpresApp.declaration.mntCotRccCalcParEmployeur">Mnt Cot Rcc Calc Par Employeur</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="employeur.employerName"><span jhiTranslate="portailCssIpresApp.declaration.employeur">Employeur</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let declaration of declarations ;trackBy: trackId">
+                    <td><a [routerLink]="['/declaration', declaration.id, 'view']">{{ declaration.id }}</a></td>
+                    <td>{{ declaration.idIdentifiant }}</td>
+                    <td>{{ declaration.raisonSociale }}</td>
+                    <td>{{ declaration.adresse }}</td>
+                    <td>{{ declaration.typeDeclaration }}</td>
+                    <td>{{ declaration.dateDebutCotisation | date:'mediumDate' }}</td>
+                    <td>{{ declaration.totalNouvSalaries }}</td>
+                    <td>{{ declaration.totalSalaries }}</td>
+                    <td>{{ declaration.cumulTotSalAssIpresRg }}</td>
+                    <td>{{ declaration.cumulTotSalAssIpresRcc }}</td>
+                    <td>{{ declaration.cumulTotSalAssCssPf }}</td>
+                    <td>{{ declaration.cumulTotSalAssCssAtmp }}</td>
+                    <td>{{ declaration.totalSalVerses }}</td>
+                    <td>{{ declaration.mntCotPfCalcParEmployeur }}</td>
+                    <td>{{ declaration.mntCotAtMpCalcParEmployeur }}</td>
+                    <td>{{ declaration.mntCotRgCalcParEmployeur }}</td>
+                    <td>{{ declaration.mntCotRccCalcParEmployeur }}</td>
+                    <td>
+                        <div *ngIf="declaration.employeur">
+                            <a [routerLink]="['/immatriculation', declaration.employeur?.id, 'view']" >{{ declaration.employeur?.employerName }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/declaration', declaration.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/declaration', declaration.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(declaration)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="declarations?.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>
