@@ -147,6 +147,76 @@ public class Immatriculation implements Serializable {
     @Column(name = "agency_ipres")
     private String agencyIpres;
 
+    @Column(name = "legal_rep_person")
+    private String legalRepPerson;
+
+    @NotNull
+    @Column(name = "last_name_rep", nullable = false)
+    private String lastNameRep;
+
+    @NotNull
+    @Column(name = "first_name_rep", nullable = false)
+    private String firstNameRep;
+
+    @NotNull
+    @Column(name = "birthdate_rep", nullable = false)
+    private LocalDate birthdateRep;
+
+    @NotNull
+    @Column(name = "nationality_rep", nullable = false)
+    private String nationalityRep;
+
+    @Column(name = "nin_rep")
+    private String ninRep;
+
+    @Column(name = "place_of_birth_rep")
+    private String placeOfBirthRep;
+
+    @Column(name = "city_of_birth_rep")
+    private String cityOfBirthRep;
+
+    @Column(name = "type_of_identity_rep")
+    private String typeOfIdentityRep;
+
+    @Column(name = "identity_id_number_rep")
+    private String identityIdNumberRep;
+
+    @Column(name = "nin_cedeo_rep")
+    private String ninCedeoRep;
+
+    @Column(name = "issued_date_rep")
+    private String issuedDateRep;
+
+    @Column(name = "expiry_date_rep")
+    private String expiryDateRep;
+
+    @Column(name = "region_rep")
+    private String regionRep;
+
+    @Column(name = "department_rep")
+    private String departmentRep;
+
+    @Column(name = "arondissement_rep")
+    private String arondissementRep;
+
+    @Column(name = "commune_rep")
+    private String communeRep;
+
+    @Column(name = "qartier_rep")
+    private String qartierRep;
+
+    @Column(name = "address_rep")
+    private String addressRep;
+
+    @Column(name = "land_line_number_rep")
+    private String landLineNumberRep;
+
+    @Column(name = "mobile_number_rep")
+    private String mobileNumberRep;
+
+    @Column(name = "email_rep")
+    private String emailRep;
+
     @Column(name = "employer_registration_form_id")
     private String employerRegistrationFormId;
 
@@ -164,15 +234,7 @@ public class Immatriculation implements Serializable {
 
     @OneToOne
     @JoinColumn(unique = true)
-    private RepresentantLegal representantLegal;
-
-    @OneToOne
-    @JoinColumn(unique = true)
     private User user;
-
-    @OneToMany(mappedBy = "employeur")
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<Declaration> declarations = new HashSet<>();
 
     @OneToMany(mappedBy = "employeur")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -659,6 +721,292 @@ public class Immatriculation implements Serializable {
         this.agencyIpres = agencyIpres;
     }
 
+    public String getLegalRepPerson() {
+        return legalRepPerson;
+    }
+
+    public Immatriculation legalRepPerson(String legalRepPerson) {
+        this.legalRepPerson = legalRepPerson;
+        return this;
+    }
+
+    public void setLegalRepPerson(String legalRepPerson) {
+        this.legalRepPerson = legalRepPerson;
+    }
+
+    public String getLastNameRep() {
+        return lastNameRep;
+    }
+
+    public Immatriculation lastNameRep(String lastNameRep) {
+        this.lastNameRep = lastNameRep;
+        return this;
+    }
+
+    public void setLastNameRep(String lastNameRep) {
+        this.lastNameRep = lastNameRep;
+    }
+
+    public String getFirstNameRep() {
+        return firstNameRep;
+    }
+
+    public Immatriculation firstNameRep(String firstNameRep) {
+        this.firstNameRep = firstNameRep;
+        return this;
+    }
+
+    public void setFirstNameRep(String firstNameRep) {
+        this.firstNameRep = firstNameRep;
+    }
+
+    public LocalDate getBirthdateRep() {
+        return birthdateRep;
+    }
+
+    public Immatriculation birthdateRep(LocalDate birthdateRep) {
+        this.birthdateRep = birthdateRep;
+        return this;
+    }
+
+    public void setBirthdateRep(LocalDate birthdateRep) {
+        this.birthdateRep = birthdateRep;
+    }
+
+    public String getNationalityRep() {
+        return nationalityRep;
+    }
+
+    public Immatriculation nationalityRep(String nationalityRep) {
+        this.nationalityRep = nationalityRep;
+        return this;
+    }
+
+    public void setNationalityRep(String nationalityRep) {
+        this.nationalityRep = nationalityRep;
+    }
+
+    public String getNinRep() {
+        return ninRep;
+    }
+
+    public Immatriculation ninRep(String ninRep) {
+        this.ninRep = ninRep;
+        return this;
+    }
+
+    public void setNinRep(String ninRep) {
+        this.ninRep = ninRep;
+    }
+
+    public String getPlaceOfBirthRep() {
+        return placeOfBirthRep;
+    }
+
+    public Immatriculation placeOfBirthRep(String placeOfBirthRep) {
+        this.placeOfBirthRep = placeOfBirthRep;
+        return this;
+    }
+
+    public void setPlaceOfBirthRep(String placeOfBirthRep) {
+        this.placeOfBirthRep = placeOfBirthRep;
+    }
+
+    public String getCityOfBirthRep() {
+        return cityOfBirthRep;
+    }
+
+    public Immatriculation cityOfBirthRep(String cityOfBirthRep) {
+        this.cityOfBirthRep = cityOfBirthRep;
+        return this;
+    }
+
+    public void setCityOfBirthRep(String cityOfBirthRep) {
+        this.cityOfBirthRep = cityOfBirthRep;
+    }
+
+    public String getTypeOfIdentityRep() {
+        return typeOfIdentityRep;
+    }
+
+    public Immatriculation typeOfIdentityRep(String typeOfIdentityRep) {
+        this.typeOfIdentityRep = typeOfIdentityRep;
+        return this;
+    }
+
+    public void setTypeOfIdentityRep(String typeOfIdentityRep) {
+        this.typeOfIdentityRep = typeOfIdentityRep;
+    }
+
+    public String getIdentityIdNumberRep() {
+        return identityIdNumberRep;
+    }
+
+    public Immatriculation identityIdNumberRep(String identityIdNumberRep) {
+        this.identityIdNumberRep = identityIdNumberRep;
+        return this;
+    }
+
+    public void setIdentityIdNumberRep(String identityIdNumberRep) {
+        this.identityIdNumberRep = identityIdNumberRep;
+    }
+
+    public String getNinCedeoRep() {
+        return ninCedeoRep;
+    }
+
+    public Immatriculation ninCedeoRep(String ninCedeoRep) {
+        this.ninCedeoRep = ninCedeoRep;
+        return this;
+    }
+
+    public void setNinCedeoRep(String ninCedeoRep) {
+        this.ninCedeoRep = ninCedeoRep;
+    }
+
+    public String getIssuedDateRep() {
+        return issuedDateRep;
+    }
+
+    public Immatriculation issuedDateRep(String issuedDateRep) {
+        this.issuedDateRep = issuedDateRep;
+        return this;
+    }
+
+    public void setIssuedDateRep(String issuedDateRep) {
+        this.issuedDateRep = issuedDateRep;
+    }
+
+    public String getExpiryDateRep() {
+        return expiryDateRep;
+    }
+
+    public Immatriculation expiryDateRep(String expiryDateRep) {
+        this.expiryDateRep = expiryDateRep;
+        return this;
+    }
+
+    public void setExpiryDateRep(String expiryDateRep) {
+        this.expiryDateRep = expiryDateRep;
+    }
+
+    public String getRegionRep() {
+        return regionRep;
+    }
+
+    public Immatriculation regionRep(String regionRep) {
+        this.regionRep = regionRep;
+        return this;
+    }
+
+    public void setRegionRep(String regionRep) {
+        this.regionRep = regionRep;
+    }
+
+    public String getDepartmentRep() {
+        return departmentRep;
+    }
+
+    public Immatriculation departmentRep(String departmentRep) {
+        this.departmentRep = departmentRep;
+        return this;
+    }
+
+    public void setDepartmentRep(String departmentRep) {
+        this.departmentRep = departmentRep;
+    }
+
+    public String getArondissementRep() {
+        return arondissementRep;
+    }
+
+    public Immatriculation arondissementRep(String arondissementRep) {
+        this.arondissementRep = arondissementRep;
+        return this;
+    }
+
+    public void setArondissementRep(String arondissementRep) {
+        this.arondissementRep = arondissementRep;
+    }
+
+    public String getCommuneRep() {
+        return communeRep;
+    }
+
+    public Immatriculation communeRep(String communeRep) {
+        this.communeRep = communeRep;
+        return this;
+    }
+
+    public void setCommuneRep(String communeRep) {
+        this.communeRep = communeRep;
+    }
+
+    public String getQartierRep() {
+        return qartierRep;
+    }
+
+    public Immatriculation qartierRep(String qartierRep) {
+        this.qartierRep = qartierRep;
+        return this;
+    }
+
+    public void setQartierRep(String qartierRep) {
+        this.qartierRep = qartierRep;
+    }
+
+    public String getAddressRep() {
+        return addressRep;
+    }
+
+    public Immatriculation addressRep(String addressRep) {
+        this.addressRep = addressRep;
+        return this;
+    }
+
+    public void setAddressRep(String addressRep) {
+        this.addressRep = addressRep;
+    }
+
+    public String getLandLineNumberRep() {
+        return landLineNumberRep;
+    }
+
+    public Immatriculation landLineNumberRep(String landLineNumberRep) {
+        this.landLineNumberRep = landLineNumberRep;
+        return this;
+    }
+
+    public void setLandLineNumberRep(String landLineNumberRep) {
+        this.landLineNumberRep = landLineNumberRep;
+    }
+
+    public String getMobileNumberRep() {
+        return mobileNumberRep;
+    }
+
+    public Immatriculation mobileNumberRep(String mobileNumberRep) {
+        this.mobileNumberRep = mobileNumberRep;
+        return this;
+    }
+
+    public void setMobileNumberRep(String mobileNumberRep) {
+        this.mobileNumberRep = mobileNumberRep;
+    }
+
+    public String getEmailRep() {
+        return emailRep;
+    }
+
+    public Immatriculation emailRep(String emailRep) {
+        this.emailRep = emailRep;
+        return this;
+    }
+
+    public void setEmailRep(String emailRep) {
+        this.emailRep = emailRep;
+    }
+
     public String getEmployerRegistrationFormId() {
         return employerRegistrationFormId;
     }
@@ -724,19 +1072,6 @@ public class Immatriculation implements Serializable {
         this.statutImmatriculation = statutImmatriculation;
     }
 
-    public RepresentantLegal getRepresentantLegal() {
-        return representantLegal;
-    }
-
-    public Immatriculation representantLegal(RepresentantLegal representantLegal) {
-        this.representantLegal = representantLegal;
-        return this;
-    }
-
-    public void setRepresentantLegal(RepresentantLegal representantLegal) {
-        this.representantLegal = representantLegal;
-    }
-
     public User getUser() {
         return user;
     }
@@ -748,31 +1083,6 @@ public class Immatriculation implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public Set<Declaration> getDeclarations() {
-        return declarations;
-    }
-
-    public Immatriculation declarations(Set<Declaration> declarations) {
-        this.declarations = declarations;
-        return this;
-    }
-
-    public Immatriculation addDeclaration(Declaration declaration) {
-        this.declarations.add(declaration);
-        declaration.setEmployeur(this);
-        return this;
-    }
-
-    public Immatriculation removeDeclaration(Declaration declaration) {
-        this.declarations.remove(declaration);
-        declaration.setEmployeur(null);
-        return this;
-    }
-
-    public void setDeclarations(Set<Declaration> declarations) {
-        this.declarations = declarations;
     }
 
     public Set<Employe> getEmployes() {
@@ -882,6 +1192,28 @@ public class Immatriculation implements Serializable {
             ", sectorIpres='" + getSectorIpres() + "'" +
             ", agencyCss='" + getAgencyCss() + "'" +
             ", agencyIpres='" + getAgencyIpres() + "'" +
+            ", legalRepPerson='" + getLegalRepPerson() + "'" +
+            ", lastNameRep='" + getLastNameRep() + "'" +
+            ", firstNameRep='" + getFirstNameRep() + "'" +
+            ", birthdateRep='" + getBirthdateRep() + "'" +
+            ", nationalityRep='" + getNationalityRep() + "'" +
+            ", ninRep='" + getNinRep() + "'" +
+            ", placeOfBirthRep='" + getPlaceOfBirthRep() + "'" +
+            ", cityOfBirthRep='" + getCityOfBirthRep() + "'" +
+            ", typeOfIdentityRep='" + getTypeOfIdentityRep() + "'" +
+            ", identityIdNumberRep='" + getIdentityIdNumberRep() + "'" +
+            ", ninCedeoRep='" + getNinCedeoRep() + "'" +
+            ", issuedDateRep='" + getIssuedDateRep() + "'" +
+            ", expiryDateRep='" + getExpiryDateRep() + "'" +
+            ", regionRep='" + getRegionRep() + "'" +
+            ", departmentRep='" + getDepartmentRep() + "'" +
+            ", arondissementRep='" + getArondissementRep() + "'" +
+            ", communeRep='" + getCommuneRep() + "'" +
+            ", qartierRep='" + getQartierRep() + "'" +
+            ", addressRep='" + getAddressRep() + "'" +
+            ", landLineNumberRep='" + getLandLineNumberRep() + "'" +
+            ", mobileNumberRep='" + getMobileNumberRep() + "'" +
+            ", emailRep='" + getEmailRep() + "'" +
             ", employerRegistrationFormId='" + getEmployerRegistrationFormId() + "'" +
             ", employeeRegistrationFormId='" + getEmployeeRegistrationFormId() + "'" +
             ", processFlowId='" + getProcessFlowId() + "'" +

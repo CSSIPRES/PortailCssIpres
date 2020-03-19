@@ -80,11 +80,32 @@ describe('Immatriculation e2e test', () => {
       immatriculationUpdatePage.setSectorIpresInput('sectorIpres'),
       immatriculationUpdatePage.setAgencyCssInput('agencyCss'),
       immatriculationUpdatePage.setAgencyIpresInput('agencyIpres'),
+      immatriculationUpdatePage.setLegalRepPersonInput('legalRepPerson'),
+      immatriculationUpdatePage.setLastNameRepInput('lastNameRep'),
+      immatriculationUpdatePage.setFirstNameRepInput('firstNameRep'),
+      immatriculationUpdatePage.setBirthdateRepInput('2000-12-31'),
+      immatriculationUpdatePage.setNationalityRepInput('nationalityRep'),
+      immatriculationUpdatePage.setNinRepInput('ninRep'),
+      immatriculationUpdatePage.setPlaceOfBirthRepInput('placeOfBirthRep'),
+      immatriculationUpdatePage.setCityOfBirthRepInput('cityOfBirthRep'),
+      immatriculationUpdatePage.setTypeOfIdentityRepInput('typeOfIdentityRep'),
+      immatriculationUpdatePage.setIdentityIdNumberRepInput('identityIdNumberRep'),
+      immatriculationUpdatePage.setNinCedeoRepInput('ninCedeoRep'),
+      immatriculationUpdatePage.setIssuedDateRepInput('issuedDateRep'),
+      immatriculationUpdatePage.setExpiryDateRepInput('expiryDateRep'),
+      immatriculationUpdatePage.setRegionRepInput('regionRep'),
+      immatriculationUpdatePage.setDepartmentRepInput('departmentRep'),
+      immatriculationUpdatePage.setArondissementRepInput('arondissementRep'),
+      immatriculationUpdatePage.setCommuneRepInput('communeRep'),
+      immatriculationUpdatePage.setQartierRepInput('qartierRep'),
+      immatriculationUpdatePage.setAddressRepInput('addressRep'),
+      immatriculationUpdatePage.setLandLineNumberRepInput('landLineNumberRep'),
+      immatriculationUpdatePage.setMobileNumberRepInput('mobileNumberRep'),
+      immatriculationUpdatePage.setEmailRepInput('emailRep'),
       immatriculationUpdatePage.setEmployerRegistrationFormIdInput('employerRegistrationFormId'),
       immatriculationUpdatePage.setEmployeeRegistrationFormIdInput('employeeRegistrationFormId'),
       immatriculationUpdatePage.setProcessFlowIdInput('processFlowId'),
       immatriculationUpdatePage.setStatutDossierInput('statutDossier'),
-      immatriculationUpdatePage.representantLegalSelectLastOption(),
       immatriculationUpdatePage.userSelectLastOption()
     ]);
 
@@ -181,6 +202,85 @@ describe('Immatriculation e2e test', () => {
       'agencyIpres',
       'Expected AgencyIpres value to be equals to agencyIpres'
     );
+    expect(await immatriculationUpdatePage.getLegalRepPersonInput()).to.eq(
+      'legalRepPerson',
+      'Expected LegalRepPerson value to be equals to legalRepPerson'
+    );
+    expect(await immatriculationUpdatePage.getLastNameRepInput()).to.eq(
+      'lastNameRep',
+      'Expected LastNameRep value to be equals to lastNameRep'
+    );
+    expect(await immatriculationUpdatePage.getFirstNameRepInput()).to.eq(
+      'firstNameRep',
+      'Expected FirstNameRep value to be equals to firstNameRep'
+    );
+    expect(await immatriculationUpdatePage.getBirthdateRepInput()).to.eq(
+      '2000-12-31',
+      'Expected birthdateRep value to be equals to 2000-12-31'
+    );
+    expect(await immatriculationUpdatePage.getNationalityRepInput()).to.eq(
+      'nationalityRep',
+      'Expected NationalityRep value to be equals to nationalityRep'
+    );
+    expect(await immatriculationUpdatePage.getNinRepInput()).to.eq('ninRep', 'Expected NinRep value to be equals to ninRep');
+    expect(await immatriculationUpdatePage.getPlaceOfBirthRepInput()).to.eq(
+      'placeOfBirthRep',
+      'Expected PlaceOfBirthRep value to be equals to placeOfBirthRep'
+    );
+    expect(await immatriculationUpdatePage.getCityOfBirthRepInput()).to.eq(
+      'cityOfBirthRep',
+      'Expected CityOfBirthRep value to be equals to cityOfBirthRep'
+    );
+    expect(await immatriculationUpdatePage.getTypeOfIdentityRepInput()).to.eq(
+      'typeOfIdentityRep',
+      'Expected TypeOfIdentityRep value to be equals to typeOfIdentityRep'
+    );
+    expect(await immatriculationUpdatePage.getIdentityIdNumberRepInput()).to.eq(
+      'identityIdNumberRep',
+      'Expected IdentityIdNumberRep value to be equals to identityIdNumberRep'
+    );
+    expect(await immatriculationUpdatePage.getNinCedeoRepInput()).to.eq(
+      'ninCedeoRep',
+      'Expected NinCedeoRep value to be equals to ninCedeoRep'
+    );
+    expect(await immatriculationUpdatePage.getIssuedDateRepInput()).to.eq(
+      'issuedDateRep',
+      'Expected IssuedDateRep value to be equals to issuedDateRep'
+    );
+    expect(await immatriculationUpdatePage.getExpiryDateRepInput()).to.eq(
+      'expiryDateRep',
+      'Expected ExpiryDateRep value to be equals to expiryDateRep'
+    );
+    expect(await immatriculationUpdatePage.getRegionRepInput()).to.eq('regionRep', 'Expected RegionRep value to be equals to regionRep');
+    expect(await immatriculationUpdatePage.getDepartmentRepInput()).to.eq(
+      'departmentRep',
+      'Expected DepartmentRep value to be equals to departmentRep'
+    );
+    expect(await immatriculationUpdatePage.getArondissementRepInput()).to.eq(
+      'arondissementRep',
+      'Expected ArondissementRep value to be equals to arondissementRep'
+    );
+    expect(await immatriculationUpdatePage.getCommuneRepInput()).to.eq(
+      'communeRep',
+      'Expected CommuneRep value to be equals to communeRep'
+    );
+    expect(await immatriculationUpdatePage.getQartierRepInput()).to.eq(
+      'qartierRep',
+      'Expected QartierRep value to be equals to qartierRep'
+    );
+    expect(await immatriculationUpdatePage.getAddressRepInput()).to.eq(
+      'addressRep',
+      'Expected AddressRep value to be equals to addressRep'
+    );
+    expect(await immatriculationUpdatePage.getLandLineNumberRepInput()).to.eq(
+      'landLineNumberRep',
+      'Expected LandLineNumberRep value to be equals to landLineNumberRep'
+    );
+    expect(await immatriculationUpdatePage.getMobileNumberRepInput()).to.eq(
+      'mobileNumberRep',
+      'Expected MobileNumberRep value to be equals to mobileNumberRep'
+    );
+    expect(await immatriculationUpdatePage.getEmailRepInput()).to.eq('emailRep', 'Expected EmailRep value to be equals to emailRep');
     expect(await immatriculationUpdatePage.getEmployerRegistrationFormIdInput()).to.eq(
       'employerRegistrationFormId',
       'Expected EmployerRegistrationFormId value to be equals to employerRegistrationFormId'

@@ -322,6 +322,166 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.legalRepPerson" for="field_legalRepPerson">Legal Rep Person</label>
+                    <input type="text" class="form-control" name="legalRepPerson" id="field_legalRepPerson"
+                           formControlName="legalRepPerson"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.lastNameRep" for="field_lastNameRep">Last Name Rep</label>
+                    <input type="text" class="form-control" name="lastNameRep" id="field_lastNameRep"
+                           formControlName="lastNameRep"/>
+                    <div *ngIf="editForm.get('lastNameRep')!.invalid && (editForm.get('lastNameRep')!.dirty || editForm.get('lastNameRep')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('lastNameRep')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.firstNameRep" for="field_firstNameRep">First Name Rep</label>
+                    <input type="text" class="form-control" name="firstNameRep" id="field_firstNameRep"
+                           formControlName="firstNameRep"/>
+                    <div *ngIf="editForm.get('firstNameRep')!.invalid && (editForm.get('firstNameRep')!.dirty || editForm.get('firstNameRep')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('firstNameRep')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.birthdateRep" for="field_birthdateRep">Birthdate Rep</label>
+                    <div class="input-group">
+                        <input id="field_birthdateRep" type="text" class="form-control" name="birthdateRep" ngbDatepicker #birthdateRepDp="ngbDatepicker" formControlName="birthdateRep"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="birthdateRepDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div *ngIf="editForm.get('birthdateRep')!.invalid && (editForm.get('birthdateRep')!.dirty || editForm.get('birthdateRep')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('birthdateRep')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.nationalityRep" for="field_nationalityRep">Nationality Rep</label>
+                    <input type="text" class="form-control" name="nationalityRep" id="field_nationalityRep"
+                           formControlName="nationalityRep"/>
+                    <div *ngIf="editForm.get('nationalityRep')!.invalid && (editForm.get('nationalityRep')!.dirty || editForm.get('nationalityRep')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('nationalityRep')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.ninRep" for="field_ninRep">Nin Rep</label>
+                    <input type="text" class="form-control" name="ninRep" id="field_ninRep"
+                           formControlName="ninRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.placeOfBirthRep" for="field_placeOfBirthRep">Place Of Birth Rep</label>
+                    <input type="text" class="form-control" name="placeOfBirthRep" id="field_placeOfBirthRep"
+                           formControlName="placeOfBirthRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.cityOfBirthRep" for="field_cityOfBirthRep">City Of Birth Rep</label>
+                    <input type="text" class="form-control" name="cityOfBirthRep" id="field_cityOfBirthRep"
+                           formControlName="cityOfBirthRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.typeOfIdentityRep" for="field_typeOfIdentityRep">Type Of Identity Rep</label>
+                    <input type="text" class="form-control" name="typeOfIdentityRep" id="field_typeOfIdentityRep"
+                           formControlName="typeOfIdentityRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.identityIdNumberRep" for="field_identityIdNumberRep">Identity Id Number Rep</label>
+                    <input type="text" class="form-control" name="identityIdNumberRep" id="field_identityIdNumberRep"
+                           formControlName="identityIdNumberRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.ninCedeoRep" for="field_ninCedeoRep">Nin Cedeo Rep</label>
+                    <input type="text" class="form-control" name="ninCedeoRep" id="field_ninCedeoRep"
+                           formControlName="ninCedeoRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.issuedDateRep" for="field_issuedDateRep">Issued Date Rep</label>
+                    <input type="text" class="form-control" name="issuedDateRep" id="field_issuedDateRep"
+                           formControlName="issuedDateRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.expiryDateRep" for="field_expiryDateRep">Expiry Date Rep</label>
+                    <input type="text" class="form-control" name="expiryDateRep" id="field_expiryDateRep"
+                           formControlName="expiryDateRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.regionRep" for="field_regionRep">Region Rep</label>
+                    <input type="text" class="form-control" name="regionRep" id="field_regionRep"
+                           formControlName="regionRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.departmentRep" for="field_departmentRep">Department Rep</label>
+                    <input type="text" class="form-control" name="departmentRep" id="field_departmentRep"
+                           formControlName="departmentRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.arondissementRep" for="field_arondissementRep">Arondissement Rep</label>
+                    <input type="text" class="form-control" name="arondissementRep" id="field_arondissementRep"
+                           formControlName="arondissementRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.communeRep" for="field_communeRep">Commune Rep</label>
+                    <input type="text" class="form-control" name="communeRep" id="field_communeRep"
+                           formControlName="communeRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.qartierRep" for="field_qartierRep">Qartier Rep</label>
+                    <input type="text" class="form-control" name="qartierRep" id="field_qartierRep"
+                           formControlName="qartierRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.addressRep" for="field_addressRep">Address Rep</label>
+                    <input type="text" class="form-control" name="addressRep" id="field_addressRep"
+                           formControlName="addressRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.landLineNumberRep" for="field_landLineNumberRep">Land Line Number Rep</label>
+                    <input type="text" class="form-control" name="landLineNumberRep" id="field_landLineNumberRep"
+                           formControlName="landLineNumberRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.mobileNumberRep" for="field_mobileNumberRep">Mobile Number Rep</label>
+                    <input type="text" class="form-control" name="mobileNumberRep" id="field_mobileNumberRep"
+                           formControlName="mobileNumberRep"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.emailRep" for="field_emailRep">Email Rep</label>
+                    <input type="text" class="form-control" name="emailRep" id="field_emailRep"
+                           formControlName="emailRep"/>
+                </div>
+
+                <div class="form-group">
                     <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.employerRegistrationFormId" for="field_employerRegistrationFormId">Employer Registration Form Id</label>
                     <input type="text" class="form-control" name="employerRegistrationFormId" id="field_employerRegistrationFormId"
                            formControlName="employerRegistrationFormId"/>
@@ -349,14 +509,6 @@
                     <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.statutImmatriculation" for="field_statutImmatriculation">Statut Immatriculation</label>
                     <input type="checkbox" class="form-control" name="statutImmatriculation" id="field_statutImmatriculation"
                            formControlName="statutImmatriculation"/>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.immatriculation.representantLegal" for="field_representantLegal">Representant Legal</label>
-                    <select class="form-control" id="field_representantLegal" name="representantLegal" formControlName="representantLegal">
-                        <option [ngValue]="null"></option>
-                        <option [ngValue]="representantLegalOption.id === editForm.get('representantLegal')!.value?.id ? editForm.get('representantLegal')!.value : representantLegalOption" *ngFor="let representantLegalOption of representantlegals; trackBy: trackById">{{ representantLegalOption.firstName }}</option>
-                    </select>
                 </div>
 
                 <div class="form-group">

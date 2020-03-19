@@ -134,20 +134,6 @@
                     <input type="number" class="form-control" name="mntCotRccCalcParEmployeur" id="field_mntCotRccCalcParEmployeur"
                            formControlName="mntCotRccCalcParEmployeur"/>
                 </div>
-
-                <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.employeur" for="field_employeur">Employeur</label>
-                    <select class="form-control" id="field_employeur" name="employeur" formControlName="employeur">
-                        <option *ngIf="!editForm.get('employeur')!.value" [ngValue]="null" selected></option>
-                        <option [ngValue]="immatriculationOption.id === editForm.get('employeur')!.value?.id ? editForm.get('employeur')!.value : immatriculationOption" *ngFor="let immatriculationOption of immatriculations; trackBy: trackById">{{ immatriculationOption.employerName }}</option>
-                    </select>
-                </div>
-                <div *ngIf="editForm.get('employeur')!.invalid && (editForm.get('employeur')!.dirty || editForm.get('employeur')!.touched)">
-                    <small class="form-text text-danger"
-                           *ngIf="editForm.get('employeur')?.errors?.required" jhiTranslate="entity.validation.required">
-                        This field is required.
-                    </small>
-                </div>
             </div>
 
             <div>

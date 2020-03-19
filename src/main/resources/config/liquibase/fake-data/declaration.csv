@@ -1,11 +1,11 @@
-id;id_identifiant;raison_sociale;adresse;type_declaration;date_debut_cotisation;total_nouv_salaries;total_salaries;cumul_tot_sal_ass_ipres_rg;cumul_tot_sal_ass_ipres_rcc;cumul_tot_sal_ass_css_pf;cumul_tot_sal_ass_css_atmp;total_sal_verses;mnt_cot_pf_calc_par_employeur;mnt_cot_at_mp_calc_par_employeur;mnt_cot_rg_calc_par_employeur;mnt_cot_rcc_calc_par_employeur;employeur_id
-1;Agent purple Soap;RSS;Tasty;Developer;2020-03-19;56358;75982;55008;19539;23066;80605;2651;14407;13519;46226;29858;1
-2;Intelligent Steel Soap;Steel Licensed;Ergonomic Concrete Table Fantastic Industrial;encoding Indiana;2020-03-19;67183;28919;75008;71738;87627;51434;62232;7327;25920;12961;34634;2
-3;haptic strategic Sri Lanka;revolutionary;open system synergistic haptic;Rustic Handmade;2020-03-18;40302;5511;60834;80186;58314;84247;23489;42949;50152;67727;19146;3
-4;compressing salmon;deposit Bangladesh;scalable Circle;web services;2020-03-19;14546;30651;95999;52688;15942;97781;26507;31751;42080;31174;13590;4
-5;Port;Credit Card Account Future executive;data-warehouse Checking Account Belize;revolutionize Denmark Pizza;2020-03-19;66078;64066;13628;22966;50052;67713;64090;55775;59314;85005;50615;5
-6;intuitive;Implementation Car;Cliffs;Generic Steel Towels Turkmenistan moderator;2020-03-19;12056;85265;96567;44173;28903;16849;74824;46124;84286;16131;89750;6
-7;Awesome Steel;Representative;AI pixel Incredible Concrete Bike;radical;2020-03-19;27081;43747;36723;41238;40827;11587;4019;20983;74934;87979;94488;7
-8;synthesize Books;Pizza;Forward International Avon;e-business;2020-03-19;26809;12169;83150;48137;73115;28884;23147;7156;57333;53433;13025;8
-9;transmitter;enhance intangible;UAE Dirham plug-and-play Salad;Enhanced Industrial application;2020-03-19;41860;45830;46995;3446;69191;26002;21672;78597;64875;95932;89808;9
-10;Texas Tasty;red digital Sri Lanka Rupee;Principal networks Sausages;Personal Loan Account;2020-03-19;49527;45922;57806;67988;71402;82629;61928;64327;38766;2745;63758;10
+id;id_identifiant;raison_sociale;adresse;type_declaration;date_debut_cotisation;total_nouv_salaries;total_salaries;cumul_tot_sal_ass_ipres_rg;cumul_tot_sal_ass_ipres_rcc;cumul_tot_sal_ass_css_pf;cumul_tot_sal_ass_css_atmp;total_sal_verses;mnt_cot_pf_calc_par_employeur;mnt_cot_at_mp_calc_par_employeur;mnt_cot_rg_calc_par_employeur;mnt_cot_rcc_calc_par_employeur
+1;Agent purple Soap;RSS;Tasty;Developer;2020-03-19;56358;75982;55008;19539;23066;80605;2651;14407;13519;46226;29858
+2;Intelligent Steel Soap;Steel Licensed;Ergonomic Concrete Table Fantastic Industrial;encoding Indiana;2020-03-19;67183;28919;75008;71738;87627;51434;62232;7327;25920;12961;34634
+3;haptic strategic Sri Lanka;revolutionary;open system synergistic haptic;Rustic Handmade;2020-03-18;40302;5511;60834;80186;58314;84247;23489;42949;50152;67727;19146
+4;compressing salmon;deposit Bangladesh;scalable Circle;web services;2020-03-19;14546;30651;95999;52688;15942;97781;26507;31751;42080;31174;13590
+5;Port;Credit Card Account Future executive;data-warehouse Checking Account Belize;revolutionize Denmark Pizza;2020-03-19;66078;64066;13628;22966;50052;67713;64090;55775;59314;85005;50615
+6;intuitive;Implementation Car;Cliffs;Generic Steel Towels Turkmenistan moderator;2020-03-19;12056;85265;96567;44173;28903;16849;74824;46124;84286;16131;89750
+7;Awesome Steel;Representative;AI pixel Incredible Concrete Bike;radical;2020-03-19;27081;43747;36723;41238;40827;11587;4019;20983;74934;87979;94488
+8;synthesize Books;Pizza;Forward International Avon;e-business;2020-03-19;26809;12169;83150;48137;73115;28884;23147;7156;57333;53433;13025
+9;transmitter;enhance intangible;UAE Dirham plug-and-play Salad;Enhanced Industrial application;2020-03-19;41860;45830;46995;3446;69191;26002;21672;78597;64875;95932;89808
+10;Texas Tasty;red digital Sri Lanka Rupee;Principal networks Sausages;Personal Loan Account;2020-03-19;49527;45922;57806;67988;71402;82629;61928;64327;38766;2745;63758

@@ -72,12 +72,6 @@
                 <dd>
                     <span>{{ declaration.mntCotRccCalcParEmployeur }}</span>
                 </dd>
-                <dt><span jhiTranslate="portailCssIpresApp.declaration.employeur">Employeur</span></dt>
-                <dd>
-                    <div *ngIf="declaration.employeur">
-                        <a [routerLink]="['/immatriculation', declaration.employeur?.id, 'view']">{{ declaration.employeur?.employerName }}</a>
-                    </div>
-                </dd>
             </dl>
 
             <button type="submit"

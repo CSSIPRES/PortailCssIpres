@@ -1,6 +1,5 @@
 package com.secusociale.portail.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -83,11 +82,6 @@ public class Declaration implements Serializable {
     @OneToMany(mappedBy = "declaration")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Employe> employes = new HashSet<>();
-
-    @ManyToOne(optional = false)
-    @NotNull
-    @JsonIgnoreProperties("declarations")
-    private Immatriculation employeur;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -329,19 +323,6 @@ public class Declaration implements Serializable {
 
     public void setEmployes(Set<Employe> employes) {
         this.employes = employes;
-    }
-
-    public Immatriculation getEmployeur() {
-        return employeur;
-    }
-
-    public Declaration employeur(Immatriculation immatriculation) {
-        this.employeur = immatriculation;
-        return this;
-    }
-
-    public void setEmployeur(Immatriculation immatriculation) {
-        this.employeur = immatriculation;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
