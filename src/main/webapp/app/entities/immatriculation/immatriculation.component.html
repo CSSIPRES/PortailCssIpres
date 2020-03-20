@@ -1,0 +1,161 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="portailCssIpresApp.immatriculation.home.title">Immatriculations</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-immatriculation" [routerLink]="['/immatriculation/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="portailCssIpresApp.immatriculation.home.createLabel">
+            Create a new Immatriculation
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="immatriculations?.length === 0">
+        <span jhiTranslate="portailCssIpresApp.immatriculation.home.notFound">No immatriculations found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="immatriculations?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="regType"><span jhiTranslate="portailCssIpresApp.immatriculation.regType">Reg Type</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="employerType"><span jhiTranslate="portailCssIpresApp.immatriculation.employerType">Employer Type</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="typeEtablissement"><span jhiTranslate="portailCssIpresApp.immatriculation.typeEtablissement">Type Etablissement</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="employerName"><span jhiTranslate="portailCssIpresApp.immatriculation.employerName">Employer Name</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="hqId"><span jhiTranslate="portailCssIpresApp.immatriculation.hqId">Hq Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nineaNumber"><span jhiTranslate="portailCssIpresApp.immatriculation.nineaNumber">Ninea Number</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="ninetNumber"><span jhiTranslate="portailCssIpresApp.immatriculation.ninetNumber">Ninet Number</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="compagnyOriginId"><span jhiTranslate="portailCssIpresApp.immatriculation.compagnyOriginId">Compagny Origin Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="legalStatus"><span jhiTranslate="portailCssIpresApp.immatriculation.legalStatus">Legal Status</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="taxId"><span jhiTranslate="portailCssIpresApp.immatriculation.taxId">Tax Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="taxIdDate"><span jhiTranslate="portailCssIpresApp.immatriculation.taxIdDate">Tax Id Date</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tradeRegisterNumber"><span jhiTranslate="portailCssIpresApp.immatriculation.tradeRegisterNumber">Trade Register Number</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tradeRegisterDate"><span jhiTranslate="portailCssIpresApp.immatriculation.tradeRegisterDate">Trade Register Date</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dateOfInpsection"><span jhiTranslate="portailCssIpresApp.immatriculation.dateOfInpsection">Date Of Inpsection</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dateOfFirtHire"><span jhiTranslate="portailCssIpresApp.immatriculation.dateOfFirtHire">Date Of Firt Hire</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="shortName"><span jhiTranslate="portailCssIpresApp.immatriculation.shortName">Short Name</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="businessSector"><span jhiTranslate="portailCssIpresApp.immatriculation.businessSector">Business Sector</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mainLineOfBusiness"><span jhiTranslate="portailCssIpresApp.immatriculation.mainLineOfBusiness">Main Line Of Business</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="noOfWorkersInGenScheme"><span jhiTranslate="portailCssIpresApp.immatriculation.noOfWorkersInGenScheme">No Of Workers In Gen Scheme</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="noOfWorkersInBasicScheme"><span jhiTranslate="portailCssIpresApp.immatriculation.noOfWorkersInBasicScheme">No Of Workers In Basic Scheme</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="region"><span jhiTranslate="portailCssIpresApp.immatriculation.region">Region</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="department"><span jhiTranslate="portailCssIpresApp.immatriculation.department">Department</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="arondissement"><span jhiTranslate="portailCssIpresApp.immatriculation.arondissement">Arondissement</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="commune"><span jhiTranslate="portailCssIpresApp.immatriculation.commune">Commune</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="qartier"><span jhiTranslate="portailCssIpresApp.immatriculation.qartier">Qartier</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="address"><span jhiTranslate="portailCssIpresApp.immatriculation.address">Address</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="postboxNo"><span jhiTranslate="portailCssIpresApp.immatriculation.postboxNo">Postbox No</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="telephone"><span jhiTranslate="portailCssIpresApp.immatriculation.telephone">Telephone</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="email"><span jhiTranslate="portailCssIpresApp.immatriculation.email">Email</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="website"><span jhiTranslate="portailCssIpresApp.immatriculation.website">Website</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="zoneCss"><span jhiTranslate="portailCssIpresApp.immatriculation.zoneCss">Zone Css</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="zoneIpres"><span jhiTranslate="portailCssIpresApp.immatriculation.zoneIpres">Zone Ipres</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="sectorCss"><span jhiTranslate="portailCssIpresApp.immatriculation.sectorCss">Sector Css</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="sectorIpres"><span jhiTranslate="portailCssIpresApp.immatriculation.sectorIpres">Sector Ipres</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="agencyCss"><span jhiTranslate="portailCssIpresApp.immatriculation.agencyCss">Agency Css</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="agencyIpres"><span jhiTranslate="portailCssIpresApp.immatriculation.agencyIpres">Agency Ipres</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="employerRegistrationFormId"><span jhiTranslate="portailCssIpresApp.immatriculation.employerRegistrationFormId">Employer Registration Form Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="employeeRegistrationFormId"><span jhiTranslate="portailCssIpresApp.immatriculation.employeeRegistrationFormId">Employee Registration Form Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="processFlowId"><span jhiTranslate="portailCssIpresApp.immatriculation.processFlowId">Process Flow Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="statutDossier"><span jhiTranslate="portailCssIpresApp.immatriculation.statutDossier">Statut Dossier</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="statutImmatriculation"><span jhiTranslate="portailCssIpresApp.immatriculation.statutImmatriculation">Statut Immatriculation</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="representantLegal.firstName"><span jhiTranslate="portailCssIpresApp.immatriculation.representantLegal">Representant Legal</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="user.login"><span jhiTranslate="portailCssIpresApp.immatriculation.user">User</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let immatriculation of immatriculations ;trackBy: trackId">
+                    <td><a [routerLink]="['/immatriculation', immatriculation.id, 'view']">{{ immatriculation.id }}</a></td>
+                    <td>{{ immatriculation.regType }}</td>
+                    <td>{{ immatriculation.employerType }}</td>
+                    <td>{{ immatriculation.typeEtablissement }}</td>
+                    <td>{{ immatriculation.employerName }}</td>
+                    <td>{{ immatriculation.hqId }}</td>
+                    <td>{{ immatriculation.nineaNumber }}</td>
+                    <td>{{ immatriculation.ninetNumber }}</td>
+                    <td>{{ immatriculation.compagnyOriginId }}</td>
+                    <td>{{ immatriculation.legalStatus }}</td>
+                    <td>{{ immatriculation.taxId }}</td>
+                    <td>{{ immatriculation.taxIdDate | date:'mediumDate' }}</td>
+                    <td>{{ immatriculation.tradeRegisterNumber }}</td>
+                    <td>{{ immatriculation.tradeRegisterDate | date:'mediumDate' }}</td>
+                    <td>{{ immatriculation.dateOfInpsection | date:'mediumDate' }}</td>
+                    <td>{{ immatriculation.dateOfFirtHire | date:'mediumDate' }}</td>
+                    <td>{{ immatriculation.shortName }}</td>
+                    <td>{{ immatriculation.businessSector }}</td>
+                    <td>{{ immatriculation.mainLineOfBusiness }}</td>
+                    <td>{{ immatriculation.noOfWorkersInGenScheme }}</td>
+                    <td>{{ immatriculation.noOfWorkersInBasicScheme }}</td>
+                    <td>{{ immatriculation.region }}</td>
+                    <td>{{ immatriculation.department }}</td>
+                    <td>{{ immatriculation.arondissement }}</td>
+                    <td>{{ immatriculation.commune }}</td>
+                    <td>{{ immatriculation.qartier }}</td>
+                    <td>{{ immatriculation.address }}</td>
+                    <td>{{ immatriculation.postboxNo }}</td>
+                    <td>{{ immatriculation.telephone }}</td>
+                    <td>{{ immatriculation.email }}</td>
+                    <td>{{ immatriculation.website }}</td>
+                    <td>{{ immatriculation.zoneCss }}</td>
+                    <td>{{ immatriculation.zoneIpres }}</td>
+                    <td>{{ immatriculation.sectorCss }}</td>
+                    <td>{{ immatriculation.sectorIpres }}</td>
+                    <td>{{ immatriculation.agencyCss }}</td>
+                    <td>{{ immatriculation.agencyIpres }}</td>
+                    <td>{{ immatriculation.employerRegistrationFormId }}</td>
+                    <td>{{ immatriculation.employeeRegistrationFormId }}</td>
+                    <td>{{ immatriculation.processFlowId }}</td>
+                    <td>{{ immatriculation.statutDossier }}</td>
+                    <td>{{ immatriculation.statutImmatriculation }}</td>
+                    <td>
+                        <div *ngIf="immatriculation.representantLegal">
+                            <a [routerLink]="['/representant-legal', immatriculation.representantLegal?.id, 'view']" >{{ immatriculation.representantLegal?.firstName }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        {{ immatriculation.user?.login }}
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/immatriculation', immatriculation.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/immatriculation', immatriculation.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(immatriculation)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="immatriculations?.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

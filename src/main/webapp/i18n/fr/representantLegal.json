@@ -1,0 +1,43 @@
+{
+  "portailCssIpresApp": {
+    "representantLegal": {
+      "home": {
+        "title": "RepresentantLegals",
+        "createLabel": "Créer un nouveau Representant Legal",
+        "createOrEditLabel": "Créer ou éditer un Representant Legal",
+        "notFound": "Aucun Representant Legal trouvé"
+      },
+      "created": "Un nouveau Representant Legal a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Representant Legal avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Representant Legal avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Representant Legal {{ id }} ?"
+      },
+      "detail": {
+        "title": "Representant Legal"
+      },
+      "legalRepPerson": "Legal Rep Person",
+      "lastName": "Last Name",
+      "firstName": "First Name",
+      "birthdate": "Birthdate",
+      "nationality": "Nationality",
+      "nin": "Nin",
+      "placeOfBirth": "Place Of Birth",
+      "cityOfBirth": "City Of Birth",
+      "typeOfIdentity": "Type Of Identity",
+      "identityIdNumber": "Identity Id Number",
+      "ninCedeo": "Nin Cedeo",
+      "issuedDate": "Issued Date",
+      "expiryDate": "Expiry Date",
+      "region": "Region",
+      "department": "Department",
+      "arondissement": "Arondissement",
+      "commune": "Commune",
+      "qartier": "Qartier",
+      "address": "Address",
+      "landLineNumber": "Land Line Number",
+      "mobileNumber": "Mobile Number",
+      "email": "Email"
+    }
+  }
+}

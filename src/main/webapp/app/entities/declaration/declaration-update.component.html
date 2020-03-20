@@ -1,0 +1,164 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-declaration-heading" jhiTranslate="portailCssIpresApp.declaration.home.createOrEditLabel">Create or edit a Declaration</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.idIdentifiant" for="field_idIdentifiant">Id Identifiant</label>
+                    <input type="text" class="form-control" name="idIdentifiant" id="field_idIdentifiant"
+                           formControlName="idIdentifiant"/>
+                    <div *ngIf="editForm.get('idIdentifiant')!.invalid && (editForm.get('idIdentifiant')!.dirty || editForm.get('idIdentifiant')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('idIdentifiant')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.raisonSociale" for="field_raisonSociale">Raison Sociale</label>
+                    <input type="text" class="form-control" name="raisonSociale" id="field_raisonSociale"
+                           formControlName="raisonSociale"/>
+                    <div *ngIf="editForm.get('raisonSociale')!.invalid && (editForm.get('raisonSociale')!.dirty || editForm.get('raisonSociale')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('raisonSociale')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.adresse" for="field_adresse">Adresse</label>
+                    <input type="text" class="form-control" name="adresse" id="field_adresse"
+                           formControlName="adresse"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.typeDeclaration" for="field_typeDeclaration">Type Declaration</label>
+                    <input type="text" class="form-control" name="typeDeclaration" id="field_typeDeclaration"
+                           formControlName="typeDeclaration"/>
+                    <div *ngIf="editForm.get('typeDeclaration')!.invalid && (editForm.get('typeDeclaration')!.dirty || editForm.get('typeDeclaration')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('typeDeclaration')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.dateDebutCotisation" for="field_dateDebutCotisation">Date Debut Cotisation</label>
+                    <div class="input-group">
+                        <input id="field_dateDebutCotisation" type="text" class="form-control" name="dateDebutCotisation" ngbDatepicker #dateDebutCotisationDp="ngbDatepicker" formControlName="dateDebutCotisation"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateDebutCotisationDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div *ngIf="editForm.get('dateDebutCotisation')!.invalid && (editForm.get('dateDebutCotisation')!.dirty || editForm.get('dateDebutCotisation')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('dateDebutCotisation')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.totalNouvSalaries" for="field_totalNouvSalaries">Total Nouv Salaries</label>
+                    <input type="number" class="form-control" name="totalNouvSalaries" id="field_totalNouvSalaries"
+                           formControlName="totalNouvSalaries"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.totalSalaries" for="field_totalSalaries">Total Salaries</label>
+                    <input type="number" class="form-control" name="totalSalaries" id="field_totalSalaries"
+                           formControlName="totalSalaries"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssIpresRg" for="field_cumulTotSalAssIpresRg">Cumul Tot Sal Ass Ipres Rg</label>
+                    <input type="number" class="form-control" name="cumulTotSalAssIpresRg" id="field_cumulTotSalAssIpresRg"
+                           formControlName="cumulTotSalAssIpresRg"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssIpresRcc" for="field_cumulTotSalAssIpresRcc">Cumul Tot Sal Ass Ipres Rcc</label>
+                    <input type="number" class="form-control" name="cumulTotSalAssIpresRcc" id="field_cumulTotSalAssIpresRcc"
+                           formControlName="cumulTotSalAssIpresRcc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssCssPf" for="field_cumulTotSalAssCssPf">Cumul Tot Sal Ass Css Pf</label>
+                    <input type="number" class="form-control" name="cumulTotSalAssCssPf" id="field_cumulTotSalAssCssPf"
+                           formControlName="cumulTotSalAssCssPf"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.cumulTotSalAssCssAtmp" for="field_cumulTotSalAssCssAtmp">Cumul Tot Sal Ass Css Atmp</label>
+                    <input type="number" class="form-control" name="cumulTotSalAssCssAtmp" id="field_cumulTotSalAssCssAtmp"
+                           formControlName="cumulTotSalAssCssAtmp"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.totalSalVerses" for="field_totalSalVerses">Total Sal Verses</label>
+                    <input type="number" class="form-control" name="totalSalVerses" id="field_totalSalVerses"
+                           formControlName="totalSalVerses"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.mntCotPfCalcParEmployeur" for="field_mntCotPfCalcParEmployeur">Mnt Cot Pf Calc Par Employeur</label>
+                    <input type="number" class="form-control" name="mntCotPfCalcParEmployeur" id="field_mntCotPfCalcParEmployeur"
+                           formControlName="mntCotPfCalcParEmployeur"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.mntCotAtMpCalcParEmployeur" for="field_mntCotAtMpCalcParEmployeur">Mnt Cot At Mp Calc Par Employeur</label>
+                    <input type="number" class="form-control" name="mntCotAtMpCalcParEmployeur" id="field_mntCotAtMpCalcParEmployeur"
+                           formControlName="mntCotAtMpCalcParEmployeur"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.mntCotRgCalcParEmployeur" for="field_mntCotRgCalcParEmployeur">Mnt Cot Rg Calc Par Employeur</label>
+                    <input type="number" class="form-control" name="mntCotRgCalcParEmployeur" id="field_mntCotRgCalcParEmployeur"
+                           formControlName="mntCotRgCalcParEmployeur"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.mntCotRccCalcParEmployeur" for="field_mntCotRccCalcParEmployeur">Mnt Cot Rcc Calc Par Employeur</label>
+                    <input type="number" class="form-control" name="mntCotRccCalcParEmployeur" id="field_mntCotRccCalcParEmployeur"
+                           formControlName="mntCotRccCalcParEmployeur"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.declaration.employeur" for="field_employeur">Employeur</label>
+                    <select class="form-control" id="field_employeur" name="employeur" formControlName="employeur">
+                        <option *ngIf="!editForm.get('employeur')!.value" [ngValue]="null" selected></option>
+                        <option [ngValue]="immatriculationOption.id === editForm.get('employeur')!.value?.id ? editForm.get('employeur')!.value : immatriculationOption" *ngFor="let immatriculationOption of immatriculations; trackBy: trackById">{{ immatriculationOption.employerName }}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('employeur')!.invalid && (editForm.get('employeur')!.dirty || editForm.get('employeur')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('employeur')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
