@@ -1,0 +1,211 @@
+/* Portail CSS IPRES */
+entity Immatriculation {
+regType String
+employerType String required
+typeEtablissement String required
+employerName String required
+hqId String
+nineaNumber String required
+ninetNumber String
+compagnyOriginId String
+legalStatus String required
+taxId String
+taxIdDate LocalDate
+tradeRegisterNumber String
+tradeRegisterDate LocalDate
+dateOfInpsection LocalDate
+dateOfFirtHire LocalDate
+shortName String
+businessSector String required
+mainLineOfBusiness String required
+noOfWorkersInGenScheme Integer 
+noOfWorkersInBasicScheme Integer
+region String required
+department String required
+arondissement String required
+commune String required
+qartier String required
+address String required
+postboxNo String
+telephone String
+email String
+website String
+zoneCss String
+zoneIpres String
+sectorCss String
+sectorIpres String
+agencyCss String
+agencyIpres String
+
+legalRepPerson String  
+lastNameRep String required
+firstNameRep String  required
+birthdateRep LocalDate required
+nationalityRep String  required
+ninRep String
+placeOfBirthRep String  
+cityOfBirthRep String
+typeOfIdentityRep String  
+identityIdNumberRep String
+ninCedeoRep String  
+issuedDateRep String
+expiryDateRep String  
+regionRep String
+departmentRep String
+arondissementRep String
+communeRep String
+qartierRep String
+addressRep String
+landLineNumberRep String
+mobileNumberRep String
+emailRep String
+
+
+employerRegistrationFormId String
+employeeRegistrationFormId String
+processFlowId String
+statutDossier String
+
+statutImmatriculation Boolean
+
+}
+
+
+
+entity Document {
+	name String  
+    url String
+    document Blob
+}
+
+ 
+
+ 
+entity Employe {
+	rechercheEmploye String  
+    nomEmploye String  required
+    prenomEmploye String required  
+    sexe String  required
+    etatCivil String  required
+    dateNaissance LocalDate required
+    numRegNaiss String  required
+    nomPere String  
+    prenomPere String  
+    nomMere String  
+    prenomMere String   
+    nationalite String  required
+    typePieceIdentite String  
+    nin String
+    ninCedeao String  
+    numPieceIdentite String 
+    delivreLe String  
+    lieuDelivrance String  
+    expireLe String   
+    villeNaissance String  
+    paysNaissance String  
+    employeurPrec String
+    pays String 
+    region String
+    department String
+    arondissement String
+    commune String
+    qartier String
+    address String
+    boitePostale String  
+    typeMouvement String  
+    natureContrat String  
+    dateDebutContrat LocalDate  
+    dateFinContrat LocalDate
+    profession String  
+    emploi String
+    nonCadre String  
+    ouiCadre String 
+    conventionApplicable String  
+    salaireContractuel BigDecimal
+    tempsTravail Integer 
+    categorie String 
+    
+    motifSortie String 
+    
+    totSalAssCssPf1 BigDecimal
+    totSalAssCssAtmp1 BigDecimal
+    totSalAssIpresRg1 BigDecimal
+    totSalAssIpresRcc1 BigDecimal
+    salaireBrut1 BigDecimal 
+    nombreJours1 Integer
+    nombreHeures1 Integer 
+    tempsTravail1 String 
+    trancheTravail1 String 
+    regimeGeneral1 String 
+    regimCompCadre1 String 
+    dateEffetRegimeCadre1 LocalDate
+    
+    totSalAssCssPf2 BigDecimal
+    totSalAssCssAtmp2 BigDecimal
+    totSalAssIpresRg2 BigDecimal
+    totSalAssIpresRcc2 BigDecimal
+    salaireBrut2 BigDecimal 
+    nombreJours2 Integer
+    nombreHeures2 Integer 
+    tempsTravail2 String 
+    trancheTravail2 String 
+    regimeGeneral2 String 
+    regimCompCadre2 String 
+    dateEffetRegimeCadre2 LocalDate
+    
+    totSalAssCssPf3 BigDecimal
+    totSalAssCssAtmp3 BigDecimal
+    totSalAssIpresRg3 BigDecimal
+    totSalAssIpresRcc3 BigDecimal
+    salaireBrut3 BigDecimal 
+    nombreJours3 Integer
+    nombreHeures3 Integer 
+    tempsTravail3 String 
+    trancheTravail3 String 
+    regimeGeneral3 String 
+    regimCompCadre3 String 
+    dateEffetRegimeCadre3 LocalDate
+     
+}
+
+entity Declaration {
+    idIdentifiant String  required
+    raisonSociale String  required
+    adresse String
+    typeDeclaration String required
+    dateDebutCotisation LocalDate required 
+    dateDebutCotisation LocalDate required
+    totalNouvSalaries Integer
+    totalSalaries Integer
+    cumulTotSalAssIpresRg BigDecimal
+    cumulTotSalAssIpresRcc BigDecimal
+    cumulTotSalAssCssPf BigDecimal
+    cumulTotSalAssCssAtmp BigDecimal
+    totalSalVerses BigDecimal
+    mntCotPfCalcParEmployeur BigDecimal
+    mntCotAtMpCalcParEmployeur BigDecimal
+    mntCotRgCalcParEmployeur BigDecimal
+    mntCotRccCalcParEmployeur BigDecimal
+    
+}
+
+ 
+
+ 
+relationship OneToOne {
+    Immatriculation{user(login)} to User
+  
+}
+
+
+relationship OneToMany {
+     
+     
+    Declaration{employe} to Employe{declaration(raisonSociale)},
+	Immatriculation{employe} to Employe{employeur(employerName)},
+    Immatriculation{document} to Document{employeur(employerName)}
+     
+}
+ 
+service * with serviceClass
+paginate Immatriculation, Declaration, Employe with pagination

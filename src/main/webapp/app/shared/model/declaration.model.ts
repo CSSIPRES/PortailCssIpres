@@ -1,6 +1,5 @@
 import { Moment } from 'moment';
 import { IEmploye } from 'app/shared/model/employe.model';
-import { IImmatriculation } from 'app/shared/model/immatriculation.model';
 
 export interface IDeclaration {
   id?: number;
@@ -21,7 +20,6 @@ export interface IDeclaration {
   mntCotRgCalcParEmployeur?: number;
   mntCotRccCalcParEmployeur?: number;
   employes?: IEmploye[];
-  employeur?: IImmatriculation;
 }
 
 export class Declaration implements IDeclaration {
@@ -43,7 +41,6 @@ export class Declaration implements IDeclaration {
     public mntCotAtMpCalcParEmployeur?: number,
     public mntCotRgCalcParEmployeur?: number,
     public mntCotRccCalcParEmployeur?: number,
-    public employes?: IEmploye[],
-    public employeur?: IImmatriculation
+    public employes?: IEmploye[]
   ) {}
 }

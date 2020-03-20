@@ -4,16 +4,11 @@ import { HttpResponse } from '@angular/common/http';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 import { IImmatriculation, Immatriculation } from 'app/shared/model/immatriculation.model';
 import { ImmatriculationService } from './immatriculation.service';
-import { IRepresentantLegal } from 'app/shared/model/representant-legal.model';
-import { RepresentantLegalService } from 'app/entities/representant-legal/representant-legal.service';
 import { IUser } from 'app/core/user/user.model';
 import { UserService } from 'app/core/user/user.service';
-
-type SelectableEntity = IRepresentantLegal | IUser;
 
 @Component({
   selector: 'jhi-immatriculation-update',
@@ -21,12 +16,12 @@ type SelectableEntity = IRepresentantLegal | IUser;
 })
 export class ImmatriculationUpdateComponent implements OnInit {
   isSaving = false;
-  representantlegals: IRepresentantLegal[] = [];
   users: IUser[] = [];
   taxIdDateDp: any;
   tradeRegisterDateDp: any;
   dateOfInpsectionDp: any;
   dateOfFirtHireDp: any;
+  birthdateRepDp: any;
 
   editForm = this.fb.group({
     id: [],
@@ -66,18 +61,38 @@ export class ImmatriculationUpdateComponent implements OnInit {
     sectorIpres: [],
     agencyCss: [],
     agencyIpres: [],
+    legalRepPerson: [],
+    lastNameRep: [null, [Validators.required]],
+    firstNameRep: [null, [Validators.required]],
+    birthdateRep: [null, [Validators.required]],
+    nationalityRep: [null, [Validators.required]],
+    ninRep: [],
+    placeOfBirthRep: [],
+    cityOfBirthRep: [],
+    typeOfIdentityRep: [],
+    identityIdNumberRep: [],
+    ninCedeoRep: [],
+    issuedDateRep: [],
+    expiryDateRep: [],
+    regionRep: [],
+    departmentRep: [],
+    arondissementRep: [],
+    communeRep: [],
+    qartierRep: [],
+    addressRep: [],
+    landLineNumberRep: [],
+    mobileNumberRep: [],
+    emailRep: [],
     employerRegistrationFormId: [],
     employeeRegistrationFormId: [],
     processFlowId: [],
     statutDossier: [],
     statutImmatriculation: [],
-    representantLegal: [],
     user: []
   });
 
   constructor(
     protected immatriculationService: ImmatriculationService,
-    protected representantLegalService: RepresentantLegalService,
     protected userService: UserService,
     protected activatedRoute: ActivatedRoute,
     private fb: FormBuilder
@@ -86,28 +101,6 @@ export class ImmatriculationUpdateComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({ immatriculation }) => {
       this.updateForm(immatriculation);
-
-      this.representantLegalService
-        .query({ filter: 'immatriculation-is-null' })
-        .pipe(
-          map((res: HttpResponse<IRepresentantLegal[]>) => {
-            return res.body || [];
-          })
-        )
-        .subscribe((resBody: IRepresentantLegal[]) => {
-          if (!immatriculation.representantLegal || !immatriculation.representantLegal.id) {
-            this.representantlegals = resBody;
-          } else {
-            this.representantLegalService
-              .find(immatriculation.representantLegal.id)
-              .pipe(
-                map((subRes: HttpResponse<IRepresentantLegal>) => {
-                  return subRes.body ? [subRes.body].concat(resBody) : resBody;
-                })
-              )
-              .subscribe((concatRes: IRepresentantLegal[]) => (this.representantlegals = concatRes));
-          }
-        });
 
       this.userService.query().subscribe((res: HttpResponse<IUser[]>) => (this.users = res.body || []));
     });
@@ -152,12 +145,33 @@ export class ImmatriculationUpdateComponent implements OnInit {
       sectorIpres: immatriculation.sectorIpres,
       agencyCss: immatriculation.agencyCss,
       agencyIpres: immatriculation.agencyIpres,
+      legalRepPerson: immatriculation.legalRepPerson,
+      lastNameRep: immatriculation.lastNameRep,
+      firstNameRep: immatriculation.firstNameRep,
+      birthdateRep: immatriculation.birthdateRep,
+      nationalityRep: immatriculation.nationalityRep,
+      ninRep: immatriculation.ninRep,
+      placeOfBirthRep: immatriculation.placeOfBirthRep,
+      cityOfBirthRep: immatriculation.cityOfBirthRep,
+      typeOfIdentityRep: immatriculation.typeOfIdentityRep,
+      identityIdNumberRep: immatriculation.identityIdNumberRep,
+      ninCedeoRep: immatriculation.ninCedeoRep,
+      issuedDateRep: immatriculation.issuedDateRep,
+      expiryDateRep: immatriculation.expiryDateRep,
+      regionRep: immatriculation.regionRep,
+      departmentRep: immatriculation.departmentRep,
+      arondissementRep: immatriculation.arondissementRep,
+      communeRep: immatriculation.communeRep,
+      qartierRep: immatriculation.qartierRep,
+      addressRep: immatriculation.addressRep,
+      landLineNumberRep: immatriculation.landLineNumberRep,
+      mobileNumberRep: immatriculation.mobileNumberRep,
+      emailRep: immatriculation.emailRep,
       employerRegistrationFormId: immatriculation.employerRegistrationFormId,
       employeeRegistrationFormId: immatriculation.employeeRegistrationFormId,
       processFlowId: immatriculation.processFlowId,
       statutDossier: immatriculation.statutDossier,
       statutImmatriculation: immatriculation.statutImmatriculation,
-      representantLegal: immatriculation.representantLegal,
       user: immatriculation.user
     });
   }
@@ -216,12 +230,33 @@ export class ImmatriculationUpdateComponent implements OnInit {
       sectorIpres: this.editForm.get(['sectorIpres'])!.value,
       agencyCss: this.editForm.get(['agencyCss'])!.value,
       agencyIpres: this.editForm.get(['agencyIpres'])!.value,
+      legalRepPerson: this.editForm.get(['legalRepPerson'])!.value,
+      lastNameRep: this.editForm.get(['lastNameRep'])!.value,
+      firstNameRep: this.editForm.get(['firstNameRep'])!.value,
+      birthdateRep: this.editForm.get(['birthdateRep'])!.value,
+      nationalityRep: this.editForm.get(['nationalityRep'])!.value,
+      ninRep: this.editForm.get(['ninRep'])!.value,
+      placeOfBirthRep: this.editForm.get(['placeOfBirthRep'])!.value,
+      cityOfBirthRep: this.editForm.get(['cityOfBirthRep'])!.value,
+      typeOfIdentityRep: this.editForm.get(['typeOfIdentityRep'])!.value,
+      identityIdNumberRep: this.editForm.get(['identityIdNumberRep'])!.value,
+      ninCedeoRep: this.editForm.get(['ninCedeoRep'])!.value,
+      issuedDateRep: this.editForm.get(['issuedDateRep'])!.value,
+      expiryDateRep: this.editForm.get(['expiryDateRep'])!.value,
+      regionRep: this.editForm.get(['regionRep'])!.value,
+      departmentRep: this.editForm.get(['departmentRep'])!.value,
+      arondissementRep: this.editForm.get(['arondissementRep'])!.value,
+      communeRep: this.editForm.get(['communeRep'])!.value,
+      qartierRep: this.editForm.get(['qartierRep'])!.value,
+      addressRep: this.editForm.get(['addressRep'])!.value,
+      landLineNumberRep: this.editForm.get(['landLineNumberRep'])!.value,
+      mobileNumberRep: this.editForm.get(['mobileNumberRep'])!.value,
+      emailRep: this.editForm.get(['emailRep'])!.value,
       employerRegistrationFormId: this.editForm.get(['employerRegistrationFormId'])!.value,
       employeeRegistrationFormId: this.editForm.get(['employeeRegistrationFormId'])!.value,
       processFlowId: this.editForm.get(['processFlowId'])!.value,
       statutDossier: this.editForm.get(['statutDossier'])!.value,
       statutImmatriculation: this.editForm.get(['statutImmatriculation'])!.value,
-      representantLegal: this.editForm.get(['representantLegal'])!.value,
       user: this.editForm.get(['user'])!.value
     };
   }
@@ -242,7 +277,7 @@ export class ImmatriculationUpdateComponent implements OnInit {
     this.isSaving = false;
   }
 
-  trackById(index: number, item: SelectableEntity): any {
+  trackById(index: number, item: IUser): any {
     return item.id;
   }
 }

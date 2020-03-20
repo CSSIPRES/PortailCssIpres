@@ -2,7 +2,6 @@ package com.secusociale.portail.web.rest;
 
 import com.secusociale.portail.PortailCssIpresApp;
 import com.secusociale.portail.domain.Declaration;
-import com.secusociale.portail.domain.Immatriculation;
 import com.secusociale.portail.repository.DeclarationRepository;
 import com.secusociale.portail.service.DeclarationService;
 
@@ -121,16 +120,6 @@ public class DeclarationResourceIT {
             .mntCotAtMpCalcParEmployeur(DEFAULT_MNT_COT_AT_MP_CALC_PAR_EMPLOYEUR)
             .mntCotRgCalcParEmployeur(DEFAULT_MNT_COT_RG_CALC_PAR_EMPLOYEUR)
             .mntCotRccCalcParEmployeur(DEFAULT_MNT_COT_RCC_CALC_PAR_EMPLOYEUR);
-        // Add required entity
-        Immatriculation immatriculation;
-        if (TestUtil.findAll(em, Immatriculation.class).isEmpty()) {
-            immatriculation = ImmatriculationResourceIT.createEntity(em);
-            em.persist(immatriculation);
-            em.flush();
-        } else {
-            immatriculation = TestUtil.findAll(em, Immatriculation.class).get(0);
-        }
-        declaration.setEmployeur(immatriculation);
         return declaration;
     }
     /**
@@ -157,16 +146,6 @@ public class DeclarationResourceIT {
             .mntCotAtMpCalcParEmployeur(UPDATED_MNT_COT_AT_MP_CALC_PAR_EMPLOYEUR)
             .mntCotRgCalcParEmployeur(UPDATED_MNT_COT_RG_CALC_PAR_EMPLOYEUR)
             .mntCotRccCalcParEmployeur(UPDATED_MNT_COT_RCC_CALC_PAR_EMPLOYEUR);
-        // Add required entity
-        Immatriculation immatriculation;
-        if (TestUtil.findAll(em, Immatriculation.class).isEmpty()) {
-            immatriculation = ImmatriculationResourceIT.createUpdatedEntity(em);
-            em.persist(immatriculation);
-            em.flush();
-        } else {
-            immatriculation = TestUtil.findAll(em, Immatriculation.class).get(0);
-        }
-        declaration.setEmployeur(immatriculation);
         return declaration;
     }
 

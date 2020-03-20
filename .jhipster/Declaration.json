@@ -84,14 +84,6 @@
             "otherEntityName": "employe",
             "otherEntityRelationshipName": "declaration",
             "relationshipName": "employe"
-        },
-        {
-            "relationshipType": "many-to-one",
-            "otherEntityName": "immatriculation",
-            "otherEntityRelationshipName": "declaration",
-            "relationshipValidateRules": "required",
-            "relationshipName": "employeur",
-            "otherEntityField": "employerName"
         }
     ],
     "changelogDate": "20200319142600",

@@ -89,28 +89,28 @@ public class ImmatPortailService {
 		mainRegistrationForm.setZoneCss(immatriculation.getZoneCss());
 		mainRegistrationForm.setZoneIpres(immatriculation.getZoneIpres());
 		
-		legalRepresentativeForm.setAddress(immatriculation.getRepresentantLegal().getAddress());
-		legalRepresentativeForm.setArondissement(immatriculation.getRepresentantLegal().getArondissement());
-		legalRepresentativeForm.setCityOfBirth(immatriculation.getRepresentantLegal().getCityOfBirth());
-		legalRepresentativeForm.setCommune(immatriculation.getRepresentantLegal().getCommune());
-		legalRepresentativeForm.setDepartment(immatriculation.getRepresentantLegal().getDepartment());
-		legalRepresentativeForm.setEmail(immatriculation.getRepresentantLegal().getEmail());
-		legalRepresentativeForm.setExpiryDate(immatriculation.getRepresentantLegal().getExpiryDate());
-		legalRepresentativeForm.setFirstName(immatriculation.getRepresentantLegal().getFirstName());
-		legalRepresentativeForm.setIdentityIdNumber(immatriculation.getRepresentantLegal().getIdentityIdNumber());
-	    legalRepresentativeForm.setIssuedDate(immatriculation.getRepresentantLegal().getIssuedDate());
-	    legalRepresentativeForm.setLandLineNumber(immatriculation.getRepresentantLegal().getLandLineNumber());
-	    legalRepresentativeForm.setLastName(immatriculation.getRepresentantLegal().getLastName());
-	    legalRepresentativeForm.setLegalRepPerson(immatriculation.getRepresentantLegal().getLegalRepPerson());
-	    legalRepresentativeForm.setMobileNumber(immatriculation.getRepresentantLegal().getMobileNumber());
-	    legalRepresentativeForm.setNationality(immatriculation.getRepresentantLegal().getNationality());
-	    legalRepresentativeForm.setNin(immatriculation.getRepresentantLegal().getNin());
-	    legalRepresentativeForm.setBirthdate(immatriculation.getRepresentantLegal().getBirthdate().toString());
-	    legalRepresentativeForm.setNinCedeo(immatriculation.getRepresentantLegal().getNinCedeo());
-	    legalRepresentativeForm.setPlaceOfBirth(immatriculation.getRepresentantLegal().getPlaceOfBirth());
-	    legalRepresentativeForm.setQartier(immatriculation.getRepresentantLegal().getQartier());
-	    legalRepresentativeForm.setRegion(immatriculation.getRepresentantLegal().getRegion());
-	    legalRepresentativeForm.setTypeOfIdentity(immatriculation.getRepresentantLegal().getTypeOfIdentity());
+		legalRepresentativeForm.setAddress(immatriculation.getAddressRep());
+		legalRepresentativeForm.setArondissement(immatriculation.getArondissementRep());
+		legalRepresentativeForm.setCityOfBirth(immatriculation.getCityOfBirthRep());
+		legalRepresentativeForm.setCommune(immatriculation.getCommuneRep());
+		legalRepresentativeForm.setDepartment(immatriculation.getDepartmentRep());
+		legalRepresentativeForm.setEmail(immatriculation.getEmailRep());
+		legalRepresentativeForm.setExpiryDate(immatriculation.getExpiryDateRep());
+		legalRepresentativeForm.setFirstName(immatriculation.getFirstNameRep());
+		legalRepresentativeForm.setIdentityIdNumber(immatriculation.getIdentityIdNumberRep());
+	    legalRepresentativeForm.setIssuedDate(immatriculation.getIssuedDateRep());
+	    legalRepresentativeForm.setLandLineNumber(immatriculation.getLandLineNumberRep());
+	    legalRepresentativeForm.setLastName(immatriculation.getLastNameRep());
+	    legalRepresentativeForm.setLegalRepPerson(immatriculation.getLegalRepPerson());
+	    legalRepresentativeForm.setMobileNumber(immatriculation.getMobileNumberRep());
+	    legalRepresentativeForm.setNationality(immatriculation.getNationalityRep());
+	    legalRepresentativeForm.setNin(immatriculation.getNinRep());
+	    legalRepresentativeForm.setBirthdate(immatriculation.getBirthdateRep().toString());
+	    legalRepresentativeForm.setNinCedeo(immatriculation.getNinCedeoRep());
+	    legalRepresentativeForm.setPlaceOfBirth(immatriculation.getPlaceOfBirthRep());
+	    legalRepresentativeForm.setQartier(immatriculation.getQartierRep());
+	    legalRepresentativeForm.setRegion(immatriculation.getRegionRep());
+	    legalRepresentativeForm.setTypeOfIdentity(immatriculation.getTypeOfIdentityRep());
 	    
 		 
 	    /* Ajout des Salariés          */

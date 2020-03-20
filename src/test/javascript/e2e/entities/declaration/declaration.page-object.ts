@@ -46,8 +46,6 @@ export class DeclarationUpdatePage {
   mntCotRgCalcParEmployeurInput = element(by.id('field_mntCotRgCalcParEmployeur'));
   mntCotRccCalcParEmployeurInput = element(by.id('field_mntCotRccCalcParEmployeur'));
 
-  employeurSelect = element(by.id('field_employeur'));
-
   async getPageTitle(): Promise<string> {
     return this.pageTitle.getAttribute('jhiTranslate');
   }
@@ -178,25 +176,6 @@ export class DeclarationUpdatePage {
 
   async getMntCotRccCalcParEmployeurInput(): Promise<string> {
     return await this.mntCotRccCalcParEmployeurInput.getAttribute('value');
-  }
-
-  async employeurSelectLastOption(): Promise<void> {
-    await this.employeurSelect
-      .all(by.tagName('option'))
-      .last()
-      .click();
-  }
-
-  async employeurSelectOption(option: string): Promise<void> {
-    await this.employeurSelect.sendKeys(option);
-  }
-
-  getEmployeurSelect(): ElementFinder {
-    return this.employeurSelect;
-  }
-
-  async getEmployeurSelectedOption(): Promise<string> {
-    return await this.employeurSelect.element(by.css('option:checked')).getText();
   }
 
   async save(): Promise<void> {

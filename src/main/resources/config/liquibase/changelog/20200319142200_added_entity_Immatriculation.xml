@@ -124,6 +124,72 @@
             <column name="agency_ipres" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+            <column name="legal_rep_person" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="last_name_rep" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="first_name_rep" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="birthdate_rep" type="date">
+                <constraints nullable="false" />
+            </column>
+            <column name="nationality_rep" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="nin_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="place_of_birth_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="city_of_birth_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="type_of_identity_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="identity_id_number_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nin_cedeo_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="issued_date_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="expiry_date_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="region_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="department_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="arondissement_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="commune_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="qartier_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="address_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="land_line_number_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mobile_number_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="email_rep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="employer_registration_form_id" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
@@ -138,9 +204,6 @@
             </column>
             <column name="statut_immatriculation" type="boolean">
                 <constraints nullable="true" />
-            </column>
-            <column name="representant_legal_id" type="bigint">
-                <constraints unique="true" nullable="true" uniqueConstraintName="ux_immatriculation_representant_legal_id" />
             </column>
             <column name="user_id" type="bigint">
                 <constraints unique="true" nullable="true" uniqueConstraintName="ux_immatriculation_user_id" />
@@ -204,6 +267,28 @@
             <column name="sector_ipres" type="string"/>
             <column name="agency_css" type="string"/>
             <column name="agency_ipres" type="string"/>
+            <column name="legal_rep_person" type="string"/>
+            <column name="last_name_rep" type="string"/>
+            <column name="first_name_rep" type="string"/>
+            <column name="birthdate_rep" type="date"/>
+            <column name="nationality_rep" type="string"/>
+            <column name="nin_rep" type="string"/>
+            <column name="place_of_birth_rep" type="string"/>
+            <column name="city_of_birth_rep" type="string"/>
+            <column name="type_of_identity_rep" type="string"/>
+            <column name="identity_id_number_rep" type="string"/>
+            <column name="nin_cedeo_rep" type="string"/>
+            <column name="issued_date_rep" type="string"/>
+            <column name="expiry_date_rep" type="string"/>
+            <column name="region_rep" type="string"/>
+            <column name="department_rep" type="string"/>
+            <column name="arondissement_rep" type="string"/>
+            <column name="commune_rep" type="string"/>
+            <column name="qartier_rep" type="string"/>
+            <column name="address_rep" type="string"/>
+            <column name="land_line_number_rep" type="string"/>
+            <column name="mobile_number_rep" type="string"/>
+            <column name="email_rep" type="string"/>
             <column name="employer_registration_form_id" type="string"/>
             <column name="employee_registration_form_id" type="string"/>
             <column name="process_flow_id" type="string"/>

@@ -64,6 +64,10 @@ export class ImmatriculationService {
       dateOfFirtHire:
         immatriculation.dateOfFirtHire && immatriculation.dateOfFirtHire.isValid()
           ? immatriculation.dateOfFirtHire.format(DATE_FORMAT)
+          : undefined,
+      birthdateRep:
+        immatriculation.birthdateRep && immatriculation.birthdateRep.isValid()
+          ? immatriculation.birthdateRep.format(DATE_FORMAT)
           : undefined
     });
     return copy;
@@ -75,6 +79,7 @@ export class ImmatriculationService {
       res.body.tradeRegisterDate = res.body.tradeRegisterDate ? moment(res.body.tradeRegisterDate) : undefined;
       res.body.dateOfInpsection = res.body.dateOfInpsection ? moment(res.body.dateOfInpsection) : undefined;
       res.body.dateOfFirtHire = res.body.dateOfFirtHire ? moment(res.body.dateOfFirtHire) : undefined;
+      res.body.birthdateRep = res.body.birthdateRep ? moment(res.body.birthdateRep) : undefined;
     }
     return res;
   }
@@ -86,6 +91,7 @@ export class ImmatriculationService {
         immatriculation.tradeRegisterDate = immatriculation.tradeRegisterDate ? moment(immatriculation.tradeRegisterDate) : undefined;
         immatriculation.dateOfInpsection = immatriculation.dateOfInpsection ? moment(immatriculation.dateOfInpsection) : undefined;
         immatriculation.dateOfFirtHire = immatriculation.dateOfFirtHire ? moment(immatriculation.dateOfFirtHire) : undefined;
+        immatriculation.birthdateRep = immatriculation.birthdateRep ? moment(immatriculation.birthdateRep) : undefined;
       });
     }
     return res;

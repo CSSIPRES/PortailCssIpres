@@ -185,6 +185,106 @@
             "fieldType": "String"
         },
         {
+            "fieldName": "legalRepPerson",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastNameRep",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "firstNameRep",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "birthdateRep",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nationalityRep",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ninRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "placeOfBirthRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cityOfBirthRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "typeOfIdentityRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "identityIdNumberRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ninCedeoRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "issuedDateRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "expiryDateRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regionRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "departmentRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "arondissementRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "communeRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "qartierRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "addressRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "landLineNumberRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobileNumberRep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "emailRep",
+            "fieldType": "String"
+        },
+        {
             "fieldName": "employerRegistrationFormId",
             "fieldType": "String"
         },
@@ -208,25 +308,11 @@
     "relationships": [
         {
             "relationshipType": "one-to-one",
-            "otherEntityName": "representantLegal",
-            "otherEntityRelationshipName": "immatriculation",
-            "relationshipName": "representantLegal",
-            "otherEntityField": "firstName",
-            "ownerSide": true
-        },
-        {
-            "relationshipType": "one-to-one",
             "otherEntityName": "user",
             "otherEntityRelationshipName": "immatriculation",
             "relationshipName": "user",
             "otherEntityField": "login",
             "ownerSide": true
-        },
-        {
-            "relationshipType": "one-to-many",
-            "otherEntityName": "declaration",
-            "otherEntityRelationshipName": "employeur",
-            "relationshipName": "declaration"
         },
         {
             "relationshipType": "one-to-many",

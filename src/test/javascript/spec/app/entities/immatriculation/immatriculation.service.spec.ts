@@ -65,6 +65,28 @@ describe('Service Tests', () => {
         'AAAAAAA',
         'AAAAAAA',
         'AAAAAAA',
+        currentDate,
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
+        'AAAAAAA',
         'AAAAAAA',
         false
       );
@@ -77,7 +99,8 @@ describe('Service Tests', () => {
             taxIdDate: currentDate.format(DATE_FORMAT),
             tradeRegisterDate: currentDate.format(DATE_FORMAT),
             dateOfInpsection: currentDate.format(DATE_FORMAT),
-            dateOfFirtHire: currentDate.format(DATE_FORMAT)
+            dateOfFirtHire: currentDate.format(DATE_FORMAT),
+            birthdateRep: currentDate.format(DATE_FORMAT)
           },
           elemDefault
         );
@@ -96,7 +119,8 @@ describe('Service Tests', () => {
             taxIdDate: currentDate.format(DATE_FORMAT),
             tradeRegisterDate: currentDate.format(DATE_FORMAT),
             dateOfInpsection: currentDate.format(DATE_FORMAT),
-            dateOfFirtHire: currentDate.format(DATE_FORMAT)
+            dateOfFirtHire: currentDate.format(DATE_FORMAT),
+            birthdateRep: currentDate.format(DATE_FORMAT)
           },
           elemDefault
         );
@@ -106,7 +130,8 @@ describe('Service Tests', () => {
             taxIdDate: currentDate,
             tradeRegisterDate: currentDate,
             dateOfInpsection: currentDate,
-            dateOfFirtHire: currentDate
+            dateOfFirtHire: currentDate,
+            birthdateRep: currentDate
           },
           returnedFromService
         );
@@ -157,6 +182,28 @@ describe('Service Tests', () => {
             sectorIpres: 'BBBBBB',
             agencyCss: 'BBBBBB',
             agencyIpres: 'BBBBBB',
+            legalRepPerson: 'BBBBBB',
+            lastNameRep: 'BBBBBB',
+            firstNameRep: 'BBBBBB',
+            birthdateRep: currentDate.format(DATE_FORMAT),
+            nationalityRep: 'BBBBBB',
+            ninRep: 'BBBBBB',
+            placeOfBirthRep: 'BBBBBB',
+            cityOfBirthRep: 'BBBBBB',
+            typeOfIdentityRep: 'BBBBBB',
+            identityIdNumberRep: 'BBBBBB',
+            ninCedeoRep: 'BBBBBB',
+            issuedDateRep: 'BBBBBB',
+            expiryDateRep: 'BBBBBB',
+            regionRep: 'BBBBBB',
+            departmentRep: 'BBBBBB',
+            arondissementRep: 'BBBBBB',
+            communeRep: 'BBBBBB',
+            qartierRep: 'BBBBBB',
+            addressRep: 'BBBBBB',
+            landLineNumberRep: 'BBBBBB',
+            mobileNumberRep: 'BBBBBB',
+            emailRep: 'BBBBBB',
             employerRegistrationFormId: 'BBBBBB',
             employeeRegistrationFormId: 'BBBBBB',
             processFlowId: 'BBBBBB',
@@ -171,7 +218,8 @@ describe('Service Tests', () => {
             taxIdDate: currentDate,
             tradeRegisterDate: currentDate,
             dateOfInpsection: currentDate,
-            dateOfFirtHire: currentDate
+            dateOfFirtHire: currentDate,
+            birthdateRep: currentDate
           },
           returnedFromService
         );
@@ -222,6 +270,28 @@ describe('Service Tests', () => {
             sectorIpres: 'BBBBBB',
             agencyCss: 'BBBBBB',
             agencyIpres: 'BBBBBB',
+            legalRepPerson: 'BBBBBB',
+            lastNameRep: 'BBBBBB',
+            firstNameRep: 'BBBBBB',
+            birthdateRep: currentDate.format(DATE_FORMAT),
+            nationalityRep: 'BBBBBB',
+            ninRep: 'BBBBBB',
+            placeOfBirthRep: 'BBBBBB',
+            cityOfBirthRep: 'BBBBBB',
+            typeOfIdentityRep: 'BBBBBB',
+            identityIdNumberRep: 'BBBBBB',
+            ninCedeoRep: 'BBBBBB',
+            issuedDateRep: 'BBBBBB',
+            expiryDateRep: 'BBBBBB',
+            regionRep: 'BBBBBB',
+            departmentRep: 'BBBBBB',
+            arondissementRep: 'BBBBBB',
+            communeRep: 'BBBBBB',
+            qartierRep: 'BBBBBB',
+            addressRep: 'BBBBBB',
+            landLineNumberRep: 'BBBBBB',
+            mobileNumberRep: 'BBBBBB',
+            emailRep: 'BBBBBB',
             employerRegistrationFormId: 'BBBBBB',
             employeeRegistrationFormId: 'BBBBBB',
             processFlowId: 'BBBBBB',
@@ -236,7 +306,8 @@ describe('Service Tests', () => {
             taxIdDate: currentDate,
             tradeRegisterDate: currentDate,
             dateOfInpsection: currentDate,
-            dateOfFirtHire: currentDate
+            dateOfFirtHire: currentDate,
+            birthdateRep: currentDate
           },
           returnedFromService
         );

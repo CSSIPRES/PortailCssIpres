@@ -65,13 +65,34 @@ export class ImmatriculationUpdatePage {
   sectorIpresInput = element(by.id('field_sectorIpres'));
   agencyCssInput = element(by.id('field_agencyCss'));
   agencyIpresInput = element(by.id('field_agencyIpres'));
+  legalRepPersonInput = element(by.id('field_legalRepPerson'));
+  lastNameRepInput = element(by.id('field_lastNameRep'));
+  firstNameRepInput = element(by.id('field_firstNameRep'));
+  birthdateRepInput = element(by.id('field_birthdateRep'));
+  nationalityRepInput = element(by.id('field_nationalityRep'));
+  ninRepInput = element(by.id('field_ninRep'));
+  placeOfBirthRepInput = element(by.id('field_placeOfBirthRep'));
+  cityOfBirthRepInput = element(by.id('field_cityOfBirthRep'));
+  typeOfIdentityRepInput = element(by.id('field_typeOfIdentityRep'));
+  identityIdNumberRepInput = element(by.id('field_identityIdNumberRep'));
+  ninCedeoRepInput = element(by.id('field_ninCedeoRep'));
+  issuedDateRepInput = element(by.id('field_issuedDateRep'));
+  expiryDateRepInput = element(by.id('field_expiryDateRep'));
+  regionRepInput = element(by.id('field_regionRep'));
+  departmentRepInput = element(by.id('field_departmentRep'));
+  arondissementRepInput = element(by.id('field_arondissementRep'));
+  communeRepInput = element(by.id('field_communeRep'));
+  qartierRepInput = element(by.id('field_qartierRep'));
+  addressRepInput = element(by.id('field_addressRep'));
+  landLineNumberRepInput = element(by.id('field_landLineNumberRep'));
+  mobileNumberRepInput = element(by.id('field_mobileNumberRep'));
+  emailRepInput = element(by.id('field_emailRep'));
   employerRegistrationFormIdInput = element(by.id('field_employerRegistrationFormId'));
   employeeRegistrationFormIdInput = element(by.id('field_employeeRegistrationFormId'));
   processFlowIdInput = element(by.id('field_processFlowId'));
   statutDossierInput = element(by.id('field_statutDossier'));
   statutImmatriculationInput = element(by.id('field_statutImmatriculation'));
 
-  representantLegalSelect = element(by.id('field_representantLegal'));
   userSelect = element(by.id('field_user'));
 
   async getPageTitle(): Promise<string> {
@@ -366,6 +387,182 @@ export class ImmatriculationUpdatePage {
     return await this.agencyIpresInput.getAttribute('value');
   }
 
+  async setLegalRepPersonInput(legalRepPerson: string): Promise<void> {
+    await this.legalRepPersonInput.sendKeys(legalRepPerson);
+  }
+
+  async getLegalRepPersonInput(): Promise<string> {
+    return await this.legalRepPersonInput.getAttribute('value');
+  }
+
+  async setLastNameRepInput(lastNameRep: string): Promise<void> {
+    await this.lastNameRepInput.sendKeys(lastNameRep);
+  }
+
+  async getLastNameRepInput(): Promise<string> {
+    return await this.lastNameRepInput.getAttribute('value');
+  }
+
+  async setFirstNameRepInput(firstNameRep: string): Promise<void> {
+    await this.firstNameRepInput.sendKeys(firstNameRep);
+  }
+
+  async getFirstNameRepInput(): Promise<string> {
+    return await this.firstNameRepInput.getAttribute('value');
+  }
+
+  async setBirthdateRepInput(birthdateRep: string): Promise<void> {
+    await this.birthdateRepInput.sendKeys(birthdateRep);
+  }
+
+  async getBirthdateRepInput(): Promise<string> {
+    return await this.birthdateRepInput.getAttribute('value');
+  }
+
+  async setNationalityRepInput(nationalityRep: string): Promise<void> {
+    await this.nationalityRepInput.sendKeys(nationalityRep);
+  }
+
+  async getNationalityRepInput(): Promise<string> {
+    return await this.nationalityRepInput.getAttribute('value');
+  }
+
+  async setNinRepInput(ninRep: string): Promise<void> {
+    await this.ninRepInput.sendKeys(ninRep);
+  }
+
+  async getNinRepInput(): Promise<string> {
+    return await this.ninRepInput.getAttribute('value');
+  }
+
+  async setPlaceOfBirthRepInput(placeOfBirthRep: string): Promise<void> {
+    await this.placeOfBirthRepInput.sendKeys(placeOfBirthRep);
+  }
+
+  async getPlaceOfBirthRepInput(): Promise<string> {
+    return await this.placeOfBirthRepInput.getAttribute('value');
+  }
+
+  async setCityOfBirthRepInput(cityOfBirthRep: string): Promise<void> {
+    await this.cityOfBirthRepInput.sendKeys(cityOfBirthRep);
+  }
+
+  async getCityOfBirthRepInput(): Promise<string> {
+    return await this.cityOfBirthRepInput.getAttribute('value');
+  }
+
+  async setTypeOfIdentityRepInput(typeOfIdentityRep: string): Promise<void> {
+    await this.typeOfIdentityRepInput.sendKeys(typeOfIdentityRep);
+  }
+
+  async getTypeOfIdentityRepInput(): Promise<string> {
+    return await this.typeOfIdentityRepInput.getAttribute('value');
+  }
+
+  async setIdentityIdNumberRepInput(identityIdNumberRep: string): Promise<void> {
+    await this.identityIdNumberRepInput.sendKeys(identityIdNumberRep);
+  }
+
+  async getIdentityIdNumberRepInput(): Promise<string> {
+    return await this.identityIdNumberRepInput.getAttribute('value');
+  }
+
+  async setNinCedeoRepInput(ninCedeoRep: string): Promise<void> {
+    await this.ninCedeoRepInput.sendKeys(ninCedeoRep);
+  }
+
+  async getNinCedeoRepInput(): Promise<string> {
+    return await this.ninCedeoRepInput.getAttribute('value');
+  }
+
+  async setIssuedDateRepInput(issuedDateRep: string): Promise<void> {
+    await this.issuedDateRepInput.sendKeys(issuedDateRep);
+  }
+
+  async getIssuedDateRepInput(): Promise<string> {
+    return await this.issuedDateRepInput.getAttribute('value');
+  }
+
+  async setExpiryDateRepInput(expiryDateRep: string): Promise<void> {
+    await this.expiryDateRepInput.sendKeys(expiryDateRep);
+  }
+
+  async getExpiryDateRepInput(): Promise<string> {
+    return await this.expiryDateRepInput.getAttribute('value');
+  }
+
+  async setRegionRepInput(regionRep: string): Promise<void> {
+    await this.regionRepInput.sendKeys(regionRep);
+  }
+
+  async getRegionRepInput(): Promise<string> {
+    return await this.regionRepInput.getAttribute('value');
+  }
+
+  async setDepartmentRepInput(departmentRep: string): Promise<void> {
+    await this.departmentRepInput.sendKeys(departmentRep);
+  }
+
+  async getDepartmentRepInput(): Promise<string> {
+    return await this.departmentRepInput.getAttribute('value');
+  }
+
+  async setArondissementRepInput(arondissementRep: string): Promise<void> {
+    await this.arondissementRepInput.sendKeys(arondissementRep);
+  }
+
+  async getArondissementRepInput(): Promise<string> {
+    return await this.arondissementRepInput.getAttribute('value');
+  }
+
+  async setCommuneRepInput(communeRep: string): Promise<void> {
+    await this.communeRepInput.sendKeys(communeRep);
+  }
+
+  async getCommuneRepInput(): Promise<string> {
+    return await this.communeRepInput.getAttribute('value');
+  }
+
+  async setQartierRepInput(qartierRep: string): Promise<void> {
+    await this.qartierRepInput.sendKeys(qartierRep);
+  }
+
+  async getQartierRepInput(): Promise<string> {
+    return await this.qartierRepInput.getAttribute('value');
+  }
+
+  async setAddressRepInput(addressRep: string): Promise<void> {
+    await this.addressRepInput.sendKeys(addressRep);
+  }
+
+  async getAddressRepInput(): Promise<string> {
+    return await this.addressRepInput.getAttribute('value');
+  }
+
+  async setLandLineNumberRepInput(landLineNumberRep: string): Promise<void> {
+    await this.landLineNumberRepInput.sendKeys(landLineNumberRep);
+  }
+
+  async getLandLineNumberRepInput(): Promise<string> {
+    return await this.landLineNumberRepInput.getAttribute('value');
+  }
+
+  async setMobileNumberRepInput(mobileNumberRep: string): Promise<void> {
+    await this.mobileNumberRepInput.sendKeys(mobileNumberRep);
+  }
+
+  async getMobileNumberRepInput(): Promise<string> {
+    return await this.mobileNumberRepInput.getAttribute('value');
+  }
+
+  async setEmailRepInput(emailRep: string): Promise<void> {
+    await this.emailRepInput.sendKeys(emailRep);
+  }
+
+  async getEmailRepInput(): Promise<string> {
+    return await this.emailRepInput.getAttribute('value');
+  }
+
   async setEmployerRegistrationFormIdInput(employerRegistrationFormId: string): Promise<void> {
     await this.employerRegistrationFormIdInput.sendKeys(employerRegistrationFormId);
   }
@@ -400,25 +597,6 @@ export class ImmatriculationUpdatePage {
 
   getStatutImmatriculationInput(): ElementFinder {
     return this.statutImmatriculationInput;
-  }
-
-  async representantLegalSelectLastOption(): Promise<void> {
-    await this.representantLegalSelect
-      .all(by.tagName('option'))
-      .last()
-      .click();
-  }
-
-  async representantLegalSelectOption(option: string): Promise<void> {
-    await this.representantLegalSelect.sendKeys(option);
-  }
-
-  getRepresentantLegalSelect(): ElementFinder {
-    return this.representantLegalSelect;
-  }
-
-  async getRepresentantLegalSelectedOption(): Promise<string> {
-    return await this.representantLegalSelect.element(by.css('option:checked')).getText();
   }
 
   async userSelectLastOption(): Promise<void> {

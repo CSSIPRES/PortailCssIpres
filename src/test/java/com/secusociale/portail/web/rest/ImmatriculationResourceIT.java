@@ -141,6 +141,72 @@ public class ImmatriculationResourceIT {
     private static final String DEFAULT_AGENCY_IPRES = "AAAAAAAAAA";
     private static final String UPDATED_AGENCY_IPRES = "BBBBBBBBBB";
 
+    private static final String DEFAULT_LEGAL_REP_PERSON = "AAAAAAAAAA";
+    private static final String UPDATED_LEGAL_REP_PERSON = "BBBBBBBBBB";
+
+    private static final String DEFAULT_LAST_NAME_REP = "AAAAAAAAAA";
+    private static final String UPDATED_LAST_NAME_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_FIRST_NAME_REP = "AAAAAAAAAA";
+    private static final String UPDATED_FIRST_NAME_REP = "BBBBBBBBBB";
+
+    private static final LocalDate DEFAULT_BIRTHDATE_REP = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_BIRTHDATE_REP = LocalDate.now(ZoneId.systemDefault());
+
+    private static final String DEFAULT_NATIONALITY_REP = "AAAAAAAAAA";
+    private static final String UPDATED_NATIONALITY_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_NIN_REP = "AAAAAAAAAA";
+    private static final String UPDATED_NIN_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_PLACE_OF_BIRTH_REP = "AAAAAAAAAA";
+    private static final String UPDATED_PLACE_OF_BIRTH_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_CITY_OF_BIRTH_REP = "AAAAAAAAAA";
+    private static final String UPDATED_CITY_OF_BIRTH_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_TYPE_OF_IDENTITY_REP = "AAAAAAAAAA";
+    private static final String UPDATED_TYPE_OF_IDENTITY_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_IDENTITY_ID_NUMBER_REP = "AAAAAAAAAA";
+    private static final String UPDATED_IDENTITY_ID_NUMBER_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_NIN_CEDEO_REP = "AAAAAAAAAA";
+    private static final String UPDATED_NIN_CEDEO_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_ISSUED_DATE_REP = "AAAAAAAAAA";
+    private static final String UPDATED_ISSUED_DATE_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_EXPIRY_DATE_REP = "AAAAAAAAAA";
+    private static final String UPDATED_EXPIRY_DATE_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_REGION_REP = "AAAAAAAAAA";
+    private static final String UPDATED_REGION_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_DEPARTMENT_REP = "AAAAAAAAAA";
+    private static final String UPDATED_DEPARTMENT_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_ARONDISSEMENT_REP = "AAAAAAAAAA";
+    private static final String UPDATED_ARONDISSEMENT_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_COMMUNE_REP = "AAAAAAAAAA";
+    private static final String UPDATED_COMMUNE_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_QARTIER_REP = "AAAAAAAAAA";
+    private static final String UPDATED_QARTIER_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_ADDRESS_REP = "AAAAAAAAAA";
+    private static final String UPDATED_ADDRESS_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_LAND_LINE_NUMBER_REP = "AAAAAAAAAA";
+    private static final String UPDATED_LAND_LINE_NUMBER_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_MOBILE_NUMBER_REP = "AAAAAAAAAA";
+    private static final String UPDATED_MOBILE_NUMBER_REP = "BBBBBBBBBB";
+
+    private static final String DEFAULT_EMAIL_REP = "AAAAAAAAAA";
+    private static final String UPDATED_EMAIL_REP = "BBBBBBBBBB";
+
     private static final String DEFAULT_EMPLOYER_REGISTRATION_FORM_ID = "AAAAAAAAAA";
     private static final String UPDATED_EMPLOYER_REGISTRATION_FORM_ID = "BBBBBBBBBB";
 
@@ -214,6 +280,28 @@ public class ImmatriculationResourceIT {
             .sectorIpres(DEFAULT_SECTOR_IPRES)
             .agencyCss(DEFAULT_AGENCY_CSS)
             .agencyIpres(DEFAULT_AGENCY_IPRES)
+            .legalRepPerson(DEFAULT_LEGAL_REP_PERSON)
+            .lastNameRep(DEFAULT_LAST_NAME_REP)
+            .firstNameRep(DEFAULT_FIRST_NAME_REP)
+            .birthdateRep(DEFAULT_BIRTHDATE_REP)
+            .nationalityRep(DEFAULT_NATIONALITY_REP)
+            .ninRep(DEFAULT_NIN_REP)
+            .placeOfBirthRep(DEFAULT_PLACE_OF_BIRTH_REP)
+            .cityOfBirthRep(DEFAULT_CITY_OF_BIRTH_REP)
+            .typeOfIdentityRep(DEFAULT_TYPE_OF_IDENTITY_REP)
+            .identityIdNumberRep(DEFAULT_IDENTITY_ID_NUMBER_REP)
+            .ninCedeoRep(DEFAULT_NIN_CEDEO_REP)
+            .issuedDateRep(DEFAULT_ISSUED_DATE_REP)
+            .expiryDateRep(DEFAULT_EXPIRY_DATE_REP)
+            .regionRep(DEFAULT_REGION_REP)
+            .departmentRep(DEFAULT_DEPARTMENT_REP)
+            .arondissementRep(DEFAULT_ARONDISSEMENT_REP)
+            .communeRep(DEFAULT_COMMUNE_REP)
+            .qartierRep(DEFAULT_QARTIER_REP)
+            .addressRep(DEFAULT_ADDRESS_REP)
+            .landLineNumberRep(DEFAULT_LAND_LINE_NUMBER_REP)
+            .mobileNumberRep(DEFAULT_MOBILE_NUMBER_REP)
+            .emailRep(DEFAULT_EMAIL_REP)
             .employerRegistrationFormId(DEFAULT_EMPLOYER_REGISTRATION_FORM_ID)
             .employeeRegistrationFormId(DEFAULT_EMPLOYEE_REGISTRATION_FORM_ID)
             .processFlowId(DEFAULT_PROCESS_FLOW_ID)
@@ -265,6 +353,28 @@ public class ImmatriculationResourceIT {
             .sectorIpres(UPDATED_SECTOR_IPRES)
             .agencyCss(UPDATED_AGENCY_CSS)
             .agencyIpres(UPDATED_AGENCY_IPRES)
+            .legalRepPerson(UPDATED_LEGAL_REP_PERSON)
+            .lastNameRep(UPDATED_LAST_NAME_REP)
+            .firstNameRep(UPDATED_FIRST_NAME_REP)
+            .birthdateRep(UPDATED_BIRTHDATE_REP)
+            .nationalityRep(UPDATED_NATIONALITY_REP)
+            .ninRep(UPDATED_NIN_REP)
+            .placeOfBirthRep(UPDATED_PLACE_OF_BIRTH_REP)
+            .cityOfBirthRep(UPDATED_CITY_OF_BIRTH_REP)
+            .typeOfIdentityRep(UPDATED_TYPE_OF_IDENTITY_REP)
+            .identityIdNumberRep(UPDATED_IDENTITY_ID_NUMBER_REP)
+            .ninCedeoRep(UPDATED_NIN_CEDEO_REP)
+            .issuedDateRep(UPDATED_ISSUED_DATE_REP)
+            .expiryDateRep(UPDATED_EXPIRY_DATE_REP)
+            .regionRep(UPDATED_REGION_REP)
+            .departmentRep(UPDATED_DEPARTMENT_REP)
+            .arondissementRep(UPDATED_ARONDISSEMENT_REP)
+            .communeRep(UPDATED_COMMUNE_REP)
+            .qartierRep(UPDATED_QARTIER_REP)
+            .addressRep(UPDATED_ADDRESS_REP)
+            .landLineNumberRep(UPDATED_LAND_LINE_NUMBER_REP)
+            .mobileNumberRep(UPDATED_MOBILE_NUMBER_REP)
+            .emailRep(UPDATED_EMAIL_REP)
             .employerRegistrationFormId(UPDATED_EMPLOYER_REGISTRATION_FORM_ID)
             .employeeRegistrationFormId(UPDATED_EMPLOYEE_REGISTRATION_FORM_ID)
             .processFlowId(UPDATED_PROCESS_FLOW_ID)
@@ -329,6 +439,28 @@ public class ImmatriculationResourceIT {
         assertThat(testImmatriculation.getSectorIpres()).isEqualTo(DEFAULT_SECTOR_IPRES);
         assertThat(testImmatriculation.getAgencyCss()).isEqualTo(DEFAULT_AGENCY_CSS);
         assertThat(testImmatriculation.getAgencyIpres()).isEqualTo(DEFAULT_AGENCY_IPRES);
+        assertThat(testImmatriculation.getLegalRepPerson()).isEqualTo(DEFAULT_LEGAL_REP_PERSON);
+        assertThat(testImmatriculation.getLastNameRep()).isEqualTo(DEFAULT_LAST_NAME_REP);
+        assertThat(testImmatriculation.getFirstNameRep()).isEqualTo(DEFAULT_FIRST_NAME_REP);
+        assertThat(testImmatriculation.getBirthdateRep()).isEqualTo(DEFAULT_BIRTHDATE_REP);
+        assertThat(testImmatriculation.getNationalityRep()).isEqualTo(DEFAULT_NATIONALITY_REP);
+        assertThat(testImmatriculation.getNinRep()).isEqualTo(DEFAULT_NIN_REP);
+        assertThat(testImmatriculation.getPlaceOfBirthRep()).isEqualTo(DEFAULT_PLACE_OF_BIRTH_REP);
+        assertThat(testImmatriculation.getCityOfBirthRep()).isEqualTo(DEFAULT_CITY_OF_BIRTH_REP);
+        assertThat(testImmatriculation.getTypeOfIdentityRep()).isEqualTo(DEFAULT_TYPE_OF_IDENTITY_REP);
+        assertThat(testImmatriculation.getIdentityIdNumberRep()).isEqualTo(DEFAULT_IDENTITY_ID_NUMBER_REP);
+        assertThat(testImmatriculation.getNinCedeoRep()).isEqualTo(DEFAULT_NIN_CEDEO_REP);
+        assertThat(testImmatriculation.getIssuedDateRep()).isEqualTo(DEFAULT_ISSUED_DATE_REP);
+        assertThat(testImmatriculation.getExpiryDateRep()).isEqualTo(DEFAULT_EXPIRY_DATE_REP);
+        assertThat(testImmatriculation.getRegionRep()).isEqualTo(DEFAULT_REGION_REP);
+        assertThat(testImmatriculation.getDepartmentRep()).isEqualTo(DEFAULT_DEPARTMENT_REP);
+        assertThat(testImmatriculation.getArondissementRep()).isEqualTo(DEFAULT_ARONDISSEMENT_REP);
+        assertThat(testImmatriculation.getCommuneRep()).isEqualTo(DEFAULT_COMMUNE_REP);
+        assertThat(testImmatriculation.getQartierRep()).isEqualTo(DEFAULT_QARTIER_REP);
+        assertThat(testImmatriculation.getAddressRep()).isEqualTo(DEFAULT_ADDRESS_REP);
+        assertThat(testImmatriculation.getLandLineNumberRep()).isEqualTo(DEFAULT_LAND_LINE_NUMBER_REP);
+        assertThat(testImmatriculation.getMobileNumberRep()).isEqualTo(DEFAULT_MOBILE_NUMBER_REP);
+        assertThat(testImmatriculation.getEmailRep()).isEqualTo(DEFAULT_EMAIL_REP);
         assertThat(testImmatriculation.getEmployerRegistrationFormId()).isEqualTo(DEFAULT_EMPLOYER_REGISTRATION_FORM_ID);
         assertThat(testImmatriculation.getEmployeeRegistrationFormId()).isEqualTo(DEFAULT_EMPLOYEE_REGISTRATION_FORM_ID);
         assertThat(testImmatriculation.getProcessFlowId()).isEqualTo(DEFAULT_PROCESS_FLOW_ID);
@@ -592,6 +724,78 @@ public class ImmatriculationResourceIT {
 
     @Test
     @Transactional
+    public void checkLastNameRepIsRequired() throws Exception {
+        int databaseSizeBeforeTest = immatriculationRepository.findAll().size();
+        // set the field null
+        immatriculation.setLastNameRep(null);
+
+        // Create the Immatriculation, which fails.
+
+        restImmatriculationMockMvc.perform(post("/api/immatriculations")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(TestUtil.convertObjectToJsonBytes(immatriculation)))
+            .andExpect(status().isBadRequest());
+
+        List<Immatriculation> immatriculationList = immatriculationRepository.findAll();
+        assertThat(immatriculationList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkFirstNameRepIsRequired() throws Exception {
+        int databaseSizeBeforeTest = immatriculationRepository.findAll().size();
+        // set the field null
+        immatriculation.setFirstNameRep(null);
+
+        // Create the Immatriculation, which fails.
+
+        restImmatriculationMockMvc.perform(post("/api/immatriculations")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(TestUtil.convertObjectToJsonBytes(immatriculation)))
+            .andExpect(status().isBadRequest());
+
+        List<Immatriculation> immatriculationList = immatriculationRepository.findAll();
+        assertThat(immatriculationList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkBirthdateRepIsRequired() throws Exception {
+        int databaseSizeBeforeTest = immatriculationRepository.findAll().size();
+        // set the field null
+        immatriculation.setBirthdateRep(null);
+
+        // Create the Immatriculation, which fails.
+
+        restImmatriculationMockMvc.perform(post("/api/immatriculations")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(TestUtil.convertObjectToJsonBytes(immatriculation)))
+            .andExpect(status().isBadRequest());
+
+        List<Immatriculation> immatriculationList = immatriculationRepository.findAll();
+        assertThat(immatriculationList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkNationalityRepIsRequired() throws Exception {
+        int databaseSizeBeforeTest = immatriculationRepository.findAll().size();
+        // set the field null
+        immatriculation.setNationalityRep(null);
+
+        // Create the Immatriculation, which fails.
+
+        restImmatriculationMockMvc.perform(post("/api/immatriculations")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(TestUtil.convertObjectToJsonBytes(immatriculation)))
+            .andExpect(status().isBadRequest());
+
+        List<Immatriculation> immatriculationList = immatriculationRepository.findAll();
+        assertThat(immatriculationList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllImmatriculations() throws Exception {
         // Initialize the database
         immatriculationRepository.saveAndFlush(immatriculation);
@@ -637,6 +841,28 @@ public class ImmatriculationResourceIT {
             .andExpect(jsonPath("$.[*].sectorIpres").value(hasItem(DEFAULT_SECTOR_IPRES)))
             .andExpect(jsonPath("$.[*].agencyCss").value(hasItem(DEFAULT_AGENCY_CSS)))
             .andExpect(jsonPath("$.[*].agencyIpres").value(hasItem(DEFAULT_AGENCY_IPRES)))
+            .andExpect(jsonPath("$.[*].legalRepPerson").value(hasItem(DEFAULT_LEGAL_REP_PERSON)))
+            .andExpect(jsonPath("$.[*].lastNameRep").value(hasItem(DEFAULT_LAST_NAME_REP)))
+            .andExpect(jsonPath("$.[*].firstNameRep").value(hasItem(DEFAULT_FIRST_NAME_REP)))
+            .andExpect(jsonPath("$.[*].birthdateRep").value(hasItem(DEFAULT_BIRTHDATE_REP.toString())))
+            .andExpect(jsonPath("$.[*].nationalityRep").value(hasItem(DEFAULT_NATIONALITY_REP)))
+            .andExpect(jsonPath("$.[*].ninRep").value(hasItem(DEFAULT_NIN_REP)))
+            .andExpect(jsonPath("$.[*].placeOfBirthRep").value(hasItem(DEFAULT_PLACE_OF_BIRTH_REP)))
+            .andExpect(jsonPath("$.[*].cityOfBirthRep").value(hasItem(DEFAULT_CITY_OF_BIRTH_REP)))
+            .andExpect(jsonPath("$.[*].typeOfIdentityRep").value(hasItem(DEFAULT_TYPE_OF_IDENTITY_REP)))
+            .andExpect(jsonPath("$.[*].identityIdNumberRep").value(hasItem(DEFAULT_IDENTITY_ID_NUMBER_REP)))
+            .andExpect(jsonPath("$.[*].ninCedeoRep").value(hasItem(DEFAULT_NIN_CEDEO_REP)))
+            .andExpect(jsonPath("$.[*].issuedDateRep").value(hasItem(DEFAULT_ISSUED_DATE_REP)))
+            .andExpect(jsonPath("$.[*].expiryDateRep").value(hasItem(DEFAULT_EXPIRY_DATE_REP)))
+            .andExpect(jsonPath("$.[*].regionRep").value(hasItem(DEFAULT_REGION_REP)))
+            .andExpect(jsonPath("$.[*].departmentRep").value(hasItem(DEFAULT_DEPARTMENT_REP)))
+            .andExpect(jsonPath("$.[*].arondissementRep").value(hasItem(DEFAULT_ARONDISSEMENT_REP)))
+            .andExpect(jsonPath("$.[*].communeRep").value(hasItem(DEFAULT_COMMUNE_REP)))
+            .andExpect(jsonPath("$.[*].qartierRep").value(hasItem(DEFAULT_QARTIER_REP)))
+            .andExpect(jsonPath("$.[*].addressRep").value(hasItem(DEFAULT_ADDRESS_REP)))
+            .andExpect(jsonPath("$.[*].landLineNumberRep").value(hasItem(DEFAULT_LAND_LINE_NUMBER_REP)))
+            .andExpect(jsonPath("$.[*].mobileNumberRep").value(hasItem(DEFAULT_MOBILE_NUMBER_REP)))
+            .andExpect(jsonPath("$.[*].emailRep").value(hasItem(DEFAULT_EMAIL_REP)))
             .andExpect(jsonPath("$.[*].employerRegistrationFormId").value(hasItem(DEFAULT_EMPLOYER_REGISTRATION_FORM_ID)))
             .andExpect(jsonPath("$.[*].employeeRegistrationFormId").value(hasItem(DEFAULT_EMPLOYEE_REGISTRATION_FORM_ID)))
             .andExpect(jsonPath("$.[*].processFlowId").value(hasItem(DEFAULT_PROCESS_FLOW_ID)))
@@ -691,6 +917,28 @@ public class ImmatriculationResourceIT {
             .andExpect(jsonPath("$.sectorIpres").value(DEFAULT_SECTOR_IPRES))
             .andExpect(jsonPath("$.agencyCss").value(DEFAULT_AGENCY_CSS))
             .andExpect(jsonPath("$.agencyIpres").value(DEFAULT_AGENCY_IPRES))
+            .andExpect(jsonPath("$.legalRepPerson").value(DEFAULT_LEGAL_REP_PERSON))
+            .andExpect(jsonPath("$.lastNameRep").value(DEFAULT_LAST_NAME_REP))
+            .andExpect(jsonPath("$.firstNameRep").value(DEFAULT_FIRST_NAME_REP))
+            .andExpect(jsonPath("$.birthdateRep").value(DEFAULT_BIRTHDATE_REP.toString()))
+            .andExpect(jsonPath("$.nationalityRep").value(DEFAULT_NATIONALITY_REP))
+            .andExpect(jsonPath("$.ninRep").value(DEFAULT_NIN_REP))
+            .andExpect(jsonPath("$.placeOfBirthRep").value(DEFAULT_PLACE_OF_BIRTH_REP))
+            .andExpect(jsonPath("$.cityOfBirthRep").value(DEFAULT_CITY_OF_BIRTH_REP))
+            .andExpect(jsonPath("$.typeOfIdentityRep").value(DEFAULT_TYPE_OF_IDENTITY_REP))
+            .andExpect(jsonPath("$.identityIdNumberRep").value(DEFAULT_IDENTITY_ID_NUMBER_REP))
+            .andExpect(jsonPath("$.ninCedeoRep").value(DEFAULT_NIN_CEDEO_REP))
+            .andExpect(jsonPath("$.issuedDateRep").value(DEFAULT_ISSUED_DATE_REP))
+            .andExpect(jsonPath("$.expiryDateRep").value(DEFAULT_EXPIRY_DATE_REP))
+            .andExpect(jsonPath("$.regionRep").value(DEFAULT_REGION_REP))
+            .andExpect(jsonPath("$.departmentRep").value(DEFAULT_DEPARTMENT_REP))
+            .andExpect(jsonPath("$.arondissementRep").value(DEFAULT_ARONDISSEMENT_REP))
+            .andExpect(jsonPath("$.communeRep").value(DEFAULT_COMMUNE_REP))
+            .andExpect(jsonPath("$.qartierRep").value(DEFAULT_QARTIER_REP))
+            .andExpect(jsonPath("$.addressRep").value(DEFAULT_ADDRESS_REP))
+            .andExpect(jsonPath("$.landLineNumberRep").value(DEFAULT_LAND_LINE_NUMBER_REP))
+            .andExpect(jsonPath("$.mobileNumberRep").value(DEFAULT_MOBILE_NUMBER_REP))
+            .andExpect(jsonPath("$.emailRep").value(DEFAULT_EMAIL_REP))
             .andExpect(jsonPath("$.employerRegistrationFormId").value(DEFAULT_EMPLOYER_REGISTRATION_FORM_ID))
             .andExpect(jsonPath("$.employeeRegistrationFormId").value(DEFAULT_EMPLOYEE_REGISTRATION_FORM_ID))
             .andExpect(jsonPath("$.processFlowId").value(DEFAULT_PROCESS_FLOW_ID))
@@ -755,6 +1003,28 @@ public class ImmatriculationResourceIT {
             .sectorIpres(UPDATED_SECTOR_IPRES)
             .agencyCss(UPDATED_AGENCY_CSS)
             .agencyIpres(UPDATED_AGENCY_IPRES)
+            .legalRepPerson(UPDATED_LEGAL_REP_PERSON)
+            .lastNameRep(UPDATED_LAST_NAME_REP)
+            .firstNameRep(UPDATED_FIRST_NAME_REP)
+            .birthdateRep(UPDATED_BIRTHDATE_REP)
+            .nationalityRep(UPDATED_NATIONALITY_REP)
+            .ninRep(UPDATED_NIN_REP)
+            .placeOfBirthRep(UPDATED_PLACE_OF_BIRTH_REP)
+            .cityOfBirthRep(UPDATED_CITY_OF_BIRTH_REP)
+            .typeOfIdentityRep(UPDATED_TYPE_OF_IDENTITY_REP)
+            .identityIdNumberRep(UPDATED_IDENTITY_ID_NUMBER_REP)
+            .ninCedeoRep(UPDATED_NIN_CEDEO_REP)
+            .issuedDateRep(UPDATED_ISSUED_DATE_REP)
+            .expiryDateRep(UPDATED_EXPIRY_DATE_REP)
+            .regionRep(UPDATED_REGION_REP)
+            .departmentRep(UPDATED_DEPARTMENT_REP)
+            .arondissementRep(UPDATED_ARONDISSEMENT_REP)
+            .communeRep(UPDATED_COMMUNE_REP)
+            .qartierRep(UPDATED_QARTIER_REP)
+            .addressRep(UPDATED_ADDRESS_REP)
+            .landLineNumberRep(UPDATED_LAND_LINE_NUMBER_REP)
+            .mobileNumberRep(UPDATED_MOBILE_NUMBER_REP)
+            .emailRep(UPDATED_EMAIL_REP)
             .employerRegistrationFormId(UPDATED_EMPLOYER_REGISTRATION_FORM_ID)
             .employeeRegistrationFormId(UPDATED_EMPLOYEE_REGISTRATION_FORM_ID)
             .processFlowId(UPDATED_PROCESS_FLOW_ID)
@@ -806,6 +1076,28 @@ public class ImmatriculationResourceIT {
         assertThat(testImmatriculation.getSectorIpres()).isEqualTo(UPDATED_SECTOR_IPRES);
         assertThat(testImmatriculation.getAgencyCss()).isEqualTo(UPDATED_AGENCY_CSS);
         assertThat(testImmatriculation.getAgencyIpres()).isEqualTo(UPDATED_AGENCY_IPRES);
+        assertThat(testImmatriculation.getLegalRepPerson()).isEqualTo(UPDATED_LEGAL_REP_PERSON);
+        assertThat(testImmatriculation.getLastNameRep()).isEqualTo(UPDATED_LAST_NAME_REP);
+        assertThat(testImmatriculation.getFirstNameRep()).isEqualTo(UPDATED_FIRST_NAME_REP);
+        assertThat(testImmatriculation.getBirthdateRep()).isEqualTo(UPDATED_BIRTHDATE_REP);
+        assertThat(testImmatriculation.getNationalityRep()).isEqualTo(UPDATED_NATIONALITY_REP);
+        assertThat(testImmatriculation.getNinRep()).isEqualTo(UPDATED_NIN_REP);
+        assertThat(testImmatriculation.getPlaceOfBirthRep()).isEqualTo(UPDATED_PLACE_OF_BIRTH_REP);
+        assertThat(testImmatriculation.getCityOfBirthRep()).isEqualTo(UPDATED_CITY_OF_BIRTH_REP);
+        assertThat(testImmatriculation.getTypeOfIdentityRep()).isEqualTo(UPDATED_TYPE_OF_IDENTITY_REP);
+        assertThat(testImmatriculation.getIdentityIdNumberRep()).isEqualTo(UPDATED_IDENTITY_ID_NUMBER_REP);
+        assertThat(testImmatriculation.getNinCedeoRep()).isEqualTo(UPDATED_NIN_CEDEO_REP);
+        assertThat(testImmatriculation.getIssuedDateRep()).isEqualTo(UPDATED_ISSUED_DATE_REP);
+        assertThat(testImmatriculation.getExpiryDateRep()).isEqualTo(UPDATED_EXPIRY_DATE_REP);
+        assertThat(testImmatriculation.getRegionRep()).isEqualTo(UPDATED_REGION_REP);
+        assertThat(testImmatriculation.getDepartmentRep()).isEqualTo(UPDATED_DEPARTMENT_REP);
+        assertThat(testImmatriculation.getArondissementRep()).isEqualTo(UPDATED_ARONDISSEMENT_REP);
+        assertThat(testImmatriculation.getCommuneRep()).isEqualTo(UPDATED_COMMUNE_REP);
+        assertThat(testImmatriculation.getQartierRep()).isEqualTo(UPDATED_QARTIER_REP);
+        assertThat(testImmatriculation.getAddressRep()).isEqualTo(UPDATED_ADDRESS_REP);
+        assertThat(testImmatriculation.getLandLineNumberRep()).isEqualTo(UPDATED_LAND_LINE_NUMBER_REP);
+        assertThat(testImmatriculation.getMobileNumberRep()).isEqualTo(UPDATED_MOBILE_NUMBER_REP);
+        assertThat(testImmatriculation.getEmailRep()).isEqualTo(UPDATED_EMAIL_REP);
         assertThat(testImmatriculation.getEmployerRegistrationFormId()).isEqualTo(UPDATED_EMPLOYER_REGISTRATION_FORM_ID);
         assertThat(testImmatriculation.getEmployeeRegistrationFormId()).isEqualTo(UPDATED_EMPLOYEE_REGISTRATION_FORM_ID);
         assertThat(testImmatriculation.getProcessFlowId()).isEqualTo(UPDATED_PROCESS_FLOW_ID);

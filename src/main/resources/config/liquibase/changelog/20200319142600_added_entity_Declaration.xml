@@ -64,9 +64,6 @@
             <column name="mnt_cot_rcc_calc_par_employeur" type="decimal(21,2)">
                 <constraints nullable="true" />
             </column>
-            <column name="employeur_id" type="bigint">
-                <constraints nullable="false" />
-            </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
     </changeSet>
@@ -106,7 +103,6 @@
             <column name="mnt_cot_at_mp_calc_par_employeur" type="numeric"/>
             <column name="mnt_cot_rg_calc_par_employeur" type="numeric"/>
             <column name="mnt_cot_rcc_calc_par_employeur" type="numeric"/>
-            <column name="employeur_id" type="numeric"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
         </loadData>
     </changeSet>

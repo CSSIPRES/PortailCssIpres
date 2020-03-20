@@ -152,6 +152,94 @@
                 <dd>
                     <span>{{ immatriculation.agencyIpres }}</span>
                 </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.legalRepPerson">Legal Rep Person</span></dt>
+                <dd>
+                    <span>{{ immatriculation.legalRepPerson }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.lastNameRep">Last Name Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.lastNameRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.firstNameRep">First Name Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.firstNameRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.birthdateRep">Birthdate Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.birthdateRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.nationalityRep">Nationality Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.nationalityRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.ninRep">Nin Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.ninRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.placeOfBirthRep">Place Of Birth Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.placeOfBirthRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.cityOfBirthRep">City Of Birth Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.cityOfBirthRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.typeOfIdentityRep">Type Of Identity Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.typeOfIdentityRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.identityIdNumberRep">Identity Id Number Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.identityIdNumberRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.ninCedeoRep">Nin Cedeo Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.ninCedeoRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.issuedDateRep">Issued Date Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.issuedDateRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.expiryDateRep">Expiry Date Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.expiryDateRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.regionRep">Region Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.regionRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.departmentRep">Department Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.departmentRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.arondissementRep">Arondissement Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.arondissementRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.communeRep">Commune Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.communeRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.qartierRep">Qartier Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.qartierRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.addressRep">Address Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.addressRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.landLineNumberRep">Land Line Number Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.landLineNumberRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.mobileNumberRep">Mobile Number Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.mobileNumberRep }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.emailRep">Email Rep</span></dt>
+                <dd>
+                    <span>{{ immatriculation.emailRep }}</span>
+                </dd>
                 <dt><span jhiTranslate="portailCssIpresApp.immatriculation.employerRegistrationFormId">Employer Registration Form Id</span></dt>
                 <dd>
                     <span>{{ immatriculation.employerRegistrationFormId }}</span>
@@ -171,12 +259,6 @@
                 <dt><span jhiTranslate="portailCssIpresApp.immatriculation.statutImmatriculation">Statut Immatriculation</span></dt>
                 <dd>
                     <span>{{ immatriculation.statutImmatriculation }}</span>
-                </dd>
-                <dt><span jhiTranslate="portailCssIpresApp.immatriculation.representantLegal">Representant Legal</span></dt>
-                <dd>
-                    <div *ngIf="immatriculation.representantLegal">
-                        <a [routerLink]="['/representant-legal', immatriculation.representantLegal?.id, 'view']">{{ immatriculation.representantLegal?.firstName }}</a>
-                    </div>
                 </dd>
                 <dt><span jhiTranslate="portailCssIpresApp.immatriculation.user">User</span></dt>
                 <dd>

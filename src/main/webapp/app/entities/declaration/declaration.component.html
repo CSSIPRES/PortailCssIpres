@@ -39,7 +39,6 @@
                     <th scope="col"  jhiSortBy="mntCotAtMpCalcParEmployeur"><span jhiTranslate="portailCssIpresApp.declaration.mntCotAtMpCalcParEmployeur">Mnt Cot At Mp Calc Par Employeur</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="mntCotRgCalcParEmployeur"><span jhiTranslate="portailCssIpresApp.declaration.mntCotRgCalcParEmployeur">Mnt Cot Rg Calc Par Employeur</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="mntCotRccCalcParEmployeur"><span jhiTranslate="portailCssIpresApp.declaration.mntCotRccCalcParEmployeur">Mnt Cot Rcc Calc Par Employeur</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="employeur.employerName"><span jhiTranslate="portailCssIpresApp.declaration.employeur">Employeur</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -62,11 +61,6 @@
                     <td>{{ declaration.mntCotAtMpCalcParEmployeur }}</td>
                     <td>{{ declaration.mntCotRgCalcParEmployeur }}</td>
                     <td>{{ declaration.mntCotRccCalcParEmployeur }}</td>
-                    <td>
-                        <div *ngIf="declaration.employeur">
-                            <a [routerLink]="['/immatriculation', declaration.employeur?.id, 'view']" >{{ declaration.employeur?.employerName }}</a>
-                        </div>
-                    </td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"

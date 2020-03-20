@@ -7,8 +7,6 @@ import { Observable } from 'rxjs';
 
 import { IDeclaration, Declaration } from 'app/shared/model/declaration.model';
 import { DeclarationService } from './declaration.service';
-import { IImmatriculation } from 'app/shared/model/immatriculation.model';
-import { ImmatriculationService } from 'app/entities/immatriculation/immatriculation.service';
 
 @Component({
   selector: 'jhi-declaration-update',
@@ -16,7 +14,6 @@ import { ImmatriculationService } from 'app/entities/immatriculation/immatricula
 })
 export class DeclarationUpdateComponent implements OnInit {
   isSaving = false;
-  immatriculations: IImmatriculation[] = [];
   dateDebutCotisationDp: any;
 
   editForm = this.fb.group({
@@ -36,22 +33,14 @@ export class DeclarationUpdateComponent implements OnInit {
     mntCotPfCalcParEmployeur: [],
     mntCotAtMpCalcParEmployeur: [],
     mntCotRgCalcParEmployeur: [],
-    mntCotRccCalcParEmployeur: [],
-    employeur: [null, Validators.required]
+    mntCotRccCalcParEmployeur: []
   });
 
-  constructor(
-    protected declarationService: DeclarationService,
-    protected immatriculationService: ImmatriculationService,
-    protected activatedRoute: ActivatedRoute,
-    private fb: FormBuilder
-  ) {}
+  constructor(protected declarationService: DeclarationService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({ declaration }) => {
       this.updateForm(declaration);
-
-      this.immatriculationService.query().subscribe((res: HttpResponse<IImmatriculation[]>) => (this.immatriculations = res.body || []));
     });
   }
 
@@ -73,8 +62,7 @@ export class DeclarationUpdateComponent implements OnInit {
       mntCotPfCalcParEmployeur: declaration.mntCotPfCalcParEmployeur,
       mntCotAtMpCalcParEmployeur: declaration.mntCotAtMpCalcParEmployeur,
       mntCotRgCalcParEmployeur: declaration.mntCotRgCalcParEmployeur,
-      mntCotRccCalcParEmployeur: declaration.mntCotRccCalcParEmployeur,
-      employeur: declaration.employeur
+      mntCotRccCalcParEmployeur: declaration.mntCotRccCalcParEmployeur
     });
   }
 
@@ -111,8 +99,7 @@ export class DeclarationUpdateComponent implements OnInit {
       mntCotPfCalcParEmployeur: this.editForm.get(['mntCotPfCalcParEmployeur'])!.value,
       mntCotAtMpCalcParEmployeur: this.editForm.get(['mntCotAtMpCalcParEmployeur'])!.value,
       mntCotRgCalcParEmployeur: this.editForm.get(['mntCotRgCalcParEmployeur'])!.value,
-      mntCotRccCalcParEmployeur: this.editForm.get(['mntCotRccCalcParEmployeur'])!.value,
-      employeur: this.editForm.get(['employeur'])!.value
+      mntCotRccCalcParEmployeur: this.editForm.get(['mntCotRccCalcParEmployeur'])!.value
     };
   }
 
@@ -130,9 +117,5 @@ export class DeclarationUpdateComponent implements OnInit {
 
   protected onSaveError(): void {
     this.isSaving = false;
-  }
-
-  trackById(index: number, item: IImmatriculation): any {
-    return item.id;
   }
 }
