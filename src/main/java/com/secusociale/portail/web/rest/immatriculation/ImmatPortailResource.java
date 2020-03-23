@@ -53,7 +53,7 @@ public class ImmatPortailResource {
     
     
 	@PostMapping("/immatPortail")
-    public Holder<IMMATRICULATIONINBOUND> createImmatriculationPortail(@Valid @RequestBody Immatriculation immatriculation) throws URISyntaxException, IMMATRICULATIONINBOUNDFault {
+    public Holder<IMMATRICULATIONINBOUND> createImmatriculationPortail(@RequestBody IMMATRICULATIONINBOUND immatriculation) throws URISyntaxException, IMMATRICULATIONINBOUNDFault {
         log.debug("REST request to save Immatriculation : {}", immatriculation);
         
         Holder<IMMATRICULATIONINBOUND> immatriculationInbound = new Holder<IMMATRICULATIONINBOUND>();
