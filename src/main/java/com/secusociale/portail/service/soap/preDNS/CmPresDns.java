@@ -18,7 +18,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 /**
  * <p>Classe Java pour anonymous complex type.
  * 
- * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * <p>Le fragment de schï¿½ma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -277,7 +277,7 @@ public class CmPresDns {
     protected String dateTimeTagFormat;
 
     /**
-     * Obtient la valeur de la propriété typeIdentifiant.
+     * Obtient la valeur de la propriï¿½tï¿½ typeIdentifiant.
      * 
      * @return
      *     possible object is
@@ -289,7 +289,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété typeIdentifiant.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ typeIdentifiant.
      * 
      * @param value
      *     allowed object is
@@ -301,7 +301,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété numeroIdentifiant.
+     * Obtient la valeur de la propriï¿½tï¿½ numeroIdentifiant.
      * 
      * @return
      *     possible object is
@@ -313,7 +313,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété numeroIdentifiant.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ numeroIdentifiant.
      * 
      * @param value
      *     allowed object is
@@ -325,7 +325,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété raisonSociale.
+     * Obtient la valeur de la propriï¿½tï¿½ raisonSociale.
      * 
      * @return
      *     possible object is
@@ -337,7 +337,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété raisonSociale.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ raisonSociale.
      * 
      * @param value
      *     allowed object is
@@ -349,7 +349,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété address.
+     * Obtient la valeur de la propriï¿½tï¿½ address.
      * 
      * @return
      *     possible object is
@@ -361,7 +361,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété address.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ address.
      * 
      * @param value
      *     allowed object is
@@ -373,7 +373,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété typeDeclaration.
+     * Obtient la valeur de la propriï¿½tï¿½ typeDeclaration.
      * 
      * @return
      *     possible object is
@@ -385,7 +385,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété typeDeclaration.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ typeDeclaration.
      * 
      * @param value
      *     allowed object is
@@ -397,7 +397,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété dateDebutPeriodeCotisation.
+     * Obtient la valeur de la propriï¿½tï¿½ dateDebutPeriodeCotisation.
      * 
      * @return
      *     possible object is
@@ -409,7 +409,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété dateDebutPeriodeCotisation.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ dateDebutPeriodeCotisation.
      * 
      * @param value
      *     allowed object is
@@ -421,7 +421,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété dateFinPeriodeCotisation.
+     * Obtient la valeur de la propriï¿½tï¿½ dateFinPeriodeCotisation.
      * 
      * @return
      *     possible object is
@@ -433,7 +433,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété dateFinPeriodeCotisation.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ dateFinPeriodeCotisation.
      * 
      * @param value
      *     allowed object is
@@ -445,7 +445,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété totalSalaries.
+     * Obtient la valeur de la propriï¿½tï¿½ totalSalaries.
      * 
      * @return
      *     possible object is
@@ -457,7 +457,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété totalSalaries.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaries.
      * 
      * @param value
      *     allowed object is
@@ -469,7 +469,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété totalSalaireAssujetisRg.
+     * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRg.
      * 
      * @return
      *     possible object is
@@ -481,7 +481,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété totalSalaireAssujetisRg.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRg.
      * 
      * @param value
      *     allowed object is
@@ -493,7 +493,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété totalSalaireAssujetisRcc.
+     * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRcc.
      * 
      * @return
      *     possible object is
@@ -505,7 +505,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété totalSalaireAssujetisRcc.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRcc.
      * 
      * @param value
      *     allowed object is
@@ -517,7 +517,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété totalSalaireAssujetisPf.
+     * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisPf.
      * 
      * @return
      *     possible object is
@@ -529,7 +529,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété totalSalaireAssujetisPf.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisPf.
      * 
      * @param value
      *     allowed object is
@@ -541,7 +541,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété totalSalaireAssujetisAtmp.
+     * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisAtmp.
      * 
      * @return
      *     possible object is
@@ -553,7 +553,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété totalSalaireAssujetisAtmp.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisAtmp.
      * 
      * @param value
      *     allowed object is
@@ -565,7 +565,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété totalSalaireVerses.
+     * Obtient la valeur de la propriï¿½tï¿½ totalSalaireVerses.
      * 
      * @return
      *     possible object is
@@ -577,7 +577,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété totalSalaireVerses.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireVerses.
      * 
      * @param value
      *     allowed object is
@@ -589,7 +589,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété montantCotisationPfEmp.
+     * Obtient la valeur de la propriï¿½tï¿½ montantCotisationPfEmp.
      * 
      * @return
      *     possible object is
@@ -601,7 +601,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété montantCotisationPfEmp.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ montantCotisationPfEmp.
      * 
      * @param value
      *     allowed object is
@@ -613,7 +613,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété montantCotisationAtmpEmp.
+     * Obtient la valeur de la propriï¿½tï¿½ montantCotisationAtmpEmp.
      * 
      * @return
      *     possible object is
@@ -625,7 +625,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété montantCotisationAtmpEmp.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ montantCotisationAtmpEmp.
      * 
      * @param value
      *     allowed object is
@@ -637,7 +637,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété montantCotisationRgEmpl.
+     * Obtient la valeur de la propriï¿½tï¿½ montantCotisationRgEmpl.
      * 
      * @return
      *     possible object is
@@ -649,7 +649,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété montantCotisationRgEmpl.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ montantCotisationRgEmpl.
      * 
      * @param value
      *     allowed object is
@@ -661,7 +661,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété montantCotisationRccEmp.
+     * Obtient la valeur de la propriï¿½tï¿½ montantCotisationRccEmp.
      * 
      * @return
      *     possible object is
@@ -673,7 +673,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété montantCotisationRccEmp.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ montantCotisationRccEmp.
      * 
      * @param value
      *     allowed object is
@@ -714,7 +714,7 @@ public class CmPresDns {
     }
 
     /**
-     * Obtient la valeur de la propriété dateTimeTagFormat.
+     * Obtient la valeur de la propriï¿½tï¿½ dateTimeTagFormat.
      * 
      * @return
      *     possible object is
@@ -730,7 +730,7 @@ public class CmPresDns {
     }
 
     /**
-     * Définit la valeur de la propriété dateTimeTagFormat.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ dateTimeTagFormat.
      * 
      * @param value
      *     allowed object is
@@ -745,7 +745,7 @@ public class CmPresDns {
     /**
      * <p>Classe Java pour anonymous complex type.
      * 
-     * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+     * <p>Le fragment de schï¿½ma suivant indique le contenu attendu figurant dans cette classe.
      * 
      * <pre>
      * &lt;complexType>
@@ -1022,7 +1022,7 @@ public class CmPresDns {
         protected ListAction action;
 
         /**
-         * Obtient la valeur de la propriété numeroAssureSocial.
+         * Obtient la valeur de la propriï¿½tï¿½ numeroAssureSocial.
          * 
          * @return
          *     possible object is
@@ -1034,7 +1034,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété numeroAssureSocial.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ numeroAssureSocial.
          * 
          * @param value
          *     allowed object is
@@ -1046,7 +1046,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété nom.
+         * Obtient la valeur de la propriï¿½tï¿½ nom.
          * 
          * @return
          *     possible object is
@@ -1058,7 +1058,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété nom.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ nom.
          * 
          * @param value
          *     allowed object is
@@ -1070,7 +1070,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété prenom.
+         * Obtient la valeur de la propriï¿½tï¿½ prenom.
          * 
          * @return
          *     possible object is
@@ -1082,7 +1082,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété prenom.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ prenom.
          * 
          * @param value
          *     allowed object is
@@ -1094,7 +1094,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété dateNaissance.
+         * Obtient la valeur de la propriï¿½tï¿½ dateNaissance.
          * 
          * @return
          *     possible object is
@@ -1106,7 +1106,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété dateNaissance.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ dateNaissance.
          * 
          * @param value
          *     allowed object is
@@ -1118,7 +1118,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété typePiece.
+         * Obtient la valeur de la propriï¿½tï¿½ typePiece.
          * 
          * @return
          *     possible object is
@@ -1130,7 +1130,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété typePiece.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ typePiece.
          * 
          * @param value
          *     allowed object is
@@ -1142,7 +1142,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété numeroPiece.
+         * Obtient la valeur de la propriï¿½tï¿½ numeroPiece.
          * 
          * @return
          *     possible object is
@@ -1154,7 +1154,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété numeroPiece.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ numeroPiece.
          * 
          * @param value
          *     allowed object is
@@ -1166,7 +1166,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété natureContrat.
+         * Obtient la valeur de la propriï¿½tï¿½ natureContrat.
          * 
          * @return
          *     possible object is
@@ -1178,7 +1178,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété natureContrat.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ natureContrat.
          * 
          * @param value
          *     allowed object is
@@ -1190,7 +1190,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété dateEntree.
+         * Obtient la valeur de la propriï¿½tï¿½ dateEntree.
          * 
          * @return
          *     possible object is
@@ -1202,7 +1202,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété dateEntree.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ dateEntree.
          * 
          * @param value
          *     allowed object is
@@ -1214,7 +1214,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété dateSortie.
+         * Obtient la valeur de la propriï¿½tï¿½ dateSortie.
          * 
          * @return
          *     possible object is
@@ -1226,7 +1226,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété dateSortie.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ dateSortie.
          * 
          * @param value
          *     allowed object is
@@ -1238,7 +1238,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété motif.
+         * Obtient la valeur de la propriï¿½tï¿½ motif.
          * 
          * @return
          *     possible object is
@@ -1250,7 +1250,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété motif.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ motif.
          * 
          * @param value
          *     allowed object is
@@ -1262,7 +1262,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisPfMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisPfMois1.
          * 
          * @return
          *     possible object is
@@ -1274,7 +1274,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisPfMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisPfMois1.
          * 
          * @param value
          *     allowed object is
@@ -1286,7 +1286,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisAtmpMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisAtmpMois1.
          * 
          * @return
          *     possible object is
@@ -1298,7 +1298,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisAtmpMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisAtmpMois1.
          * 
          * @param value
          *     allowed object is
@@ -1310,7 +1310,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisRgMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRgMois1.
          * 
          * @return
          *     possible object is
@@ -1322,7 +1322,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisRgMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRgMois1.
          * 
          * @param value
          *     allowed object is
@@ -1334,7 +1334,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisRccMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRccMois1.
          * 
          * @return
          *     possible object is
@@ -1346,7 +1346,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisRccMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRccMois1.
          * 
          * @param value
          *     allowed object is
@@ -1358,7 +1358,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété salaireBrutMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ salaireBrutMois1.
          * 
          * @return
          *     possible object is
@@ -1370,7 +1370,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété salaireBrutMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ salaireBrutMois1.
          * 
          * @param value
          *     allowed object is
@@ -1382,7 +1382,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tempsPresenceJourMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ tempsPresenceJourMois1.
          * 
          * @return
          *     possible object is
@@ -1394,7 +1394,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tempsPresenceJourMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tempsPresenceJourMois1.
          * 
          * @param value
          *     allowed object is
@@ -1406,7 +1406,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tempsPresenceHeureMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ tempsPresenceHeureMois1.
          * 
          * @return
          *     possible object is
@@ -1418,7 +1418,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tempsPresenceHeureMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tempsPresenceHeureMois1.
          * 
          * @param value
          *     allowed object is
@@ -1430,7 +1430,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tempsTravailMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ tempsTravailMois1.
          * 
          * @return
          *     possible object is
@@ -1442,7 +1442,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tempsTravailMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tempsTravailMois1.
          * 
          * @param value
          *     allowed object is
@@ -1454,7 +1454,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tranceDeTravailMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ tranceDeTravailMois1.
          * 
          * @return
          *     possible object is
@@ -1466,7 +1466,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tranceDeTravailMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tranceDeTravailMois1.
          * 
          * @param value
          *     allowed object is
@@ -1478,7 +1478,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété regimeGeneralMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ regimeGeneralMois1.
          * 
          * @return
          *     possible object is
@@ -1490,7 +1490,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété regimeGeneralMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ regimeGeneralMois1.
          * 
          * @param value
          *     allowed object is
@@ -1502,7 +1502,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété regimeCadreMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ regimeCadreMois1.
          * 
          * @return
          *     possible object is
@@ -1514,7 +1514,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété regimeCadreMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ regimeCadreMois1.
          * 
          * @param value
          *     allowed object is
@@ -1526,7 +1526,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété dateEffetRegimeCadreMois1.
+         * Obtient la valeur de la propriï¿½tï¿½ dateEffetRegimeCadreMois1.
          * 
          * @return
          *     possible object is
@@ -1538,7 +1538,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété dateEffetRegimeCadreMois1.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ dateEffetRegimeCadreMois1.
          * 
          * @param value
          *     allowed object is
@@ -1550,7 +1550,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisPfMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisPfMois2.
          * 
          * @return
          *     possible object is
@@ -1562,7 +1562,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisPfMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisPfMois2.
          * 
          * @param value
          *     allowed object is
@@ -1574,7 +1574,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisAtmpMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisAtmpMois2.
          * 
          * @return
          *     possible object is
@@ -1586,7 +1586,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisAtmpMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisAtmpMois2.
          * 
          * @param value
          *     allowed object is
@@ -1598,7 +1598,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisRgMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRgMois2.
          * 
          * @return
          *     possible object is
@@ -1610,7 +1610,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisRgMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRgMois2.
          * 
          * @param value
          *     allowed object is
@@ -1622,7 +1622,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisRccMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRccMois2.
          * 
          * @return
          *     possible object is
@@ -1634,7 +1634,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisRccMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRccMois2.
          * 
          * @param value
          *     allowed object is
@@ -1646,7 +1646,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété salaireBrutMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ salaireBrutMois2.
          * 
          * @return
          *     possible object is
@@ -1658,7 +1658,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété salaireBrutMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ salaireBrutMois2.
          * 
          * @param value
          *     allowed object is
@@ -1670,7 +1670,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tempsPresenceJourMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ tempsPresenceJourMois2.
          * 
          * @return
          *     possible object is
@@ -1682,7 +1682,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tempsPresenceJourMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tempsPresenceJourMois2.
          * 
          * @param value
          *     allowed object is
@@ -1694,7 +1694,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tempsPresenceHeureMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ tempsPresenceHeureMois2.
          * 
          * @return
          *     possible object is
@@ -1706,7 +1706,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tempsPresenceHeureMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tempsPresenceHeureMois2.
          * 
          * @param value
          *     allowed object is
@@ -1718,7 +1718,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tempsTravailMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ tempsTravailMois2.
          * 
          * @return
          *     possible object is
@@ -1730,7 +1730,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tempsTravailMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tempsTravailMois2.
          * 
          * @param value
          *     allowed object is
@@ -1742,7 +1742,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tranceDeTravailMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ tranceDeTravailMois2.
          * 
          * @return
          *     possible object is
@@ -1754,7 +1754,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tranceDeTravailMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tranceDeTravailMois2.
          * 
          * @param value
          *     allowed object is
@@ -1766,7 +1766,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété regimeGeneralMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ regimeGeneralMois2.
          * 
          * @return
          *     possible object is
@@ -1778,7 +1778,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété regimeGeneralMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ regimeGeneralMois2.
          * 
          * @param value
          *     allowed object is
@@ -1790,7 +1790,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété regimeCadreMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ regimeCadreMois2.
          * 
          * @return
          *     possible object is
@@ -1802,7 +1802,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété regimeCadreMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ regimeCadreMois2.
          * 
          * @param value
          *     allowed object is
@@ -1814,7 +1814,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété dateEffetRegimeCadreMois2.
+         * Obtient la valeur de la propriï¿½tï¿½ dateEffetRegimeCadreMois2.
          * 
          * @return
          *     possible object is
@@ -1826,7 +1826,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété dateEffetRegimeCadreMois2.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ dateEffetRegimeCadreMois2.
          * 
          * @param value
          *     allowed object is
@@ -1838,7 +1838,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisPfMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisPfMois3.
          * 
          * @return
          *     possible object is
@@ -1850,7 +1850,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisPfMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisPfMois3.
          * 
          * @param value
          *     allowed object is
@@ -1862,7 +1862,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisAtmpMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisAtmpMois3.
          * 
          * @return
          *     possible object is
@@ -1874,7 +1874,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisAtmpMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisAtmpMois3.
          * 
          * @param value
          *     allowed object is
@@ -1886,7 +1886,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisRgMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRgMois3.
          * 
          * @return
          *     possible object is
@@ -1898,7 +1898,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisRgMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRgMois3.
          * 
          * @param value
          *     allowed object is
@@ -1910,7 +1910,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété totalSalaireAssujetisRccMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRccMois3.
          * 
          * @return
          *     possible object is
@@ -1922,7 +1922,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété totalSalaireAssujetisRccMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ totalSalaireAssujetisRccMois3.
          * 
          * @param value
          *     allowed object is
@@ -1934,7 +1934,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété salaireBrutMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ salaireBrutMois3.
          * 
          * @return
          *     possible object is
@@ -1946,7 +1946,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété salaireBrutMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ salaireBrutMois3.
          * 
          * @param value
          *     allowed object is
@@ -1958,7 +1958,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tempsPresenceJourMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ tempsPresenceJourMois3.
          * 
          * @return
          *     possible object is
@@ -1970,7 +1970,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tempsPresenceJourMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tempsPresenceJourMois3.
          * 
          * @param value
          *     allowed object is
@@ -1982,7 +1982,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tempsPresenceHeureMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ tempsPresenceHeureMois3.
          * 
          * @return
          *     possible object is
@@ -1994,7 +1994,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tempsPresenceHeureMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tempsPresenceHeureMois3.
          * 
          * @param value
          *     allowed object is
@@ -2006,7 +2006,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tempsTravailMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ tempsTravailMois3.
          * 
          * @return
          *     possible object is
@@ -2018,7 +2018,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tempsTravailMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tempsTravailMois3.
          * 
          * @param value
          *     allowed object is
@@ -2030,7 +2030,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété tranceDeTravailMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ tranceDeTravailMois3.
          * 
          * @return
          *     possible object is
@@ -2042,7 +2042,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété tranceDeTravailMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ tranceDeTravailMois3.
          * 
          * @param value
          *     allowed object is
@@ -2054,7 +2054,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété regimeGeneralMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ regimeGeneralMois3.
          * 
          * @return
          *     possible object is
@@ -2066,7 +2066,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété regimeGeneralMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ regimeGeneralMois3.
          * 
          * @param value
          *     allowed object is
@@ -2078,7 +2078,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété regimeCadreMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ regimeCadreMois3.
          * 
          * @return
          *     possible object is
@@ -2090,7 +2090,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété regimeCadreMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ regimeCadreMois3.
          * 
          * @param value
          *     allowed object is
@@ -2102,7 +2102,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété dateEffetRegimeCadreMois3.
+         * Obtient la valeur de la propriï¿½tï¿½ dateEffetRegimeCadreMois3.
          * 
          * @return
          *     possible object is
@@ -2114,7 +2114,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété dateEffetRegimeCadreMois3.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ dateEffetRegimeCadreMois3.
          * 
          * @param value
          *     allowed object is
@@ -2126,7 +2126,7 @@ public class CmPresDns {
         }
 
         /**
-         * Obtient la valeur de la propriété action.
+         * Obtient la valeur de la propriï¿½tï¿½ action.
          * 
          * @return
          *     possible object is
@@ -2138,7 +2138,7 @@ public class CmPresDns {
         }
 
         /**
-         * Définit la valeur de la propriété action.
+         * Dï¿½finit la valeur de la propriï¿½tï¿½ action.
          * 
          * @param value
          *     allowed object is

@@ -31,10 +31,13 @@ public class CertificatImmatriculationService {
 		certificatImmatrication.value = obj.createCmGetCertificatImmatriculation();
 		certificatImmatrication.value.setInput(input);
 		
-		final JAXBContext jc = JAXBContext.newInstance(CmGetCertificatImmatriculation.class);
-	    final Marshaller marshaller = jc.createMarshaller();
-	    marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-	    marshaller.marshal(certificatImmatrication.value, System.out);
+		/*
+		 * final JAXBContext jc =
+		 * JAXBContext.newInstance(CmGetCertificatImmatriculation.class); final
+		 * Marshaller marshaller = jc.createMarshaller();
+		 * marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		 * marshaller.marshal(certificatImmatrication.value, System.out);
+		 */
 		
 	    
 	    CmGetCertificatImmatriculationService cmGetCertificatImmatriculationService = new CmGetCertificatImmatriculationService() ;  
