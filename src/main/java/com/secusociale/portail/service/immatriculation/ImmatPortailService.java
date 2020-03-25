@@ -1,15 +1,11 @@
 package com.secusociale.portail.service.immatriculation;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import javax.xml.ws.BindingProvider;
 import javax.xml.ws.Holder;
 
 import org.springframework.stereotype.Service;
 
 import com.secusociale.portail.service.PortailConstant;
-import com.secusociale.portail.service.soap.certificatImmatriculation.CmGetCertificatImmatriculation;
 import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATIONINBOUND;
 import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATIONINBOUNDFault;
 import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATIONINBOUNDPortType;
@@ -22,7 +18,7 @@ import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATI
 public class ImmatPortailService {
 	
 	 
-	public Holder<IMMATRICULATIONINBOUND> createImmatriculationPortail(IMMATRICULATIONINBOUND immatriculation) throws IMMATRICULATIONINBOUNDFault, JAXBException{
+	public Holder<IMMATRICULATIONINBOUND> createImmatriculationPortail(IMMATRICULATIONINBOUND immatriculation) throws IMMATRICULATIONINBOUNDFault{
 		
 		//String immatriculationType = "BVOLN" ;   //Immatriculation Volontaire 
 	   	 
@@ -43,17 +39,8 @@ public class ImmatPortailService {
 	    input.setDocuments(immatriculation.getInput().getDocuments());
 		
 		
-	    
-	    final JAXBContext jc = JAXBContext.newInstance(IMMATRICULATIONINBOUND.class);
-	    final Marshaller marshaller = jc.createMarshaller();
-	    marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-	    marshaller.marshal(immatriculationInbound.value, System.out);
 		
 		ObjectFactory obj = new ObjectFactory();
-		
-		
-		
-		
 		immatriculationInbound.value = obj.createIMMATRICULATIONINBOUND();
 		immatriculationInbound.value.setInput(input);
 		
