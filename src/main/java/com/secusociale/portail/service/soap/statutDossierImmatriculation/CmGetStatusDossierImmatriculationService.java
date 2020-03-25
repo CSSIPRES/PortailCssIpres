@@ -10,6 +10,8 @@ import javax.xml.ws.WebServiceClient;
 import javax.xml.ws.WebServiceException;
 import javax.xml.ws.WebServiceFeature;
 
+import com.secusociale.portail.service.PortailConstant;
+
 
 /**
  * Cm-GetStatusDossierImmatriculation version 2: Recuperation status dossier immatriculation
@@ -19,7 +21,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "Cm-GetStatusDossierImmatriculationService", targetNamespace = "http://ouaf.oracle.com/spl/XAIXapp/xaiserver/Cm-GetStatusDossierImmatriculation", wsdlLocation = "http://192.168.125.23:7500/ouaf/XAIApp/xaiserver/Cm-GetStatusDossierImmatriculation?WSDL")
+@WebServiceClient(name = "Cm-GetStatusDossierImmatriculationService", targetNamespace = "http://ouaf.oracle.com/spl/XAIXapp/xaiserver/Cm-GetStatusDossierImmatriculation", wsdlLocation =  PortailConstant.STATUT_DOSSIER_IMMAT_WSDL)
 public class CmGetStatusDossierImmatriculationService
     extends Service
 {
@@ -32,7 +34,7 @@ public class CmGetStatusDossierImmatriculationService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://192.168.125.23:7500/ouaf/XAIApp/xaiserver/Cm-GetStatusDossierImmatriculation?WSDL");
+            url = new URL( PortailConstant.STATUT_DOSSIER_IMMAT_WSDL);
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
