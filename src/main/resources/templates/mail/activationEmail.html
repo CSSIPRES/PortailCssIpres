@@ -9,22 +9,22 @@
         <p> Bonjour <span th:text="${user.firstName}"></span></p>
     <!--   <p th:text="#{email.activation.greeting(${user.firstName})}"></p>  -->
         <p>
-            Merci pour votre inscription sur le portail.
+            Merci pour votre inscription sur le portail IPRES/CSS.
         </p>
         <p>
             Votre identifiant est <span th:text="${user.email}">email</span>
         </p>
         <p>
-            Pour activer votre compte merci de cliquer sur le bouton suivant :
+            Vous pouvez vous connecter sur le portail avec vos identifiants.
         </p>
 
         <!--  <a th:with="url=(@{|${baseUrl}/account/activate?key=${user.activationKey}|})" th:href="${url}"
           th:text="${url}">Activation link</a> -->
-        <a th:href="@{http://localhost:4200/accueil(key=${user.activationKey})}">
+       <!-- <a th:href="@{http://localhost:4200/accueil(key=${user.activationKey})}">
             <button style="margin-left:50px;border-radius:7px;background-color:orange;color:black;padding:10px;font-weight:bold;font-size:18px">
                 ACTIVER MON COMPTE
             </button>
-        </a>
+        </a> -->
         <p>
             <span th:text="#{email.activation.text2}">Regards, </span>
             <br/>
