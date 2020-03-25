@@ -33,10 +33,12 @@ public class StatutDossierImmatriculationService {
 		statutDossierImmatriculation.value = obj.createCmGetStatusDossierImmatriculation() ;
 		statutDossierImmatriculation.value.setInput(input);
 		
-		final JAXBContext jc = JAXBContext.newInstance(CmGetStatusDossierImmatriculation.class);
-		final Marshaller marshaller = jc.createMarshaller();
-		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-		marshaller.marshal(statutDossierImmatriculation.value, System.out);
+		
+		  final JAXBContext jc = JAXBContext.newInstance(CmGetStatusDossierImmatriculation.class); 
+		  final Marshaller marshaller = jc.createMarshaller();
+		  marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		  marshaller.marshal(statutDossierImmatriculation.value, System.out);
+		 
 		
 		CmGetStatusDossierImmatriculationService cmGetStatusDossierImmatriculationService = new CmGetStatusDossierImmatriculationService() ;
 		CmGetStatusDossierImmatriculationPortType cmGetStatusDossierImmatriculationPortType = cmGetStatusDossierImmatriculationService.getCmGetStatusDossierImmatriculationPort() ;
