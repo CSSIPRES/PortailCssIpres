@@ -1,19 +1,17 @@
 package com.secusociale.portail.web.rest.declaration;
 
 import javax.xml.bind.JAXBException;
-import javax.xml.ws.Holder;
-
+import javax.xml.datatype.DatatypeConfigurationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.secusociale.portail.model.DeclarationModel;
 import com.secusociale.portail.service.declaration.PreDNSService;
-import com.secusociale.portail.service.soap.preDNS.CmPresDns;
 import com.secusociale.portail.service.soap.preDNS.CmPresDnsFault;
 
 
@@ -30,14 +28,13 @@ public class DeclarationPortailResource {
 	
 	
 	@PostMapping("/preDNS")
-	public Holder<CmPresDns> getPreDNSEmployeur(@RequestBody CmPresDns cmPresDns) throws CmPresDnsFault, JAXBException{
+	public DeclarationModel getPreDNSEmployeur(@RequestBody DeclarationModel preDnsInput) throws CmPresDnsFault, JAXBException, DatatypeConfigurationException{
 		
 		log.debug("REST request to get PreDNS: {}", ENTITY_NAME);
 		
-		Holder<CmPresDns> preDNSinbound = new Holder<CmPresDns>();
-		preDNSinbound = dnsService.getPreDns(cmPresDns);
+		 
 		
-		return preDNSinbound;
+		return dnsService.getPreDns(preDnsInput);
 		
 	}
 	

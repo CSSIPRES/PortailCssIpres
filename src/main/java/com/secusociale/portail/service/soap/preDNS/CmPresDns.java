@@ -247,30 +247,30 @@ public class CmPresDns {
     protected String address;
     @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
     protected String typeDeclaration;
-    @XmlElementRef(name = "dateDebutPeriodeCotisation", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected String dateDebutPeriodeCotisation;
-    @XmlElementRef(name = "dateFinPeriodeCotisation", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected String dateFinPeriodeCotisation;
+    @XmlElementRef(name = "dateDebutPeriodeCotisation", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> dateDebutPeriodeCotisation;
+    @XmlElementRef(name = "dateFinPeriodeCotisation", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> dateFinPeriodeCotisation;
     @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
     protected BigDecimal totalSalaries;
-    @XmlElementRef(name = "totalSalaireAssujetisRg", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected BigDecimal totalSalaireAssujetisRg;
-    @XmlElementRef(name = "totalSalaireAssujetisRcc", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected BigDecimal totalSalaireAssujetisRcc;
-    @XmlElementRef(name = "totalSalaireAssujetisPf", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected BigDecimal totalSalaireAssujetisPf;
-    @XmlElementRef(name = "totalSalaireAssujetisAtmp", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected BigDecimal totalSalaireAssujetisAtmp;
-    @XmlElementRef(name = "totalSalaireVerses", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected BigDecimal totalSalaireVerses;
-    @XmlElementRef(name = "montantCotisationPfEmp", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected BigDecimal montantCotisationPfEmp;
-    @XmlElementRef(name = "montantCotisationAtmpEmp", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected BigDecimal montantCotisationAtmpEmp;
-    @XmlElementRef(name = "montantCotisationRgEmpl", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected BigDecimal montantCotisationRgEmpl;
-    @XmlElementRef(name = "montantCotisationRccEmp", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-    protected BigDecimal montantCotisationRccEmp;
+    @XmlElementRef(name = "totalSalaireAssujetisRg", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> totalSalaireAssujetisRg;
+    @XmlElementRef(name = "totalSalaireAssujetisRcc", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> totalSalaireAssujetisRcc;
+    @XmlElementRef(name = "totalSalaireAssujetisPf", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> totalSalaireAssujetisPf;
+    @XmlElementRef(name = "totalSalaireAssujetisAtmp", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> totalSalaireAssujetisAtmp;
+    @XmlElementRef(name = "totalSalaireVerses", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> totalSalaireVerses;
+    @XmlElementRef(name = "montantCotisationPfEmp", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> montantCotisationPfEmp;
+    @XmlElementRef(name = "montantCotisationAtmpEmp", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> montantCotisationAtmpEmp;
+    @XmlElementRef(name = "montantCotisationRgEmpl", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> montantCotisationRgEmpl;
+    @XmlElementRef(name = "montantCotisationRccEmp", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> montantCotisationRccEmp;
     @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
     protected List<CmPresDns.InformationSalaries> informationSalaries;
     @XmlAttribute(name = "dateTimeTagFormat", required = true)
@@ -404,7 +404,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public String getDateDebutPeriodeCotisation() {
+    public JAXBElement<XMLGregorianCalendar> getDateDebutPeriodeCotisation() {
         return dateDebutPeriodeCotisation;
     }
 
@@ -416,7 +416,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public void setDateDebutPeriodeCotisation(String value) {
+    public void setDateDebutPeriodeCotisation(JAXBElement<XMLGregorianCalendar> value) {
         this.dateDebutPeriodeCotisation = value;
     }
 
@@ -428,7 +428,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public String getDateFinPeriodeCotisation() {
+    public JAXBElement<XMLGregorianCalendar> getDateFinPeriodeCotisation() {
         return dateFinPeriodeCotisation;
     }
 
@@ -440,7 +440,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public void setDateFinPeriodeCotisation(String value) {
+    public void setDateFinPeriodeCotisation(JAXBElement<XMLGregorianCalendar> value) {
         this.dateFinPeriodeCotisation = value;
     }
 
@@ -476,7 +476,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getTotalSalaireAssujetisRg() {
+    public JAXBElement<BigDecimal> getTotalSalaireAssujetisRg() {
         return totalSalaireAssujetisRg;
     }
 
@@ -488,7 +488,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setTotalSalaireAssujetisRg(BigDecimal value) {
+    public void setTotalSalaireAssujetisRg(JAXBElement<BigDecimal> value) {
         this.totalSalaireAssujetisRg = value;
     }
 
@@ -500,7 +500,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getTotalSalaireAssujetisRcc() {
+    public JAXBElement<BigDecimal> getTotalSalaireAssujetisRcc() {
         return totalSalaireAssujetisRcc;
     }
 
@@ -512,7 +512,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setTotalSalaireAssujetisRcc(BigDecimal value) {
+    public void setTotalSalaireAssujetisRcc(JAXBElement<BigDecimal> value) {
         this.totalSalaireAssujetisRcc = value;
     }
 
@@ -524,7 +524,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getTotalSalaireAssujetisPf() {
+    public JAXBElement<BigDecimal> getTotalSalaireAssujetisPf() {
         return totalSalaireAssujetisPf;
     }
 
@@ -536,7 +536,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setTotalSalaireAssujetisPf(BigDecimal value) {
+    public void setTotalSalaireAssujetisPf(JAXBElement<BigDecimal> value) {
         this.totalSalaireAssujetisPf = value;
     }
 
@@ -548,7 +548,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getTotalSalaireAssujetisAtmp() {
+    public JAXBElement<BigDecimal> getTotalSalaireAssujetisAtmp() {
         return totalSalaireAssujetisAtmp;
     }
 
@@ -560,7 +560,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setTotalSalaireAssujetisAtmp(BigDecimal value) {
+    public void setTotalSalaireAssujetisAtmp(JAXBElement<BigDecimal> value) {
         this.totalSalaireAssujetisAtmp = value;
     }
 
@@ -572,7 +572,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getTotalSalaireVerses() {
+    public JAXBElement<BigDecimal> getTotalSalaireVerses() {
         return totalSalaireVerses;
     }
 
@@ -584,7 +584,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setTotalSalaireVerses(BigDecimal value) {
+    public void setTotalSalaireVerses(JAXBElement<BigDecimal> value) {
         this.totalSalaireVerses = value;
     }
 
@@ -596,7 +596,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getMontantCotisationPfEmp() {
+    public JAXBElement<BigDecimal> getMontantCotisationPfEmp() {
         return montantCotisationPfEmp;
     }
 
@@ -608,7 +608,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setMontantCotisationPfEmp(BigDecimal value) {
+    public void setMontantCotisationPfEmp(JAXBElement<BigDecimal> value) {
         this.montantCotisationPfEmp = value;
     }
 
@@ -620,7 +620,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getMontantCotisationAtmpEmp() {
+    public JAXBElement<BigDecimal> getMontantCotisationAtmpEmp() {
         return montantCotisationAtmpEmp;
     }
 
@@ -632,7 +632,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setMontantCotisationAtmpEmp(BigDecimal value) {
+    public void setMontantCotisationAtmpEmp(JAXBElement<BigDecimal> value) {
         this.montantCotisationAtmpEmp = value;
     }
 
@@ -644,7 +644,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getMontantCotisationRgEmpl() {
+    public JAXBElement<BigDecimal> getMontantCotisationRgEmpl() {
         return montantCotisationRgEmpl;
     }
 
@@ -656,7 +656,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setMontantCotisationRgEmpl(BigDecimal value) {
+    public void setMontantCotisationRgEmpl(JAXBElement<BigDecimal> value) {
         this.montantCotisationRgEmpl = value;
     }
 
@@ -668,7 +668,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getMontantCotisationRccEmp() {
+    public JAXBElement<BigDecimal> getMontantCotisationRccEmp() {
         return montantCotisationRccEmp;
     }
 
@@ -680,7 +680,7 @@ public class CmPresDns {
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setMontantCotisationRccEmp(BigDecimal value) {
+    public void setMontantCotisationRccEmp(JAXBElement<BigDecimal> value) {
         this.montantCotisationRccEmp = value;
     }
 
@@ -932,30 +932,30 @@ public class CmPresDns {
         protected String nom;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String prenom;
-        @XmlElementRef(name = "dateNaissance", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected String dateNaissance;
+        @XmlElementRef(name = "dateNaissance", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<XMLGregorianCalendar> dateNaissance;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String typePiece;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String numeroPiece;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String natureContrat;
-        @XmlElementRef(name = "dateEntree", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected String dateEntree;
-        @XmlElementRef(name = "dateSortie", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected String dateSortie;
+        @XmlElementRef(name = "dateEntree", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<XMLGregorianCalendar> dateEntree;
+        @XmlElementRef(name = "dateSortie", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<XMLGregorianCalendar> dateSortie;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String motif;
-        @XmlElementRef(name = "totalSalaireAssujetisPfMois1", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisPfMois1;
-        @XmlElementRef(name = "totalSalaireAssujetisAtmpMois1", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisAtmpMois1;
-        @XmlElementRef(name = "totalSalaireAssujetisRgMois1", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisRgMois1;
-        @XmlElementRef(name = "totalSalaireAssujetisRccMois1", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisRccMois1;
-        @XmlElementRef(name = "salaireBrutMois1", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal salaireBrutMois1;
+        @XmlElementRef(name = "totalSalaireAssujetisPfMois1", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisPfMois1;
+        @XmlElementRef(name = "totalSalaireAssujetisAtmpMois1", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisAtmpMois1;
+        @XmlElementRef(name = "totalSalaireAssujetisRgMois1", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisRgMois1;
+        @XmlElementRef(name = "totalSalaireAssujetisRccMois1", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisRccMois1;
+        @XmlElementRef(name = "salaireBrutMois1", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> salaireBrutMois1;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected BigDecimal tempsPresenceJourMois1;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
@@ -964,60 +964,60 @@ public class CmPresDns {
         protected String tempsTravailMois1;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String tranceDeTravailMois1;
-        @XmlElementRef(name = "regimeGeneralMois1", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected Boolean regimeGeneralMois1;
-        @XmlElementRef(name = "regimeCadreMois1", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected Boolean regimeCadreMois1;
-        @XmlElementRef(name = "dateEffetRegimeCadreMois1", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected String dateEffetRegimeCadreMois1;
+        @XmlElementRef(name = "regimeGeneralMois1", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<Boolean> regimeGeneralMois1;
+        @XmlElementRef(name = "regimeCadreMois1", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<Boolean> regimeCadreMois1;
+        @XmlElementRef(name = "dateEffetRegimeCadreMois1", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<XMLGregorianCalendar> dateEffetRegimeCadreMois1;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String totalSalaireAssujetisPfMois2;
-        @XmlElementRef(name = "totalSalaireAssujetisAtmpMois2", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisAtmpMois2;
-        @XmlElementRef(name = "totalSalaireAssujetisRgMois2", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisRgMois2;
-        @XmlElementRef(name = "totalSalaireAssujetisRccMois2", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisRccMois2;
-        @XmlElementRef(name = "salaireBrutMois2", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal salaireBrutMois2;
-        @XmlElementRef(name = "tempsPresenceJourMois2", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal tempsPresenceJourMois2;
-        @XmlElementRef(name = "tempsPresenceHeureMois2", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal tempsPresenceHeureMois2;
+        @XmlElementRef(name = "totalSalaireAssujetisAtmpMois2", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisAtmpMois2;
+        @XmlElementRef(name = "totalSalaireAssujetisRgMois2", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisRgMois2;
+        @XmlElementRef(name = "totalSalaireAssujetisRccMois2", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisRccMois2;
+        @XmlElementRef(name = "salaireBrutMois2", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> salaireBrutMois2;
+        @XmlElementRef(name = "tempsPresenceJourMois2", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> tempsPresenceJourMois2;
+        @XmlElementRef(name = "tempsPresenceHeureMois2", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> tempsPresenceHeureMois2;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String tempsTravailMois2;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String tranceDeTravailMois2;
-        @XmlElementRef(name = "regimeGeneralMois2", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected Boolean regimeGeneralMois2;
-        @XmlElementRef(name = "regimeCadreMois2", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected Boolean regimeCadreMois2;
-        @XmlElementRef(name = "dateEffetRegimeCadreMois2", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected String dateEffetRegimeCadreMois2;
-        @XmlElementRef(name = "totalSalaireAssujetisPfMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisPfMois3;
-        @XmlElementRef(name = "totalSalaireAssujetisAtmpMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisAtmpMois3;
-        @XmlElementRef(name = "totalSalaireAssujetisRgMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisRgMois3;
-        @XmlElementRef(name = "totalSalaireAssujetisRccMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal totalSalaireAssujetisRccMois3;
-        @XmlElementRef(name = "salaireBrutMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal salaireBrutMois3;
-        @XmlElementRef(name = "tempsPresenceJourMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal tempsPresenceJourMois3;
-        @XmlElementRef(name = "tempsPresenceHeureMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected BigDecimal tempsPresenceHeureMois3;
+        @XmlElementRef(name = "regimeGeneralMois2", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<Boolean> regimeGeneralMois2;
+        @XmlElementRef(name = "regimeCadreMois2", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<Boolean> regimeCadreMois2;
+        @XmlElementRef(name = "dateEffetRegimeCadreMois2", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<XMLGregorianCalendar> dateEffetRegimeCadreMois2;
+        @XmlElementRef(name = "totalSalaireAssujetisPfMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisPfMois3;
+        @XmlElementRef(name = "totalSalaireAssujetisAtmpMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisAtmpMois3;
+        @XmlElementRef(name = "totalSalaireAssujetisRgMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisRgMois3;
+        @XmlElementRef(name = "totalSalaireAssujetisRccMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> totalSalaireAssujetisRccMois3;
+        @XmlElementRef(name = "salaireBrutMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> salaireBrutMois3;
+        @XmlElementRef(name = "tempsPresenceJourMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> tempsPresenceJourMois3;
+        @XmlElementRef(name = "tempsPresenceHeureMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<BigDecimal> tempsPresenceHeureMois3;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String tempsTravailMois3;
         @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
         protected String tranceDeTravailMois3;
-        @XmlElementRef(name = "regimeGeneralMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected Boolean regimeGeneralMois3;
-        @XmlElementRef(name = "regimeCadreMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected Boolean regimeCadreMois3;
-        @XmlElementRef(name = "dateEffetRegimeCadreMois3", namespace = "http://oracle.com/CmPresDns.xsd",  required = false)
-        protected String dateEffetRegimeCadreMois3;
+        @XmlElementRef(name = "regimeGeneralMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<Boolean> regimeGeneralMois3;
+        @XmlElementRef(name = "regimeCadreMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<Boolean> regimeCadreMois3;
+        @XmlElementRef(name = "dateEffetRegimeCadreMois3", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
+        protected JAXBElement<XMLGregorianCalendar> dateEffetRegimeCadreMois3;
         @XmlAttribute(name = "action")
         protected ListAction action;
 
@@ -1101,7 +1101,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public String getDateNaissance() {
+        public JAXBElement<XMLGregorianCalendar> getDateNaissance() {
             return dateNaissance;
         }
 
@@ -1113,7 +1113,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public void setDateNaissance(String value) {
+        public void setDateNaissance(JAXBElement<XMLGregorianCalendar> value) {
             this.dateNaissance = value;
         }
 
@@ -1197,7 +1197,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public String getDateEntree() {
+        public JAXBElement<XMLGregorianCalendar> getDateEntree() {
             return dateEntree;
         }
 
@@ -1209,7 +1209,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public void setDateEntree(String value) {
+        public void setDateEntree(JAXBElement<XMLGregorianCalendar> value) {
             this.dateEntree = value;
         }
 
@@ -1221,7 +1221,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public String getDateSortie() {
+        public JAXBElement<XMLGregorianCalendar> getDateSortie() {
             return dateSortie;
         }
 
@@ -1233,7 +1233,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public void setDateSortie(String value) {
+        public void setDateSortie(JAXBElement<XMLGregorianCalendar> value) {
             this.dateSortie = value;
         }
 
@@ -1269,7 +1269,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisPfMois1() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisPfMois1() {
             return totalSalaireAssujetisPfMois1;
         }
 
@@ -1281,7 +1281,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisPfMois1(BigDecimal value) {
+        public void setTotalSalaireAssujetisPfMois1(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisPfMois1 = value;
         }
 
@@ -1293,7 +1293,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisAtmpMois1() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisAtmpMois1() {
             return totalSalaireAssujetisAtmpMois1;
         }
 
@@ -1305,7 +1305,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisAtmpMois1(BigDecimal value) {
+        public void setTotalSalaireAssujetisAtmpMois1(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisAtmpMois1 = value;
         }
 
@@ -1317,7 +1317,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisRgMois1() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisRgMois1() {
             return totalSalaireAssujetisRgMois1;
         }
 
@@ -1329,7 +1329,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisRgMois1(BigDecimal value) {
+        public void setTotalSalaireAssujetisRgMois1(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRgMois1 = value;
         }
 
@@ -1341,7 +1341,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisRccMois1() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisRccMois1() {
             return totalSalaireAssujetisRccMois1;
         }
 
@@ -1353,7 +1353,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisRccMois1(BigDecimal value) {
+        public void setTotalSalaireAssujetisRccMois1(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRccMois1 = value;
         }
 
@@ -1365,7 +1365,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getSalaireBrutMois1() {
+        public JAXBElement<BigDecimal> getSalaireBrutMois1() {
             return salaireBrutMois1;
         }
 
@@ -1377,7 +1377,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setSalaireBrutMois1(BigDecimal value) {
+        public void setSalaireBrutMois1(JAXBElement<BigDecimal> value) {
             this.salaireBrutMois1 = value;
         }
 
@@ -1485,7 +1485,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public Boolean getRegimeGeneralMois1() {
+        public JAXBElement<Boolean> getRegimeGeneralMois1() {
             return regimeGeneralMois1;
         }
 
@@ -1497,7 +1497,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public void setRegimeGeneralMois1(Boolean value) {
+        public void setRegimeGeneralMois1(JAXBElement<Boolean> value) {
             this.regimeGeneralMois1 = value;
         }
 
@@ -1509,7 +1509,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public Boolean getRegimeCadreMois1() {
+        public JAXBElement<Boolean> getRegimeCadreMois1() {
             return regimeCadreMois1;
         }
 
@@ -1521,7 +1521,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public void setRegimeCadreMois1(Boolean value) {
+        public void setRegimeCadreMois1(JAXBElement<Boolean> value) {
             this.regimeCadreMois1 = value;
         }
 
@@ -1533,7 +1533,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public String getDateEffetRegimeCadreMois1() {
+        public JAXBElement<XMLGregorianCalendar> getDateEffetRegimeCadreMois1() {
             return dateEffetRegimeCadreMois1;
         }
 
@@ -1545,7 +1545,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public void setDateEffetRegimeCadreMois1(String value) {
+        public void setDateEffetRegimeCadreMois1(JAXBElement<XMLGregorianCalendar> value) {
             this.dateEffetRegimeCadreMois1 = value;
         }
 
@@ -1581,7 +1581,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisAtmpMois2() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisAtmpMois2() {
             return totalSalaireAssujetisAtmpMois2;
         }
 
@@ -1593,7 +1593,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisAtmpMois2(BigDecimal value) {
+        public void setTotalSalaireAssujetisAtmpMois2(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisAtmpMois2 = value;
         }
 
@@ -1605,7 +1605,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisRgMois2() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisRgMois2() {
             return totalSalaireAssujetisRgMois2;
         }
 
@@ -1617,7 +1617,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisRgMois2(BigDecimal value) {
+        public void setTotalSalaireAssujetisRgMois2(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRgMois2 = value;
         }
 
@@ -1629,7 +1629,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisRccMois2() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisRccMois2() {
             return totalSalaireAssujetisRccMois2;
         }
 
@@ -1641,7 +1641,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisRccMois2(BigDecimal value) {
+        public void setTotalSalaireAssujetisRccMois2(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRccMois2 = value;
         }
 
@@ -1653,7 +1653,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getSalaireBrutMois2() {
+        public JAXBElement<BigDecimal> getSalaireBrutMois2() {
             return salaireBrutMois2;
         }
 
@@ -1665,7 +1665,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setSalaireBrutMois2(BigDecimal value) {
+        public void setSalaireBrutMois2(JAXBElement<BigDecimal> value) {
             this.salaireBrutMois2 = value;
         }
 
@@ -1677,7 +1677,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTempsPresenceJourMois2() {
+        public JAXBElement<BigDecimal> getTempsPresenceJourMois2() {
             return tempsPresenceJourMois2;
         }
 
@@ -1689,7 +1689,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTempsPresenceJourMois2(BigDecimal value) {
+        public void setTempsPresenceJourMois2(JAXBElement<BigDecimal> value) {
             this.tempsPresenceJourMois2 = value;
         }
 
@@ -1701,7 +1701,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTempsPresenceHeureMois2() {
+        public JAXBElement<BigDecimal> getTempsPresenceHeureMois2() {
             return tempsPresenceHeureMois2;
         }
 
@@ -1713,7 +1713,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTempsPresenceHeureMois2(BigDecimal value) {
+        public void setTempsPresenceHeureMois2(JAXBElement<BigDecimal> value) {
             this.tempsPresenceHeureMois2 = value;
         }
 
@@ -1773,7 +1773,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public Boolean getRegimeGeneralMois2() {
+        public JAXBElement<Boolean> getRegimeGeneralMois2() {
             return regimeGeneralMois2;
         }
 
@@ -1785,7 +1785,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public void setRegimeGeneralMois2(Boolean value) {
+        public void setRegimeGeneralMois2(JAXBElement<Boolean> value) {
             this.regimeGeneralMois2 = value;
         }
 
@@ -1797,7 +1797,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public Boolean getRegimeCadreMois2() {
+        public JAXBElement<Boolean> getRegimeCadreMois2() {
             return regimeCadreMois2;
         }
 
@@ -1809,7 +1809,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public void setRegimeCadreMois2(Boolean value) {
+        public void setRegimeCadreMois2(JAXBElement<Boolean> value) {
             this.regimeCadreMois2 = value;
         }
 
@@ -1821,7 +1821,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public String getDateEffetRegimeCadreMois2() {
+        public JAXBElement<XMLGregorianCalendar> getDateEffetRegimeCadreMois2() {
             return dateEffetRegimeCadreMois2;
         }
 
@@ -1833,7 +1833,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public void setDateEffetRegimeCadreMois2(String value) {
+        public void setDateEffetRegimeCadreMois2(JAXBElement<XMLGregorianCalendar> value) {
             this.dateEffetRegimeCadreMois2 = value;
         }
 
@@ -1845,7 +1845,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisPfMois3() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisPfMois3() {
             return totalSalaireAssujetisPfMois3;
         }
 
@@ -1857,7 +1857,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisPfMois3(BigDecimal value) {
+        public void setTotalSalaireAssujetisPfMois3(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisPfMois3 = value;
         }
 
@@ -1869,7 +1869,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisAtmpMois3() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisAtmpMois3() {
             return totalSalaireAssujetisAtmpMois3;
         }
 
@@ -1881,7 +1881,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisAtmpMois3(BigDecimal value) {
+        public void setTotalSalaireAssujetisAtmpMois3(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisAtmpMois3 = value;
         }
 
@@ -1893,7 +1893,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisRgMois3() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisRgMois3() {
             return totalSalaireAssujetisRgMois3;
         }
 
@@ -1905,7 +1905,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisRgMois3(BigDecimal value) {
+        public void setTotalSalaireAssujetisRgMois3(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRgMois3 = value;
         }
 
@@ -1917,7 +1917,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTotalSalaireAssujetisRccMois3() {
+        public JAXBElement<BigDecimal> getTotalSalaireAssujetisRccMois3() {
             return totalSalaireAssujetisRccMois3;
         }
 
@@ -1929,7 +1929,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTotalSalaireAssujetisRccMois3(BigDecimal value) {
+        public void setTotalSalaireAssujetisRccMois3(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRccMois3 = value;
         }
 
@@ -1941,7 +1941,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getSalaireBrutMois3() {
+        public JAXBElement<BigDecimal> getSalaireBrutMois3() {
             return salaireBrutMois3;
         }
 
@@ -1953,7 +1953,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setSalaireBrutMois3(BigDecimal value) {
+        public void setSalaireBrutMois3(JAXBElement<BigDecimal> value) {
             this.salaireBrutMois3 = value;
         }
 
@@ -1965,7 +1965,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTempsPresenceJourMois3() {
+        public JAXBElement<BigDecimal> getTempsPresenceJourMois3() {
             return tempsPresenceJourMois3;
         }
 
@@ -1977,7 +1977,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTempsPresenceJourMois3(BigDecimal value) {
+        public void setTempsPresenceJourMois3(JAXBElement<BigDecimal> value) {
             this.tempsPresenceJourMois3 = value;
         }
 
@@ -1989,7 +1989,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public BigDecimal getTempsPresenceHeureMois3() {
+        public JAXBElement<BigDecimal> getTempsPresenceHeureMois3() {
             return tempsPresenceHeureMois3;
         }
 
@@ -2001,7 +2001,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
          *     
          */
-        public void setTempsPresenceHeureMois3(BigDecimal value) {
+        public void setTempsPresenceHeureMois3(JAXBElement<BigDecimal> value) {
             this.tempsPresenceHeureMois3 = value;
         }
 
@@ -2061,7 +2061,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public Boolean getRegimeGeneralMois3() {
+        public JAXBElement<Boolean> getRegimeGeneralMois3() {
             return regimeGeneralMois3;
         }
 
@@ -2073,7 +2073,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public void setRegimeGeneralMois3(Boolean value) {
+        public void setRegimeGeneralMois3(JAXBElement<Boolean> value) {
             this.regimeGeneralMois3 = value;
         }
 
@@ -2085,7 +2085,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public Boolean getRegimeCadreMois3() {
+        public JAXBElement<Boolean> getRegimeCadreMois3() {
             return regimeCadreMois3;
         }
 
@@ -2097,7 +2097,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
          *     
          */
-        public void setRegimeCadreMois3(Boolean value) {
+        public void setRegimeCadreMois3(JAXBElement<Boolean> value) {
             this.regimeCadreMois3 = value;
         }
 
@@ -2109,7 +2109,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public String getDateEffetRegimeCadreMois3() {
+        public JAXBElement<XMLGregorianCalendar> getDateEffetRegimeCadreMois3() {
             return dateEffetRegimeCadreMois3;
         }
 
@@ -2121,7 +2121,7 @@ public class CmPresDns {
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
          *     
          */
-        public void setDateEffetRegimeCadreMois3(String value) {
+        public void setDateEffetRegimeCadreMois3(JAXBElement<XMLGregorianCalendar> value) {
             this.dateEffetRegimeCadreMois3 = value;
         }
 
