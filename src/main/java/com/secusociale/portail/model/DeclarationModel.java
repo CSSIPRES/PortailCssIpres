@@ -319,7 +319,7 @@ public class DeclarationModel {
 
     	    private String prenomEmploye;
 
-    	    private Date dateNaissance;
+    	    private String dateNaissance;
     	    
     	    private String typePieceIdentite;
     	    
@@ -327,9 +327,9 @@ public class DeclarationModel {
     	    
     	    private String natureContrat;
     	    
-    	    private Date dateEntree;
+    	    private String dateEntree;
     	     
-    	    private Date dateSortie;
+    	    private String dateSortie;
 
     	    private String motifSortie;
 
@@ -355,7 +355,7 @@ public class DeclarationModel {
 
     	    private Boolean regimCompCadre1;
  
-    	    private Date dateEffetRegimeCadre1;
+    	    private String dateEffetRegimeCadre1;
 
     	    private String totSalAssCssPf2;
 
@@ -377,7 +377,7 @@ public class DeclarationModel {
 
     	    private Boolean regimeGeneral2;
 
-    	    private String regimCompCadre2;
+    	    private Boolean regimCompCadre2;
 
     	    private Date dateEffetRegimeCadre2;
 
@@ -429,12 +429,12 @@ public class DeclarationModel {
 				this.prenomEmploye = prenomEmploye;
 			}
 
-			public Date getDateNaissance() {
+			public String getDateNaissance() {
 				return dateNaissance;
 			}
 
-			public void setDateNaissance(Date date) {
-				this.dateNaissance = date;
+			public void setDateNaissance(String string) {
+				this.dateNaissance = string;
 			}
 
 			public String getTypePieceIdentite() {
@@ -461,20 +461,20 @@ public class DeclarationModel {
 				this.natureContrat = natureContrat;
 			}
 
-			public Date getDateEntree() {
+			public String getDateEntree() {
 				return dateEntree;
 			}
 
-			public void setDateEntree(Date date) {
-				this.dateEntree = date;
+			public void setDateEntree(String string) {
+				this.dateEntree = string;
 			}
 
-			public Date getDateSortie() {
+			public String getDateSortie() {
 				return dateSortie;
 			}
 
-			public void setDateSortie(Date date) {
-				this.dateSortie = date;
+			public void setDateSortie(String string) {
+				this.dateSortie = string;
 			}
 
 			public String getMotifSortie() {
@@ -573,12 +573,12 @@ public class DeclarationModel {
 				this.regimCompCadre1 = boolean1;
 			}
 
-			public Date getDateEffetRegimeCadre1() {
+			public String getDateEffetRegimeCadre1() {
 				return dateEffetRegimeCadre1;
 			}
 
-			public void setDateEffetRegimeCadre1(Date date) {
-				this.dateEffetRegimeCadre1 = date;
+			public void setDateEffetRegimeCadre1(String string) {
+				this.dateEffetRegimeCadre1 = string;
 			}
 
 			public String getTotSalAssCssPf2() {
@@ -661,12 +661,12 @@ public class DeclarationModel {
 				this.regimeGeneral2 = boolean1;
 			}
 
-			public String getRegimCompCadre2() {
+			public Boolean getRegimCompCadre2() {
 				return regimCompCadre2;
 			}
 
-			public void setRegimCompCadre2(String regimCompCadre2) {
-				this.regimCompCadre2 = regimCompCadre2;
+			public void setRegimCompCadre2(Boolean boolean1) {
+				this.regimCompCadre2 = boolean1;
 			}
 
 			public Date getDateEffetRegimeCadre2() {
