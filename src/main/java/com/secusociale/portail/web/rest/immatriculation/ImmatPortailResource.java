@@ -29,70 +29,57 @@ import com.secusociale.portail.web.rest.ImmatriculationResource;
 @RestController
 @RequestMapping("/api")
 public class ImmatPortailResource {
-	
+
 	private final Logger log = LoggerFactory.getLogger(ImmatriculationResource.class);
     private static final String ENTITY_NAME = "IMMATRICULATIONINBOUND";
-    
+
     @Autowired
    private ImmatPortailService immatPortailService ;
-    
+
     @Autowired
     private StatutDossierImmatriculationService statutDossierImmatriculationService ;
-    
-	
+
+
     @Autowired
 	private CertificatImmatriculationService certificatImmatriculationService;
-    
-    
 
-	 
-	
-    
 	@PostMapping("/immatPortail")
     public Holder<IMMATRICULATIONINBOUND> createImmatriculationPortail(@RequestBody IMMATRICULATIONINBOUND immatriculation) throws URISyntaxException, IMMATRICULATIONINBOUNDFault, JAXBException {
         log.debug("REST request to save Immatriculation : {}", ENTITY_NAME);
-        
+
         Holder<IMMATRICULATIONINBOUND> immatriculationInbound = new Holder<IMMATRICULATIONINBOUND>();
-        
            immatriculationInbound = immatPortailService.createImmatriculationPortail(immatriculation);
-        
 		return immatriculationInbound;
-       
     }
-	
-	
- 
-	
-	
 	@GetMapping("/statutDossierImmatriculation/{idDossier}")
 	Holder<CmGetStatusDossierImmatriculation> getStatutDossierImmatriculation(@PathVariable String idDossier) throws JAXBException, CmGetStatusDossierImmatriculationFault{
-		
+
 		Holder<CmGetStatusDossierImmatriculation> statuDossier = new Holder<CmGetStatusDossierImmatriculation>();
-		
+
 		statuDossier = statutDossierImmatriculationService.getStatutDossierImmatriculation(idDossier) ;
-		
-		
+
+
 		return statuDossier;
-		
+
 	}
-	
-	
 
 
-	 
-	
+
+
+
+
 	@GetMapping("/certificatImmatriculation/{idDossier}")
 	Holder<CmGetCertificatImmatriculation> getCertificatImmatriculation(@PathVariable String idDossier) throws JAXBException, CmGetCertificatImmatriculationFault{
-		
+
 		Holder<CmGetCertificatImmatriculation> certificatImmatriculation = new Holder<CmGetCertificatImmatriculation>();
-		
+
 		certificatImmatriculation = certificatImmatriculationService.getCertificatImmatriculation(idDossier);
-		
-		
+
+
 		return certificatImmatriculation;
-		
+
 	}
-	
+
 
 
 }
