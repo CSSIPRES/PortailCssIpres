@@ -1,10 +1,19 @@
 package com.secusociale.portail.model;
 
 import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
+
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeConstants;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 
  
 
@@ -27,9 +36,9 @@ public class DeclarationModel {
     
     private Date dateFinPeriodeCotisation;
 
-    private Integer totalNouvSalaries;
+    private BigDecimal totalNouvSalaries;
 
-    private Integer totalSalaries;
+    private BigDecimal totalSalaries;
     
     private BigDecimal cumulTotSalAssIpresRg;
    
@@ -140,25 +149,25 @@ public class DeclarationModel {
 
 
 
-	public Integer getTotalNouvSalaries() {
+	public BigDecimal getTotalNouvSalaries() {
 		return totalNouvSalaries;
 	}
 
 
 
-	public void setTotalNouvSalaries(Integer totalNouvSalaries) {
+	public void setTotalNouvSalaries(BigDecimal totalNouvSalaries) {
 		this.totalNouvSalaries = totalNouvSalaries;
 	}
 
 
 
-	public Integer getTotalSalaries() {
+	public BigDecimal getTotalSalaries() {
 		return totalSalaries;
 	}
 
 
 
-	public void setTotalSalaries(Integer totalSalaries) {
+	public void setTotalSalaries(BigDecimal totalSalaries) {
 		this.totalSalaries = totalSalaries;
 	}
 
@@ -310,7 +319,7 @@ public class DeclarationModel {
 
 
 
-	public class EmployeModel {
+	public static class EmployeModel {
     	
     	  
     	    private String numeroAssureSocial;
@@ -343,9 +352,9 @@ public class DeclarationModel {
 
     	    private BigDecimal salaireBrut1;
 
-    	    private Integer nombreJours1;
+    	    private BigDecimal nombreJours1;
 
-    	    private Integer nombreHeures1;
+    	    private BigDecimal nombreHeures1;
 
     	    private String tempsTravail1;
 
@@ -379,7 +388,7 @@ public class DeclarationModel {
 
     	    private Boolean regimCompCadre2;
 
-    	    private Date dateEffetRegimeCadre2;
+    	    private String dateEffetRegimeCadre2;
 
     	    private BigDecimal totSalAssCssPf3;
 
@@ -403,7 +412,7 @@ public class DeclarationModel {
 
     	    private Boolean regimCompCadre3;
 
-    	    private Date dateEffetRegimeCadre3;
+    	    private String dateEffetRegimeCadre3;
 
 			public String getNumeroAssureSocial() {
 				return numeroAssureSocial;
@@ -525,19 +534,19 @@ public class DeclarationModel {
 				this.salaireBrut1 = salaireBrut1;
 			}
 
-			public Integer getNombreJours1() {
+			public BigDecimal getNombreJours1() {
 				return nombreJours1;
 			}
 
-			public void setNombreJours1(Integer nombreJours1) {
+			public void setNombreJours1(BigDecimal nombreJours1) {
 				this.nombreJours1 = nombreJours1;
 			}
 
-			public Integer getNombreHeures1() {
+			public BigDecimal getNombreHeures1() {
 				return nombreHeures1;
 			}
 
-			public void setNombreHeures1(Integer nombreHeures1) {
+			public void setNombreHeures1(BigDecimal nombreHeures1) {
 				this.nombreHeures1 = nombreHeures1;
 			}
 
@@ -669,11 +678,11 @@ public class DeclarationModel {
 				this.regimCompCadre2 = boolean1;
 			}
 
-			public Date getDateEffetRegimeCadre2() {
+			public String getDateEffetRegimeCadre2() {
 				return dateEffetRegimeCadre2;
 			}
 
-			public void setDateEffetRegimeCadre2(Date date) {
+			public void setDateEffetRegimeCadre2(String date) {
 				this.dateEffetRegimeCadre2 = date;
 			}
 
@@ -765,17 +774,49 @@ public class DeclarationModel {
 				this.regimCompCadre3 = boolean1;
 			}
 
-			public Date getDateEffetRegimeCadre3() {
+			public String getDateEffetRegimeCadre3() {
 				return dateEffetRegimeCadre3;
 			}
 
-			public void setDateEffetRegimeCadre3(Date date) {
+			public void setDateEffetRegimeCadre3(String date) {
 				this.dateEffetRegimeCadre3 = date;
 			}
 
     	
+			
     }
 	
+	public XMLGregorianCalendar formatToGregorianCalendar(String dateFormat) throws ParseException, DatatypeConfigurationException {
+		 
+		 
+		 XMLGregorianCalendar xmlGregorianCalendar = null ;
+	 if(dateFormat != null && !dateFormat.isEmpty() && !"".equals(dateFormat)) {
+			 
+		 Date format = new SimpleDateFormat("yyyy-MM-dd").parse(dateFormat);
+		 GregorianCalendar gCalendar = new GregorianCalendar();
+		 gCalendar.setTime(format);
+		 xmlGregorianCalendar= DatatypeFactory.newInstance().newXMLGregorianCalendarDate(gCalendar.get(Calendar.YEAR), gCalendar.get(Calendar.MONTH)+1, gCalendar.get(Calendar.DAY_OF_MONTH), DatatypeConstants.FIELD_UNDEFINED);
+		
+		 return xmlGregorianCalendar;
+	}
+	 else {
+		 return null;
+	 }
+		 
+	}
 	
-	
+	public String formaToString(Date date) {
+		
+		 
+		
+		 
+		SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
+		return formatDate.format(date);
+	 
+		
+		
+		 
+		
+		
+	}
 }
