@@ -43,12 +43,12 @@ public class PreDNSService {
 		
         List<InformationSalaries> listSalaries = new ArrayList<CmPresDns.InformationSalaries>();
 	
-		
         DeclarationModel model = new DeclarationModel();
+		
 		
 		// Input
 		 
-         SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
 		   
 		
 		  GregorianCalendar gDateDebutCalendar = new GregorianCalendar();
@@ -126,11 +126,12 @@ public class PreDNSService {
 		
 		  listSalaries = cmPreDns.value.getInformationSalaries();
 		  
-		  //DeclarationModel declarationModel = new DeclarationModel();
+		  DeclarationModel declarationModel = new DeclarationModel();
 		  
 		  for (int i=0 ; i < listSalaries.size() ; i++) {
 		  
-		  EmployeModel employeModel =  new EmployeModel() ;
+		  EmployeModel employeModel = new EmployeModel() ;
+		  
 		  
 		  JAXBElement<XMLGregorianCalendar> rcc1 = listSalaries.get(i).getDateEffetRegimeCadreMois1();
 		  JAXBElement<XMLGregorianCalendar> rcc2 = listSalaries.get(i).getDateEffetRegimeCadreMois2();
@@ -140,18 +141,15 @@ public class PreDNSService {
 		  employeModel.setNumeroAssureSocial(listSalaries.get(i).getNumeroAssureSocial()); 
 		  employeModel.setNomEmploye(listSalaries.get(i).getNom());
 		  employeModel.setPrenomEmploye(listSalaries.get(i).getPrenom());
-		  employeModel.setDateNaissance(model.formaToString(listSalaries.get(i).getDateNaissance().getValue().toGregorianCalendar().getTime()));
+		  employeModel.setDateNaissance(formatDate.format(listSalaries.get(i).getDateNaissance().getValue().toGregorianCalendar().getTime()));
 		  employeModel.setTypePieceIdentite(listSalaries.get(i).getTypePiece());
 		  employeModel.setNumPieceIdentite(listSalaries.get(i).getNumeroPiece());
 		  employeModel.setNatureContrat(listSalaries.get(i).getNatureContrat());
-		  employeModel.setDateEntree(model.formaToString(listSalaries.get(i).getDateEntree().getValue().toGregorianCalendar().getTime()));
+		  employeModel.setDateEntree(formatDate.format(listSalaries.get(i).getDateEntree().getValue().toGregorianCalendar().getTime()));
 		  if(dateSortie != null) {
 			  employeModel.setDateSortie(model.formaToString(dateSortie.getValue().toGregorianCalendar().getTime()));
 		  }
 		  employeModel.setMotifSortie(listSalaries.get(i).getMotif());
-		  
-		
-		  
 		  
 		  
 		  employeModel.setTotSalAssCssAtmp1(listSalaries.get(i).getTotalSalaireAssujetisAtmpMois1().getValue());
@@ -173,8 +171,6 @@ public class PreDNSService {
 			  //System.out.println("RCC2: "+rcc2);
 		  }
 		  
-		 
-		  
 		  employeModel.setTotSalAssCssAtmp2(listSalaries.get(i).getTotalSalaireAssujetisAtmpMois2().getValue());
 		  employeModel.setTotSalAssCssPf2(listSalaries.get(i).getTotalSalaireAssujetisPfMois2());
 		  employeModel.setTotSalAssIpresRcc2(listSalaries.get(i).getTotalSalaireAssujetisRccMois2().getValue());
@@ -193,7 +189,6 @@ public class PreDNSService {
 		  }
 		  
 		  
-		  
 		  employeModel.setTotSalAssCssAtmp3(listSalaries.get(i).getTotalSalaireAssujetisAtmpMois3().getValue());
 		  employeModel.setTotSalAssCssPf3(listSalaries.get(i).getTotalSalaireAssujetisPfMois3().getValue());
 		  employeModel.setTotSalAssIpresRcc3(listSalaries.get(i).getTotalSalaireAssujetisRccMois3().getValue());
@@ -208,7 +203,6 @@ public class PreDNSService {
 		  if(rcc3 != null) {
 			  employeModel.setDateEffetRegimeCadre3(model.formaToString(rcc3.getValue().toGregorianCalendar().getTime()));
 		  }
-		  
 		  
 		  
 		  preDnsInput.getInformationSalaries().add(employeModel);

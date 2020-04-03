@@ -1,7 +1,6 @@
 package com.secusociale.portail.model;
 
 import java.math.BigDecimal;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,6 +13,8 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeConstants;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+
+import com.google.protobuf.TextFormat.ParseException;
 
  
 
@@ -781,12 +782,13 @@ public class DeclarationModel {
 			public void setDateEffetRegimeCadre3(String date) {
 				this.dateEffetRegimeCadre3 = date;
 			}
+			
+			
 
     	
-			
     }
 	
-	public XMLGregorianCalendar formatToGregorianCalendar(String dateFormat) throws ParseException, DatatypeConfigurationException {
+	public XMLGregorianCalendar formatToGregorianCalendar(String dateFormat) throws ParseException, DatatypeConfigurationException, java.text.ParseException {
 		 
 		 
 		 XMLGregorianCalendar xmlGregorianCalendar = null ;
@@ -819,4 +821,7 @@ public class DeclarationModel {
 		
 		
 	}
+	
+	
+	
 }

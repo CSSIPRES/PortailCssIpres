@@ -17,9 +17,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * <p>Classe Java pour anonymous complex type.
- *
+ * 
  * <p>Le fragment de sch�ma suivant indique le contenu attendu figurant dans cette classe.
- *
+ * 
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -210,8 +210,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- *
- *
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -271,18 +271,18 @@ public class CmPresDns {
     protected JAXBElement<BigDecimal> montantCotisationRgEmpl;
     @XmlElementRef(name = "montantCotisationRccEmp", namespace = "http://oracle.com/CmPresDns.xsd", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> montantCotisationRccEmp;
-    @XmlElement(namespace = "http://oraclegetPreDNSEmployeur.com/CmPresDns.xsd")
+    @XmlElement(namespace = "http://oracle.com/CmPresDns.xsd")
     protected List<CmPresDns.InformationSalaries> informationSalaries;
     @XmlAttribute(name = "dateTimeTagFormat", required = true)
     protected String dateTimeTagFormat;
 
     /**
      * Obtient la valeur de la propri�t� typeIdentifiant.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTypeIdentifiant() {
         return typeIdentifiant;
@@ -290,11 +290,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� typeIdentifiant.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTypeIdentifiant(String value) {
         this.typeIdentifiant = value;
@@ -302,11 +302,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� numeroIdentifiant.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getNumeroIdentifiant() {
         return numeroIdentifiant;
@@ -314,11 +314,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� numeroIdentifiant.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setNumeroIdentifiant(String value) {
         this.numeroIdentifiant = value;
@@ -326,11 +326,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� raisonSociale.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRaisonSociale() {
         return raisonSociale;
@@ -338,11 +338,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� raisonSociale.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRaisonSociale(String value) {
         this.raisonSociale = value;
@@ -350,11 +350,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� address.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getAddress() {
         return address;
@@ -362,11 +362,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� address.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setAddress(String value) {
         this.address = value;
@@ -374,11 +374,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� typeDeclaration.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTypeDeclaration() {
         return typeDeclaration;
@@ -386,11 +386,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� typeDeclaration.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTypeDeclaration(String value) {
         this.typeDeclaration = value;
@@ -398,11 +398,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� dateDebutPeriodeCotisation.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-     *
+     *     
      */
     public JAXBElement<XMLGregorianCalendar> getDateDebutPeriodeCotisation() {
         return dateDebutPeriodeCotisation;
@@ -410,11 +410,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� dateDebutPeriodeCotisation.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-     *
+     *     
      */
     public void setDateDebutPeriodeCotisation(JAXBElement<XMLGregorianCalendar> value) {
         this.dateDebutPeriodeCotisation = value;
@@ -422,11 +422,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� dateFinPeriodeCotisation.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-     *
+     *     
      */
     public JAXBElement<XMLGregorianCalendar> getDateFinPeriodeCotisation() {
         return dateFinPeriodeCotisation;
@@ -434,11 +434,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� dateFinPeriodeCotisation.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-     *
+     *     
      */
     public void setDateFinPeriodeCotisation(JAXBElement<XMLGregorianCalendar> value) {
         this.dateFinPeriodeCotisation = value;
@@ -446,11 +446,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� totalSalaries.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public BigDecimal getTotalSalaries() {
         return totalSalaries;
@@ -458,11 +458,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� totalSalaries.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public void setTotalSalaries(BigDecimal value) {
         this.totalSalaries = value;
@@ -470,11 +470,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� totalSalaireAssujetisRg.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public JAXBElement<BigDecimal> getTotalSalaireAssujetisRg() {
         return totalSalaireAssujetisRg;
@@ -482,11 +482,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� totalSalaireAssujetisRg.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public void setTotalSalaireAssujetisRg(JAXBElement<BigDecimal> value) {
         this.totalSalaireAssujetisRg = value;
@@ -494,11 +494,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� totalSalaireAssujetisRcc.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public JAXBElement<BigDecimal> getTotalSalaireAssujetisRcc() {
         return totalSalaireAssujetisRcc;
@@ -506,11 +506,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� totalSalaireAssujetisRcc.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public void setTotalSalaireAssujetisRcc(JAXBElement<BigDecimal> value) {
         this.totalSalaireAssujetisRcc = value;
@@ -518,11 +518,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� totalSalaireAssujetisPf.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public JAXBElement<BigDecimal> getTotalSalaireAssujetisPf() {
         return totalSalaireAssujetisPf;
@@ -530,11 +530,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� totalSalaireAssujetisPf.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public void setTotalSalaireAssujetisPf(JAXBElement<BigDecimal> value) {
         this.totalSalaireAssujetisPf = value;
@@ -542,11 +542,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� totalSalaireAssujetisAtmp.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public JAXBElement<BigDecimal> getTotalSalaireAssujetisAtmp() {
         return totalSalaireAssujetisAtmp;
@@ -554,11 +554,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� totalSalaireAssujetisAtmp.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public void setTotalSalaireAssujetisAtmp(JAXBElement<BigDecimal> value) {
         this.totalSalaireAssujetisAtmp = value;
@@ -566,11 +566,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� totalSalaireVerses.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public JAXBElement<BigDecimal> getTotalSalaireVerses() {
         return totalSalaireVerses;
@@ -578,11 +578,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� totalSalaireVerses.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public void setTotalSalaireVerses(JAXBElement<BigDecimal> value) {
         this.totalSalaireVerses = value;
@@ -590,11 +590,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� montantCotisationPfEmp.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public JAXBElement<BigDecimal> getMontantCotisationPfEmp() {
         return montantCotisationPfEmp;
@@ -602,11 +602,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� montantCotisationPfEmp.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public void setMontantCotisationPfEmp(JAXBElement<BigDecimal> value) {
         this.montantCotisationPfEmp = value;
@@ -614,11 +614,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� montantCotisationAtmpEmp.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public JAXBElement<BigDecimal> getMontantCotisationAtmpEmp() {
         return montantCotisationAtmpEmp;
@@ -626,11 +626,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� montantCotisationAtmpEmp.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public void setMontantCotisationAtmpEmp(JAXBElement<BigDecimal> value) {
         this.montantCotisationAtmpEmp = value;
@@ -638,11 +638,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� montantCotisationRgEmpl.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public JAXBElement<BigDecimal> getMontantCotisationRgEmpl() {
         return montantCotisationRgEmpl;
@@ -650,11 +650,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� montantCotisationRgEmpl.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public void setMontantCotisationRgEmpl(JAXBElement<BigDecimal> value) {
         this.montantCotisationRgEmpl = value;
@@ -662,11 +662,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� montantCotisationRccEmp.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public JAXBElement<BigDecimal> getMontantCotisationRccEmp() {
         return montantCotisationRccEmp;
@@ -674,11 +674,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� montantCotisationRccEmp.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-     *
+     *     
      */
     public void setMontantCotisationRccEmp(JAXBElement<BigDecimal> value) {
         this.montantCotisationRccEmp = value;
@@ -686,25 +686,25 @@ public class CmPresDns {
 
     /**
      * Gets the value of the informationSalaries property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the informationSalaries property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getInformationSalaries().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CmPresDns.InformationSalaries }
-     *
-     *
+     * 
+     * 
      */
     public List<CmPresDns.InformationSalaries> getInformationSalaries() {
         if (informationSalaries == null) {
@@ -715,11 +715,11 @@ public class CmPresDns {
 
     /**
      * Obtient la valeur de la propri�t� dateTimeTagFormat.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getDateTimeTagFormat() {
         if (dateTimeTagFormat == null) {
@@ -731,11 +731,11 @@ public class CmPresDns {
 
     /**
      * D�finit la valeur de la propri�t� dateTimeTagFormat.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setDateTimeTagFormat(String value) {
         this.dateTimeTagFormat = value;
@@ -744,9 +744,9 @@ public class CmPresDns {
 
     /**
      * <p>Classe Java pour anonymous complex type.
-     *
+     * 
      * <p>Le fragment de sch�ma suivant indique le contenu attendu figurant dans cette classe.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -872,8 +872,8 @@ public class CmPresDns {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1023,11 +1023,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� numeroAssureSocial.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getNumeroAssureSocial() {
             return numeroAssureSocial;
@@ -1035,11 +1035,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� numeroAssureSocial.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setNumeroAssureSocial(String value) {
             this.numeroAssureSocial = value;
@@ -1047,11 +1047,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� nom.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getNom() {
             return nom;
@@ -1059,11 +1059,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� nom.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setNom(String value) {
             this.nom = value;
@@ -1071,11 +1071,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� prenom.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getPrenom() {
             return prenom;
@@ -1083,11 +1083,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� prenom.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setPrenom(String value) {
             this.prenom = value;
@@ -1095,11 +1095,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� dateNaissance.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public JAXBElement<XMLGregorianCalendar> getDateNaissance() {
             return dateNaissance;
@@ -1107,11 +1107,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� dateNaissance.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public void setDateNaissance(JAXBElement<XMLGregorianCalendar> value) {
             this.dateNaissance = value;
@@ -1119,11 +1119,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� typePiece.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTypePiece() {
             return typePiece;
@@ -1131,11 +1131,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� typePiece.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTypePiece(String value) {
             this.typePiece = value;
@@ -1143,11 +1143,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� numeroPiece.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getNumeroPiece() {
             return numeroPiece;
@@ -1155,11 +1155,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� numeroPiece.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setNumeroPiece(String value) {
             this.numeroPiece = value;
@@ -1167,11 +1167,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� natureContrat.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getNatureContrat() {
             return natureContrat;
@@ -1179,11 +1179,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� natureContrat.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setNatureContrat(String value) {
             this.natureContrat = value;
@@ -1191,11 +1191,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� dateEntree.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public JAXBElement<XMLGregorianCalendar> getDateEntree() {
             return dateEntree;
@@ -1203,11 +1203,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� dateEntree.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public void setDateEntree(JAXBElement<XMLGregorianCalendar> value) {
             this.dateEntree = value;
@@ -1215,11 +1215,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� dateSortie.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public JAXBElement<XMLGregorianCalendar> getDateSortie() {
             return dateSortie;
@@ -1227,11 +1227,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� dateSortie.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public void setDateSortie(JAXBElement<XMLGregorianCalendar> value) {
             this.dateSortie = value;
@@ -1239,11 +1239,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� motif.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getMotif() {
             return motif;
@@ -1251,11 +1251,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� motif.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setMotif(String value) {
             this.motif = value;
@@ -1263,11 +1263,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisPfMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisPfMois1() {
             return totalSalaireAssujetisPfMois1;
@@ -1275,11 +1275,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisPfMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisPfMois1(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisPfMois1 = value;
@@ -1287,11 +1287,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisAtmpMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisAtmpMois1() {
             return totalSalaireAssujetisAtmpMois1;
@@ -1299,11 +1299,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisAtmpMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisAtmpMois1(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisAtmpMois1 = value;
@@ -1311,11 +1311,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisRgMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisRgMois1() {
             return totalSalaireAssujetisRgMois1;
@@ -1323,11 +1323,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisRgMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisRgMois1(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRgMois1 = value;
@@ -1335,11 +1335,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisRccMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisRccMois1() {
             return totalSalaireAssujetisRccMois1;
@@ -1347,11 +1347,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisRccMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisRccMois1(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRccMois1 = value;
@@ -1359,11 +1359,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� salaireBrutMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getSalaireBrutMois1() {
             return salaireBrutMois1;
@@ -1371,11 +1371,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� salaireBrutMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setSalaireBrutMois1(JAXBElement<BigDecimal> value) {
             this.salaireBrutMois1 = value;
@@ -1383,11 +1383,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tempsPresenceJourMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getTempsPresenceJourMois1() {
             return tempsPresenceJourMois1;
@@ -1395,11 +1395,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tempsPresenceJourMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setTempsPresenceJourMois1(BigDecimal value) {
             this.tempsPresenceJourMois1 = value;
@@ -1407,11 +1407,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tempsPresenceHeureMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getTempsPresenceHeureMois1() {
             return tempsPresenceHeureMois1;
@@ -1419,11 +1419,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tempsPresenceHeureMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setTempsPresenceHeureMois1(BigDecimal value) {
             this.tempsPresenceHeureMois1 = value;
@@ -1431,11 +1431,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tempsTravailMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTempsTravailMois1() {
             return tempsTravailMois1;
@@ -1443,11 +1443,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tempsTravailMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTempsTravailMois1(String value) {
             this.tempsTravailMois1 = value;
@@ -1455,11 +1455,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tranceDeTravailMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTranceDeTravailMois1() {
             return tranceDeTravailMois1;
@@ -1467,11 +1467,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tranceDeTravailMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTranceDeTravailMois1(String value) {
             this.tranceDeTravailMois1 = value;
@@ -1479,11 +1479,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� regimeGeneralMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public JAXBElement<Boolean> getRegimeGeneralMois1() {
             return regimeGeneralMois1;
@@ -1491,11 +1491,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� regimeGeneralMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public void setRegimeGeneralMois1(JAXBElement<Boolean> value) {
             this.regimeGeneralMois1 = value;
@@ -1503,11 +1503,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� regimeCadreMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public JAXBElement<Boolean> getRegimeCadreMois1() {
             return regimeCadreMois1;
@@ -1515,11 +1515,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� regimeCadreMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public void setRegimeCadreMois1(JAXBElement<Boolean> value) {
             this.regimeCadreMois1 = value;
@@ -1527,11 +1527,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� dateEffetRegimeCadreMois1.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public JAXBElement<XMLGregorianCalendar> getDateEffetRegimeCadreMois1() {
             return dateEffetRegimeCadreMois1;
@@ -1539,11 +1539,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� dateEffetRegimeCadreMois1.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public void setDateEffetRegimeCadreMois1(JAXBElement<XMLGregorianCalendar> value) {
             this.dateEffetRegimeCadreMois1 = value;
@@ -1551,11 +1551,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisPfMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTotalSalaireAssujetisPfMois2() {
             return totalSalaireAssujetisPfMois2;
@@ -1563,11 +1563,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisPfMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTotalSalaireAssujetisPfMois2(String value) {
             this.totalSalaireAssujetisPfMois2 = value;
@@ -1575,11 +1575,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisAtmpMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisAtmpMois2() {
             return totalSalaireAssujetisAtmpMois2;
@@ -1587,11 +1587,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisAtmpMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisAtmpMois2(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisAtmpMois2 = value;
@@ -1599,11 +1599,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisRgMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisRgMois2() {
             return totalSalaireAssujetisRgMois2;
@@ -1611,11 +1611,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisRgMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisRgMois2(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRgMois2 = value;
@@ -1623,11 +1623,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisRccMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisRccMois2() {
             return totalSalaireAssujetisRccMois2;
@@ -1635,11 +1635,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisRccMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisRccMois2(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRccMois2 = value;
@@ -1647,11 +1647,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� salaireBrutMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getSalaireBrutMois2() {
             return salaireBrutMois2;
@@ -1659,11 +1659,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� salaireBrutMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setSalaireBrutMois2(JAXBElement<BigDecimal> value) {
             this.salaireBrutMois2 = value;
@@ -1671,11 +1671,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tempsPresenceJourMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTempsPresenceJourMois2() {
             return tempsPresenceJourMois2;
@@ -1683,11 +1683,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tempsPresenceJourMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTempsPresenceJourMois2(JAXBElement<BigDecimal> value) {
             this.tempsPresenceJourMois2 = value;
@@ -1695,11 +1695,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tempsPresenceHeureMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTempsPresenceHeureMois2() {
             return tempsPresenceHeureMois2;
@@ -1707,11 +1707,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tempsPresenceHeureMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTempsPresenceHeureMois2(JAXBElement<BigDecimal> value) {
             this.tempsPresenceHeureMois2 = value;
@@ -1719,11 +1719,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tempsTravailMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTempsTravailMois2() {
             return tempsTravailMois2;
@@ -1731,11 +1731,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tempsTravailMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTempsTravailMois2(String value) {
             this.tempsTravailMois2 = value;
@@ -1743,11 +1743,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tranceDeTravailMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTranceDeTravailMois2() {
             return tranceDeTravailMois2;
@@ -1755,11 +1755,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tranceDeTravailMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTranceDeTravailMois2(String value) {
             this.tranceDeTravailMois2 = value;
@@ -1767,11 +1767,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� regimeGeneralMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public JAXBElement<Boolean> getRegimeGeneralMois2() {
             return regimeGeneralMois2;
@@ -1779,11 +1779,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� regimeGeneralMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public void setRegimeGeneralMois2(JAXBElement<Boolean> value) {
             this.regimeGeneralMois2 = value;
@@ -1791,11 +1791,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� regimeCadreMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public JAXBElement<Boolean> getRegimeCadreMois2() {
             return regimeCadreMois2;
@@ -1803,11 +1803,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� regimeCadreMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public void setRegimeCadreMois2(JAXBElement<Boolean> value) {
             this.regimeCadreMois2 = value;
@@ -1815,11 +1815,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� dateEffetRegimeCadreMois2.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public JAXBElement<XMLGregorianCalendar> getDateEffetRegimeCadreMois2() {
             return dateEffetRegimeCadreMois2;
@@ -1827,11 +1827,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� dateEffetRegimeCadreMois2.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public void setDateEffetRegimeCadreMois2(JAXBElement<XMLGregorianCalendar> value) {
             this.dateEffetRegimeCadreMois2 = value;
@@ -1839,11 +1839,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisPfMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisPfMois3() {
             return totalSalaireAssujetisPfMois3;
@@ -1851,11 +1851,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisPfMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisPfMois3(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisPfMois3 = value;
@@ -1863,11 +1863,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisAtmpMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisAtmpMois3() {
             return totalSalaireAssujetisAtmpMois3;
@@ -1875,11 +1875,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisAtmpMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisAtmpMois3(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisAtmpMois3 = value;
@@ -1887,11 +1887,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisRgMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisRgMois3() {
             return totalSalaireAssujetisRgMois3;
@@ -1899,11 +1899,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisRgMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisRgMois3(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRgMois3 = value;
@@ -1911,11 +1911,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� totalSalaireAssujetisRccMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTotalSalaireAssujetisRccMois3() {
             return totalSalaireAssujetisRccMois3;
@@ -1923,11 +1923,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� totalSalaireAssujetisRccMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTotalSalaireAssujetisRccMois3(JAXBElement<BigDecimal> value) {
             this.totalSalaireAssujetisRccMois3 = value;
@@ -1935,11 +1935,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� salaireBrutMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getSalaireBrutMois3() {
             return salaireBrutMois3;
@@ -1947,11 +1947,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� salaireBrutMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setSalaireBrutMois3(JAXBElement<BigDecimal> value) {
             this.salaireBrutMois3 = value;
@@ -1959,11 +1959,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tempsPresenceJourMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTempsPresenceJourMois3() {
             return tempsPresenceJourMois3;
@@ -1971,11 +1971,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tempsPresenceJourMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTempsPresenceJourMois3(JAXBElement<BigDecimal> value) {
             this.tempsPresenceJourMois3 = value;
@@ -1983,11 +1983,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tempsPresenceHeureMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public JAXBElement<BigDecimal> getTempsPresenceHeureMois3() {
             return tempsPresenceHeureMois3;
@@ -1995,11 +1995,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tempsPresenceHeureMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *
+         *     
          */
         public void setTempsPresenceHeureMois3(JAXBElement<BigDecimal> value) {
             this.tempsPresenceHeureMois3 = value;
@@ -2007,11 +2007,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tempsTravailMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTempsTravailMois3() {
             return tempsTravailMois3;
@@ -2019,11 +2019,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tempsTravailMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTempsTravailMois3(String value) {
             this.tempsTravailMois3 = value;
@@ -2031,11 +2031,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� tranceDeTravailMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTranceDeTravailMois3() {
             return tranceDeTravailMois3;
@@ -2043,11 +2043,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� tranceDeTravailMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTranceDeTravailMois3(String value) {
             this.tranceDeTravailMois3 = value;
@@ -2055,11 +2055,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� regimeGeneralMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public JAXBElement<Boolean> getRegimeGeneralMois3() {
             return regimeGeneralMois3;
@@ -2067,11 +2067,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� regimeGeneralMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public void setRegimeGeneralMois3(JAXBElement<Boolean> value) {
             this.regimeGeneralMois3 = value;
@@ -2079,11 +2079,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� regimeCadreMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public JAXBElement<Boolean> getRegimeCadreMois3() {
             return regimeCadreMois3;
@@ -2091,11 +2091,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� regimeCadreMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-         *
+         *     
          */
         public void setRegimeCadreMois3(JAXBElement<Boolean> value) {
             this.regimeCadreMois3 = value;
@@ -2103,11 +2103,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� dateEffetRegimeCadreMois3.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public JAXBElement<XMLGregorianCalendar> getDateEffetRegimeCadreMois3() {
             return dateEffetRegimeCadreMois3;
@@ -2115,11 +2115,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� dateEffetRegimeCadreMois3.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *
+         *     
          */
         public void setDateEffetRegimeCadreMois3(JAXBElement<XMLGregorianCalendar> value) {
             this.dateEffetRegimeCadreMois3 = value;
@@ -2127,11 +2127,11 @@ public class CmPresDns {
 
         /**
          * Obtient la valeur de la propri�t� action.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ListAction }
-         *
+         *     
          */
         public ListAction getAction() {
             return action;
@@ -2139,11 +2139,11 @@ public class CmPresDns {
 
         /**
          * D�finit la valeur de la propri�t� action.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ListAction }
-         *
+         *     
          */
         public void setAction(ListAction value) {
             this.action = value;

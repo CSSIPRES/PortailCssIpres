@@ -36,7 +36,7 @@ import com.secusociale.portail.service.soap.declaration.ObjectFactory;
 public class DnsService {
 	
 	
-	public Holder<DeclarationModel> createDns (DeclarationModel dnsInput) throws DNSINBOUNDSERVICEFault, DatatypeConfigurationException, ParseException, JAXBException{
+	public Holder<DeclarationModel> createDns (DeclarationModel dnsInput) throws DNSINBOUNDSERVICEFault, DatatypeConfigurationException, ParseException, JAXBException, com.google.protobuf.TextFormat.ParseException{
 		
 		
 		Holder<DNSINBOUNDSERVICE> dnsInbound = new Holder<DNSINBOUNDSERVICE>();

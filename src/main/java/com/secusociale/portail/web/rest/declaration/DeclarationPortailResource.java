@@ -30,10 +30,12 @@ public class DeclarationPortailResource {
 	
 	
 	@Autowired
-	private PreDNSService prednsService ;
+	private PreDNSService  prednsService ;
+	
 	
 	@Autowired
 	private DnsService dnsService ;
+	
 	
 	@PostMapping("/preDNS")
 	public Holder<DeclarationModel> getPreDNSEmployeur(@RequestBody DeclarationModel preDnsInput) throws CmPresDnsFault, JAXBException, DatatypeConfigurationException{
@@ -42,12 +44,12 @@ public class DeclarationPortailResource {
 		
 		 
 		
-		return prednsService.getPreDns(preDnsInput);
+		return  prednsService.getPreDns(preDnsInput);
 		
 	}
 	
 	@PostMapping("/dns")
-	public Holder<DeclarationModel> createDeclaration(@RequestBody DeclarationModel preDnsInput) throws   JAXBException, DatatypeConfigurationException, DNSINBOUNDSERVICEFault, ParseException{
+	public Holder<DeclarationModel> createDeclaration(@RequestBody DeclarationModel preDnsInput) throws   JAXBException, DatatypeConfigurationException, DNSINBOUNDSERVICEFault, ParseException, com.google.protobuf.TextFormat.ParseException{
 		
 		log.debug("REST request to get PreDNS: {}", ENTITY_NAME);
 		
@@ -55,4 +57,5 @@ public class DeclarationPortailResource {
 		return dnsService.createDns(preDnsInput);
 		
 	}
+	
 }
