@@ -24,61 +24,58 @@ import com.secusociale.portail.service.soap.urlAttestationReguralite.CMGENATTEST
 @RestController
 @RequestMapping("/api")
 public class DemandeAttestationRegulariteResource {
-	
+
 	@Autowired
 	private DemandeAttestationService demandeAttestationService ;
 	@Autowired
 	private StatutDossierAttestationService statutDossierAttestationService ;
 	@Autowired
-	private GetAttestationUrlService getAttestationUrlService ; 
-	
+	private GetAttestationUrlService getAttestationUrlService ;
+
 	@Value("${jhipster.clientApp.name}")
     private String applicationName;
-	
-	
-	 
 
-	@PostMapping("/attestation/create/{typeIdentifiant}/{identifiant}")
-	
+
+
+
+	@GetMapping("/attestation/create/{typeIdentifiant}/{identifiant}")
+
 	Holder<CmGetAttestationRegularite> createDossierAttestation(@PathVariable String typeIdentifiant , @PathVariable String identifiant) throws JAXBException, CmGetAttestationRegulariteFault{
-		
+
 		Holder<CmGetAttestationRegularite>  cmGetAttestationRegularite = new Holder<CmGetAttestationRegularite>();
-		
+
 		cmGetAttestationRegularite = demandeAttestationService.createDossierAttestation(typeIdentifiant, identifiant);
- 
+
 		return cmGetAttestationRegularite;
-		
-
-		
 	}
-	
-	
-	 
+
+
+
 	@GetMapping("/attestation/getStatus/{idDossier}")
-	
-	 Holder<CMGetStatusDemandeAttestation> getStatutDossier(@PathVariable String idDossier ) throws JAXBException, CMGetStatusDemandeAttestationFault{
-		
-		 Holder<CMGetStatusDemandeAttestation> cmGetStatutAttestationRegularite = new  Holder<CMGetStatusDemandeAttestation>();
-		
-		 cmGetStatutAttestationRegularite = statutDossierAttestationService.getStatutDemandeAttestation(idDossier) ;
- 
-		return  cmGetStatutAttestationRegularite;
-		
 
-		
+	 Holder<CMGetStatusDemandeAttestation> getStatutDossier(@PathVariable String idDossier ) throws JAXBException, CMGetStatusDemandeAttestationFault{
+
+		 Holder<CMGetStatusDemandeAttestation> cmGetStatutAttestationRegularite = new  Holder<CMGetStatusDemandeAttestation>();
+
+		 cmGetStatutAttestationRegularite = statutDossierAttestationService.getStatutDemandeAttestation(idDossier) ;
+
+		return  cmGetStatutAttestationRegularite;
+
+
+
 	}
-	
-	
+
+
 	@GetMapping("/attestation/getUrl/{idDossier}")
-	
+
 	Holder<CMGENATTESTATION> getUrlAttestationRegularite(@PathVariable String idDossier) throws JAXBException, CMGENATTESTATIONFault{
-		
+
 		Holder<CMGENATTESTATION> cmgenattestation = new Holder<CMGENATTESTATION>() ;
-		
+
 		cmgenattestation = getAttestationUrlService.getUrlAttestation(idDossier);
-		
+
 		return cmgenattestation;
-		
+
 	}
 
 }

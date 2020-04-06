@@ -5,6 +5,8 @@ import java.net.URISyntaxException;
 import javax.xml.bind.JAXBException;
 import javax.xml.ws.Holder;
 
+import com.secusociale.portail.service.soap.immatRepresentantationDiplomatique.IMMATREPDIPLO;
+import com.secusociale.portail.service.soap.immatRepresentantationDiplomatique.IMMATREPDIPLOFault;
 import com.secusociale.portail.service.soap.maintientAffiliation.MAINTAFFINBOUND;
 import com.secusociale.portail.service.soap.maintientAffiliation.MAINTAFFINBOUNDFault;
 import org.slf4j.Logger;
@@ -65,6 +67,14 @@ public class ImmatPortailResource {
         Holder<MAINTAFFINBOUND> immatriculationMaintienAffiliation = new Holder<MAINTAFFINBOUND>();
         immatriculationMaintienAffiliation = immatPortailService.createImmatriculationMaintienAffiliation(immatriculationMainAffiliation);
         return immatriculationMaintienAffiliation;
+    }
+
+    @PostMapping("/immatriculation-representant-diplomatique")
+    public Holder<IMMATREPDIPLO> createImmatriculationRepresentant(@RequestBody IMMATREPDIPLO.Input immatriculationRepresentant) throws URISyntaxException, IMMATREPDIPLOFault, JAXBException, MAINTAFFINBOUNDFault {
+        log.debug("REST request to save Immatriculation : {}", ENTITY_NAME);
+        Holder<IMMATREPDIPLO> immatriculationRepresentantOuput = new Holder<IMMATREPDIPLO>();
+        immatriculationRepresentantOuput = immatPortailService.createImmatriculationRepresentatnt(immatriculationRepresentant);
+        return immatriculationRepresentantOuput;
     }
 }
 
