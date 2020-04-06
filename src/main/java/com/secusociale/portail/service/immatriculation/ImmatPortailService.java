@@ -1,14 +1,9 @@
 package com.secusociale.portail.service.immatriculation;
 
-
-import javax.xml.bind.JAXBContext;
-
-
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import javax.xml.ws.BindingProvider;
 import javax.xml.ws.Holder;
 
+<<<<<<< HEAD
 import com.secusociale.portail.service.soap.immatRepresentantationDiplomatique.IMMATREPDIPLO;
 import com.secusociale.portail.service.soap.immatRepresentantationDiplomatique.IMMATREPDIPLOFault;
 import com.secusociale.portail.service.soap.immatRepresentantationDiplomatique.IMMATREPDIPLOPortType;
@@ -18,6 +13,8 @@ import com.secusociale.portail.service.soap.maintientAffiliation.MAINTAFFINBOUND
 import com.secusociale.portail.service.soap.maintientAffiliation.MAINTAFFINBOUNDPortType;
 import com.secusociale.portail.service.soap.maintientAffiliation.MAINTAFFINBOUNDService;
 import com.secusociale.portail.service.soap.preDNS.CmPresDns;
+=======
+>>>>>>> af9203b62a9bd45c285ca272a0d2181c6e67f60e
 import org.springframework.stereotype.Service;
 
 import com.secusociale.portail.service.PortailConstant;
@@ -27,50 +24,51 @@ import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATI
 import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATIONINBOUNDService;
 import com.secusociale.portail.service.soap.demandeImmatriculation.ObjectFactory;
 import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATIONINBOUND.Input;
-
+ 
 
 @Service
 public class ImmatPortailService {
-
-
+	
+	 
 	public Holder<IMMATRICULATIONINBOUND> createImmatriculationPortail(IMMATRICULATIONINBOUND immatriculation) throws IMMATRICULATIONINBOUNDFault{
-
-		//String immatriculationType = "BVOLN" ;   //Immatriculation Volontaire
-
-
-
-
+		
+		//String immatriculationType = "BVOLN" ;   //Immatriculation Volontaire 
+	   	 
+		
+		 
+		
 		Holder<IMMATRICULATIONINBOUND> immatriculationInbound = new Holder<IMMATRICULATIONINBOUND>();
-
+		
 		Input input = new Input();
-
-
-
+		 
+		
+	    
 	    input.getEmployeList().addAll(immatriculation.getInput().getEmployeList());
-
+		 
 		input.setEmployerQuery(immatriculation.getInput().getEmployerQuery());
 		input.setMainRegistrationForm(immatriculation.getInput().getMainRegistrationForm());
 		input.setLegalRepresentativeForm(immatriculation.getInput().getLegalRepresentativeForm());
 	    input.setDocuments(immatriculation.getInput().getDocuments());
-
-
-
+		
+		
+		
 		ObjectFactory obj = new ObjectFactory();
 		immatriculationInbound.value = obj.createIMMATRICULATIONINBOUND();
 		immatriculationInbound.value.setInput(input);
-
+		
 		IMMATRICULATIONINBOUNDService immatriculationinboundService = new IMMATRICULATIONINBOUNDService();
 		IMMATRICULATIONINBOUNDPortType immatriculationinboundPortType = immatriculationinboundService.getIMMATRICULATIONINBOUNDPort();
-
+		
 		BindingProvider prov = (BindingProvider) immatriculationinboundPortType ;
 		prov.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, PortailConstant.USERNAME);
         prov.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, PortailConstant.PASSWORD);
-
+        
         immatriculationinboundPortType.immatriculationINBOUND(immatriculationInbound);
-
+		
 		return immatriculationInbound;
-
+		
 	}
+<<<<<<< HEAD
 	 // Save Immatriculation maintien d'affiliation
 
     public Holder<MAINTAFFINBOUND> createImmatriculationMaintienAffiliation(MAINTAFFINBOUND.Input immatriculation) throws MAINTAFFINBOUNDFault, JAXBException {
@@ -132,4 +130,7 @@ public class ImmatPortailService {
         immatriculationRepresentantPortType.immatREPDIPLO(immatriculationRepresentatnt);
         return immatriculationRepresentatnt;
     }
+=======
+
+>>>>>>> af9203b62a9bd45c285ca272a0d2181c6e67f60e
 }
