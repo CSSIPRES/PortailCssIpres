@@ -33,7 +33,7 @@ import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATI
 public class ImmatPortailService {
 
 
-	public Holder<IMMATRICULATIONINBOUND> createImmatriculationPortail(IMMATRICULATIONINBOUND immatriculation) throws IMMATRICULATIONINBOUNDFault{
+	public Holder<IMMATRICULATIONINBOUND> createImmatriculationPortail(IMMATRICULATIONINBOUND immatriculation) {
 
 		//String immatriculationType = "BVOLN" ;   //Immatriculation Volontaire
 
@@ -66,7 +66,11 @@ public class ImmatPortailService {
 		prov.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, PortailConstant.USERNAME);
         prov.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, PortailConstant.PASSWORD);
 
-        immatriculationinboundPortType.immatriculationINBOUND(immatriculationInbound);
+        try {
+			immatriculationinboundPortType.immatriculationINBOUND(immatriculationInbound);
+		} catch (IMMATRICULATIONINBOUNDFault e) {
+			throw new  RuntimeException(e.getFaultInfo().getServerMessage().getText(), e);
+		}
 
 		return immatriculationInbound;
 

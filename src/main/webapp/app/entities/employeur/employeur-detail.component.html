@@ -1,0 +1,162 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="employeur">
+            <h2><span jhiTranslate="portailCssIpresApp.employeur.detail.title">Employeur</span> {{ employeur.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.employerType">Employer Type</span></dt>
+                <dd>
+                    <span>{{ employeur.employerType }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.typeEtablissement">Type Etablissement</span></dt>
+                <dd>
+                    <span>{{ employeur.typeEtablissement }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.raisonSociale">Raison Sociale</span></dt>
+                <dd>
+                    <span>{{ employeur.raisonSociale }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.maisonMere">Maison Mere</span></dt>
+                <dd>
+                    <span>{{ employeur.maisonMere }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.prenom">Prenom</span></dt>
+                <dd>
+                    <span>{{ employeur.prenom }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.nom">Nom</span></dt>
+                <dd>
+                    <span>{{ employeur.nom }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.typeIdentifiant">Type Identifiant</span></dt>
+                <dd>
+                    <span>{{ employeur.typeIdentifiant }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.numeroIdentifiant">Numero Identifiant</span></dt>
+                <dd>
+                    <span>{{ employeur.numeroIdentifiant }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.legalStatus">Legal Status</span></dt>
+                <dd>
+                    <span>{{ employeur.legalStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.shortName">Short Name</span></dt>
+                <dd>
+                    <span>{{ employeur.shortName }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.businessSector">Business Sector</span></dt>
+                <dd>
+                    <span>{{ employeur.businessSector }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.mainLineOfBusiness">Main Line Of Business</span></dt>
+                <dd>
+                    <span>{{ employeur.mainLineOfBusiness }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.noOfWorkersInGenScheme">No Of Workers In Gen Scheme</span></dt>
+                <dd>
+                    <span>{{ employeur.noOfWorkersInGenScheme }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.noOfWorkersInBasicScheme">No Of Workers In Basic Scheme</span></dt>
+                <dd>
+                    <span>{{ employeur.noOfWorkersInBasicScheme }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.region">Region</span></dt>
+                <dd>
+                    <span>{{ employeur.region }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.department">Department</span></dt>
+                <dd>
+                    <span>{{ employeur.department }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.arondissement">Arondissement</span></dt>
+                <dd>
+                    <span>{{ employeur.arondissement }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.commune">Commune</span></dt>
+                <dd>
+                    <span>{{ employeur.commune }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.qartier">Qartier</span></dt>
+                <dd>
+                    <span>{{ employeur.qartier }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.address">Address</span></dt>
+                <dd>
+                    <span>{{ employeur.address }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.postboxNo">Postbox No</span></dt>
+                <dd>
+                    <span>{{ employeur.postboxNo }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.telephone">Telephone</span></dt>
+                <dd>
+                    <span>{{ employeur.telephone }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.email">Email</span></dt>
+                <dd>
+                    <span>{{ employeur.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.website">Website</span></dt>
+                <dd>
+                    <span>{{ employeur.website }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.zoneCss">Zone Css</span></dt>
+                <dd>
+                    <span>{{ employeur.zoneCss }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.zoneIpres">Zone Ipres</span></dt>
+                <dd>
+                    <span>{{ employeur.zoneIpres }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.sectorCss">Sector Css</span></dt>
+                <dd>
+                    <span>{{ employeur.sectorCss }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.sectorIpres">Sector Ipres</span></dt>
+                <dd>
+                    <span>{{ employeur.sectorIpres }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.agencyCss">Agency Css</span></dt>
+                <dd>
+                    <span>{{ employeur.agencyCss }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.agencyIpres">Agency Ipres</span></dt>
+                <dd>
+                    <span>{{ employeur.agencyIpres }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.processFlowId">Process Flow Id</span></dt>
+                <dd>
+                    <span>{{ employeur.processFlowId }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.statutDossier">Statut Dossier</span></dt>
+                <dd>
+                    <span>{{ employeur.statutDossier }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.statutImmatriculation">Statut Immatriculation</span></dt>
+                <dd>
+                    <span>{{ employeur.statutImmatriculation }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.employeur.user">User</span></dt>
+                <dd>
+                    {{ employeur.user?.id }}
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/employeur', employeur.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

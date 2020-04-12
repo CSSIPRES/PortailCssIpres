@@ -23,6 +23,18 @@ import { RouterModule } from '@angular/router';
       {
         path: 'declaration',
         loadChildren: () => import('./declaration/declaration.module').then(m => m.PortailCssIpresDeclarationModule)
+      },
+      {
+        path: 'employeur',
+        loadChildren: () => import('./employeur/employeur.module').then(m => m.PortailCssIpresEmployeurModule)
+      },
+      {
+        path: 'document-url',
+        loadChildren: () => import('./document-url/document-url.module').then(m => m.PortailCssIpresDocumentUrlModule)
+      },
+      {
+        path: 'demande-service',
+        loadChildren: () => import('./demande-service/demande-service.module').then(m => m.PortailCssIpresDemandeServiceModule)
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])

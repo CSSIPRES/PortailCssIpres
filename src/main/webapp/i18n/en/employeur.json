@@ -1,0 +1,57 @@
+{
+  "portailCssIpresApp": {
+    "employeur": {
+      "home": {
+        "title": "Employeurs",
+        "createLabel": "Create a new Employeur",
+        "createOrEditLabel": "Create or edit a Employeur",
+        "notFound": "No Employeurs found"
+      },
+      "created": "A new Employeur is created with identifier {{ param }}",
+      "updated": "A Employeur is updated with identifier {{ param }}",
+      "deleted": "A Employeur is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Employeur {{ id }}?"
+      },
+      "detail": {
+        "title": "Employeur"
+      },
+      "employerType": "Employer Type",
+      "typeEtablissement": "Type Etablissement",
+      "raisonSociale": "Raison Sociale",
+      "maisonMere": "Maison Mere",
+      "prenom": "Prenom",
+      "nom": "Nom",
+      "typeIdentifiant": "Type Identifiant",
+      "numeroIdentifiant": "Numero Identifiant",
+      "legalStatus": "Legal Status",
+      "shortName": "Short Name",
+      "businessSector": "Business Sector",
+      "mainLineOfBusiness": "Main Line Of Business",
+      "noOfWorkersInGenScheme": "No Of Workers In Gen Scheme",
+      "noOfWorkersInBasicScheme": "No Of Workers In Basic Scheme",
+      "region": "Region",
+      "department": "Department",
+      "arondissement": "Arondissement",
+      "commune": "Commune",
+      "qartier": "Qartier",
+      "address": "Address",
+      "postboxNo": "Postbox No",
+      "telephone": "Telephone",
+      "email": "Email",
+      "website": "Website",
+      "zoneCss": "Zone Css",
+      "zoneIpres": "Zone Ipres",
+      "sectorCss": "Sector Css",
+      "sectorIpres": "Sector Ipres",
+      "agencyCss": "Agency Css",
+      "agencyIpres": "Agency Ipres",
+      "processFlowId": "Process Flow Id",
+      "statutDossier": "Statut Dossier",
+      "statutImmatriculation": "Statut Immatriculation",
+      "idDossier": "Id Dossier",
+      "document": "Document",
+      "user": "User"
+    }
+  }
+}

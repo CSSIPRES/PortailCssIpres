@@ -1,0 +1,232 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-employeur-heading" jhiTranslate="portailCssIpresApp.employeur.home.createOrEditLabel">Create or edit a Employeur</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.employerType" for="field_employerType">Employer Type</label>
+                    <input type="text" class="form-control" name="employerType" id="field_employerType"
+                           formControlName="employerType"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.typeEtablissement" for="field_typeEtablissement">Type Etablissement</label>
+                    <input type="text" class="form-control" name="typeEtablissement" id="field_typeEtablissement"
+                           formControlName="typeEtablissement"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.raisonSociale" for="field_raisonSociale">Raison Sociale</label>
+                    <input type="text" class="form-control" name="raisonSociale" id="field_raisonSociale"
+                           formControlName="raisonSociale"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.maisonMere" for="field_maisonMere">Maison Mere</label>
+                    <input type="text" class="form-control" name="maisonMere" id="field_maisonMere"
+                           formControlName="maisonMere"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.prenom" for="field_prenom">Prenom</label>
+                    <input type="text" class="form-control" name="prenom" id="field_prenom"
+                           formControlName="prenom"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.nom" for="field_nom">Nom</label>
+                    <input type="text" class="form-control" name="nom" id="field_nom"
+                           formControlName="nom"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.typeIdentifiant" for="field_typeIdentifiant">Type Identifiant</label>
+                    <input type="text" class="form-control" name="typeIdentifiant" id="field_typeIdentifiant"
+                           formControlName="typeIdentifiant"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.numeroIdentifiant" for="field_numeroIdentifiant">Numero Identifiant</label>
+                    <input type="text" class="form-control" name="numeroIdentifiant" id="field_numeroIdentifiant"
+                           formControlName="numeroIdentifiant"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.legalStatus" for="field_legalStatus">Legal Status</label>
+                    <input type="text" class="form-control" name="legalStatus" id="field_legalStatus"
+                           formControlName="legalStatus"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.shortName" for="field_shortName">Short Name</label>
+                    <input type="text" class="form-control" name="shortName" id="field_shortName"
+                           formControlName="shortName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.businessSector" for="field_businessSector">Business Sector</label>
+                    <input type="text" class="form-control" name="businessSector" id="field_businessSector"
+                           formControlName="businessSector"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.mainLineOfBusiness" for="field_mainLineOfBusiness">Main Line Of Business</label>
+                    <input type="text" class="form-control" name="mainLineOfBusiness" id="field_mainLineOfBusiness"
+                           formControlName="mainLineOfBusiness"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.noOfWorkersInGenScheme" for="field_noOfWorkersInGenScheme">No Of Workers In Gen Scheme</label>
+                    <input type="number" class="form-control" name="noOfWorkersInGenScheme" id="field_noOfWorkersInGenScheme"
+                           formControlName="noOfWorkersInGenScheme"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.noOfWorkersInBasicScheme" for="field_noOfWorkersInBasicScheme">No Of Workers In Basic Scheme</label>
+                    <input type="number" class="form-control" name="noOfWorkersInBasicScheme" id="field_noOfWorkersInBasicScheme"
+                           formControlName="noOfWorkersInBasicScheme"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.region" for="field_region">Region</label>
+                    <input type="text" class="form-control" name="region" id="field_region"
+                           formControlName="region"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.department" for="field_department">Department</label>
+                    <input type="text" class="form-control" name="department" id="field_department"
+                           formControlName="department"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.arondissement" for="field_arondissement">Arondissement</label>
+                    <input type="text" class="form-control" name="arondissement" id="field_arondissement"
+                           formControlName="arondissement"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.commune" for="field_commune">Commune</label>
+                    <input type="text" class="form-control" name="commune" id="field_commune"
+                           formControlName="commune"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.qartier" for="field_qartier">Qartier</label>
+                    <input type="text" class="form-control" name="qartier" id="field_qartier"
+                           formControlName="qartier"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.address" for="field_address">Address</label>
+                    <input type="text" class="form-control" name="address" id="field_address"
+                           formControlName="address"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.postboxNo" for="field_postboxNo">Postbox No</label>
+                    <input type="text" class="form-control" name="postboxNo" id="field_postboxNo"
+                           formControlName="postboxNo"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.telephone" for="field_telephone">Telephone</label>
+                    <input type="text" class="form-control" name="telephone" id="field_telephone"
+                           formControlName="telephone"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.website" for="field_website">Website</label>
+                    <input type="text" class="form-control" name="website" id="field_website"
+                           formControlName="website"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.zoneCss" for="field_zoneCss">Zone Css</label>
+                    <input type="text" class="form-control" name="zoneCss" id="field_zoneCss"
+                           formControlName="zoneCss"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.zoneIpres" for="field_zoneIpres">Zone Ipres</label>
+                    <input type="text" class="form-control" name="zoneIpres" id="field_zoneIpres"
+                           formControlName="zoneIpres"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.sectorCss" for="field_sectorCss">Sector Css</label>
+                    <input type="text" class="form-control" name="sectorCss" id="field_sectorCss"
+                           formControlName="sectorCss"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.sectorIpres" for="field_sectorIpres">Sector Ipres</label>
+                    <input type="text" class="form-control" name="sectorIpres" id="field_sectorIpres"
+                           formControlName="sectorIpres"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.agencyCss" for="field_agencyCss">Agency Css</label>
+                    <input type="text" class="form-control" name="agencyCss" id="field_agencyCss"
+                           formControlName="agencyCss"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.agencyIpres" for="field_agencyIpres">Agency Ipres</label>
+                    <input type="text" class="form-control" name="agencyIpres" id="field_agencyIpres"
+                           formControlName="agencyIpres"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.processFlowId" for="field_processFlowId">Process Flow Id</label>
+                    <input type="text" class="form-control" name="processFlowId" id="field_processFlowId"
+                           formControlName="processFlowId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.statutDossier" for="field_statutDossier">Statut Dossier</label>
+                    <input type="text" class="form-control" name="statutDossier" id="field_statutDossier"
+                           formControlName="statutDossier"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.statutImmatriculation" for="field_statutImmatriculation">Statut Immatriculation</label>
+                    <input type="checkbox" class="form-control" name="statutImmatriculation" id="field_statutImmatriculation"
+                           formControlName="statutImmatriculation"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="portailCssIpresApp.employeur.user" for="field_user">User</label>
+                    <select class="form-control" id="field_user" name="user" formControlName="user">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userOption.id === editForm.get('user')!.value?.id ? editForm.get('user')!.value : userOption" *ngFor="let userOption of users; trackBy: trackById">{{ userOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

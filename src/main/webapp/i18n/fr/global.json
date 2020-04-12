@@ -12,6 +12,9 @@
         "representantLegal": "Representant Legal",
         "employe": "Employe",
         "declaration": "Declaration",
+        "employeur": "Employeur",
+        "documentUrl": "Document Url",
+        "demandeService": "Demande Service",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

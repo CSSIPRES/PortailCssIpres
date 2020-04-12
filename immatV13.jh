@@ -1,0 +1,81 @@
+/* Portail CSS IPRES */
+entity Employeur{
+employerType String  
+typeEtablissement String  
+raisonSociale String  
+maisonMere String
+prenom String
+nom String
+typeIdentifiant String  
+numeroIdentifiant String
+legalStatus String  
+shortName String
+businessSector String  
+mainLineOfBusiness String  
+noOfWorkersInGenScheme Integer 
+noOfWorkersInBasicScheme Integer
+region String 
+department String 
+arondissement String 
+commune String 
+qartier String 
+address String 
+postboxNo String
+telephone String
+email String
+website String
+zoneCss String
+zoneIpres String
+sectorCss String
+sectorIpres String
+agencyCss String
+agencyIpres String
+
+ 
+processFlowId String
+statutDossier String
+
+statutImmatriculation Boolean
+
+}
+
+
+
+entity DocumentUrl {
+	name String  
+    url String
+    document Blob
+}
+
+ 
+
+ 
+ 
+
+ 
+
+
+entity DemandeService {
+ typeDemande String
+ idDossier String
+ statutDossier String
+ urlDocument String
+}
+
+ relationship ManyToOne{
+  Employeur{user} to User
+ }
+ 
+
+relationship OneToMany {
+     
+     
+    //Declaration{employe} to Employe{declaration(raisonSociale)},
+   
+   Employeur{idDossier} to DemandeService{employeur(raisonSociale)},
+   Employeur{document} to DocumentUrl{employeur(raisonSociale)}
+     
+}
+ 
+service * with serviceClass
+paginate Employeur, DemandeService, DocumentUrl with pagination

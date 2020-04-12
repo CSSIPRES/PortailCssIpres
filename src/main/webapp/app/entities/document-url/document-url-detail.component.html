@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="documentUrl">
+            <h2><span jhiTranslate="portailCssIpresApp.documentUrl.detail.title">Document Url</span> {{ documentUrl.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="portailCssIpresApp.documentUrl.name">Name</span></dt>
+                <dd>
+                    <span>{{ documentUrl.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.documentUrl.url">Url</span></dt>
+                <dd>
+                    <span>{{ documentUrl.url }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.documentUrl.document">Document</span></dt>
+                <dd>
+                    <div *ngIf="documentUrl.document">
+                        <a (click)="openFile(documentUrl?.documentContentType!, documentUrl?.document)" jhiTranslate="entity.action.open">open</a>
+                        {{ documentUrl.documentContentType }}, {{ byteSize(documentUrl.document) }}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.documentUrl.employeur">Employeur</span></dt>
+                <dd>
+                    <div *ngIf="documentUrl.employeur">
+                        <a [routerLink]="['/employeur', documentUrl.employeur?.id, 'view']">{{ documentUrl.employeur?.raisonSociale }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/document-url', documentUrl.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

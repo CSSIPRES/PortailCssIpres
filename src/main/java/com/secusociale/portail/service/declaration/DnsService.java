@@ -36,7 +36,7 @@ import com.secusociale.portail.service.soap.declaration.ObjectFactory;
 public class DnsService {
 	
 	
-	public Holder<DeclarationModel> createDns (DeclarationModel dnsInput) throws DNSINBOUNDSERVICEFault, DatatypeConfigurationException, ParseException, JAXBException, com.google.protobuf.TextFormat.ParseException{
+	public Holder<DeclarationModel> createDns (DeclarationModel dnsInput) throws  DatatypeConfigurationException, ParseException, JAXBException, com.google.protobuf.TextFormat.ParseException{
 		
 		
 		Holder<DNSINBOUNDSERVICE> dnsInbound = new Holder<DNSINBOUNDSERVICE>();
@@ -226,7 +226,11 @@ public class DnsService {
 		prov.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, PortailConstant.USERNAME);
         prov.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, PortailConstant.PASSWORD);
         
-        dnsinboundservicePortType.dnsINBOUNDSERVICE(dnsInbound);
+        try {
+			dnsinboundservicePortType.dnsINBOUNDSERVICE(dnsInbound);
+		} catch (DNSINBOUNDSERVICEFault e) {
+			throw new  RuntimeException(e.getFaultInfo().getServerMessage().getText(), e);
+		}
         
         dnsInput.setProcessFlowId(dnsInbound.value.getOutput().getProcessFlowId());
         dnsInput.setFormId(dnsInbound.value.getOutput().getFormId());

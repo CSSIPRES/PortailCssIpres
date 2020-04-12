@@ -1,0 +1,25 @@
+{
+  "portailCssIpresApp": {
+    "documentUrl": {
+      "home": {
+        "title": "Document Urls",
+        "createLabel": "Create a new Document Url",
+        "createOrEditLabel": "Create or edit a Document Url",
+        "notFound": "No Document Urls found"
+      },
+      "created": "A new Document Url is created with identifier {{ param }}",
+      "updated": "A Document Url is updated with identifier {{ param }}",
+      "deleted": "A Document Url is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Document Url {{ id }}?"
+      },
+      "detail": {
+        "title": "Document Url"
+      },
+      "name": "Name",
+      "url": "Url",
+      "document": "Document",
+      "employeur": "Employeur"
+    }
+  }
+}

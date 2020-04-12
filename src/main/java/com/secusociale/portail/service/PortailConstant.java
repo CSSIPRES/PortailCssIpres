@@ -15,8 +15,7 @@ public final class PortailConstant {
 	 public static final String PUBLIC_PARAPUBLIC_WSDL = "http://192.168.125.23:7500/ouaf/XAIApp/xaiserver/IMMAT2_INBOUND?WSDL" ;
 	 public static final String REP_DIP_WSDL = "http://192.168.125.23:7500/ouaf/XAIApp/xaiserver/IMMAT_REP_DIPLO?WSDL" ;
 	 public static final String GEN_ATTESTATION_REG_WSDL = "http://192.168.125.23:7500/ouaf/XAIApp/xaiserver/CM_GEN_ATTESTATION?WSDL" ;
-	 
-	 
+	 public static final String CHECK_EXISTENCE_EMPLOYEUR_WSDL = "http://192.168.125.23:7500/ouaf/XAIApp/xaiserver/CmCheckExistenceEmployeur?WSDL" ;
 	 
 	 
 	 private PortailConstant() {

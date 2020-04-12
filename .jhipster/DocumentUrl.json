@@ -1,0 +1,38 @@
+{
+    "name": "DocumentUrl",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "document",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "employeur",
+            "otherEntityRelationshipName": "document",
+            "relationshipName": "employeur",
+            "otherEntityField": "raisonSociale"
+        }
+    ],
+    "changelogDate": "20200407163100",
+    "entityTableName": "document_url",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

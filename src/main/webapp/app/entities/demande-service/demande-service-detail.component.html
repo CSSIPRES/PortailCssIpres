@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="demandeService">
+            <h2><span jhiTranslate="portailCssIpresApp.demandeService.detail.title">Demande Service</span> {{ demandeService.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="portailCssIpresApp.demandeService.typeDemande">Type Demande</span></dt>
+                <dd>
+                    <span>{{ demandeService.typeDemande }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.demandeService.idDossier">Id Dossier</span></dt>
+                <dd>
+                    <span>{{ demandeService.idDossier }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.demandeService.statutDossier">Statut Dossier</span></dt>
+                <dd>
+                    <span>{{ demandeService.statutDossier }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.demandeService.urlDocument">Url Document</span></dt>
+                <dd>
+                    <span>{{ demandeService.urlDocument }}</span>
+                </dd>
+                <dt><span jhiTranslate="portailCssIpresApp.demandeService.employeur">Employeur</span></dt>
+                <dd>
+                    <div *ngIf="demandeService.employeur">
+                        <a [routerLink]="['/employeur', demandeService.employeur?.id, 'view']">{{ demandeService.employeur?.raisonSociale }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/demande-service', demandeService.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

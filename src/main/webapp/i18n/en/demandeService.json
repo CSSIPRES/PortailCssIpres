@@ -1,0 +1,26 @@
+{
+  "portailCssIpresApp": {
+    "demandeService": {
+      "home": {
+        "title": "Demande Services",
+        "createLabel": "Create a new Demande Service",
+        "createOrEditLabel": "Create or edit a Demande Service",
+        "notFound": "No Demande Services found"
+      },
+      "created": "A new Demande Service is created with identifier {{ param }}",
+      "updated": "A Demande Service is updated with identifier {{ param }}",
+      "deleted": "A Demande Service is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Demande Service {{ id }}?"
+      },
+      "detail": {
+        "title": "Demande Service"
+      },
+      "typeDemande": "Type Demande",
+      "idDossier": "Id Dossier",
+      "statutDossier": "Statut Dossier",
+      "urlDocument": "Url Document",
+      "employeur": "Employeur"
+    }
+  }
+}

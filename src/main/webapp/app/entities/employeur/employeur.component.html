@@ -1,0 +1,139 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="portailCssIpresApp.employeur.home.title">Employeurs</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-employeur" [routerLink]="['/employeur/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="portailCssIpresApp.employeur.home.createLabel">
+            Create a new Employeur
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="employeurs?.length === 0">
+        <span jhiTranslate="portailCssIpresApp.employeur.home.notFound">No employeurs found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="employeurs?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="employerType"><span jhiTranslate="portailCssIpresApp.employeur.employerType">Employer Type</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="typeEtablissement"><span jhiTranslate="portailCssIpresApp.employeur.typeEtablissement">Type Etablissement</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="raisonSociale"><span jhiTranslate="portailCssIpresApp.employeur.raisonSociale">Raison Sociale</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="maisonMere"><span jhiTranslate="portailCssIpresApp.employeur.maisonMere">Maison Mere</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="prenom"><span jhiTranslate="portailCssIpresApp.employeur.prenom">Prenom</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nom"><span jhiTranslate="portailCssIpresApp.employeur.nom">Nom</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="typeIdentifiant"><span jhiTranslate="portailCssIpresApp.employeur.typeIdentifiant">Type Identifiant</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="numeroIdentifiant"><span jhiTranslate="portailCssIpresApp.employeur.numeroIdentifiant">Numero Identifiant</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="legalStatus"><span jhiTranslate="portailCssIpresApp.employeur.legalStatus">Legal Status</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="shortName"><span jhiTranslate="portailCssIpresApp.employeur.shortName">Short Name</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="businessSector"><span jhiTranslate="portailCssIpresApp.employeur.businessSector">Business Sector</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mainLineOfBusiness"><span jhiTranslate="portailCssIpresApp.employeur.mainLineOfBusiness">Main Line Of Business</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="noOfWorkersInGenScheme"><span jhiTranslate="portailCssIpresApp.employeur.noOfWorkersInGenScheme">No Of Workers In Gen Scheme</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="noOfWorkersInBasicScheme"><span jhiTranslate="portailCssIpresApp.employeur.noOfWorkersInBasicScheme">No Of Workers In Basic Scheme</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="region"><span jhiTranslate="portailCssIpresApp.employeur.region">Region</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="department"><span jhiTranslate="portailCssIpresApp.employeur.department">Department</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="arondissement"><span jhiTranslate="portailCssIpresApp.employeur.arondissement">Arondissement</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="commune"><span jhiTranslate="portailCssIpresApp.employeur.commune">Commune</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="qartier"><span jhiTranslate="portailCssIpresApp.employeur.qartier">Qartier</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="address"><span jhiTranslate="portailCssIpresApp.employeur.address">Address</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="postboxNo"><span jhiTranslate="portailCssIpresApp.employeur.postboxNo">Postbox No</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="telephone"><span jhiTranslate="portailCssIpresApp.employeur.telephone">Telephone</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="email"><span jhiTranslate="portailCssIpresApp.employeur.email">Email</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="website"><span jhiTranslate="portailCssIpresApp.employeur.website">Website</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="zoneCss"><span jhiTranslate="portailCssIpresApp.employeur.zoneCss">Zone Css</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="zoneIpres"><span jhiTranslate="portailCssIpresApp.employeur.zoneIpres">Zone Ipres</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="sectorCss"><span jhiTranslate="portailCssIpresApp.employeur.sectorCss">Sector Css</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="sectorIpres"><span jhiTranslate="portailCssIpresApp.employeur.sectorIpres">Sector Ipres</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="agencyCss"><span jhiTranslate="portailCssIpresApp.employeur.agencyCss">Agency Css</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="agencyIpres"><span jhiTranslate="portailCssIpresApp.employeur.agencyIpres">Agency Ipres</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="processFlowId"><span jhiTranslate="portailCssIpresApp.employeur.processFlowId">Process Flow Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="statutDossier"><span jhiTranslate="portailCssIpresApp.employeur.statutDossier">Statut Dossier</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="statutImmatriculation"><span jhiTranslate="portailCssIpresApp.employeur.statutImmatriculation">Statut Immatriculation</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="user.id"><span jhiTranslate="portailCssIpresApp.employeur.user">User</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employeur of employeurs ;trackBy: trackId">
+                    <td><a [routerLink]="['/employeur', employeur.id, 'view']">{{ employeur.id }}</a></td>
+                    <td>{{ employeur.employerType }}</td>
+                    <td>{{ employeur.typeEtablissement }}</td>
+                    <td>{{ employeur.raisonSociale }}</td>
+                    <td>{{ employeur.maisonMere }}</td>
+                    <td>{{ employeur.prenom }}</td>
+                    <td>{{ employeur.nom }}</td>
+                    <td>{{ employeur.typeIdentifiant }}</td>
+                    <td>{{ employeur.numeroIdentifiant }}</td>
+                    <td>{{ employeur.legalStatus }}</td>
+                    <td>{{ employeur.shortName }}</td>
+                    <td>{{ employeur.businessSector }}</td>
+                    <td>{{ employeur.mainLineOfBusiness }}</td>
+                    <td>{{ employeur.noOfWorkersInGenScheme }}</td>
+                    <td>{{ employeur.noOfWorkersInBasicScheme }}</td>
+                    <td>{{ employeur.region }}</td>
+                    <td>{{ employeur.department }}</td>
+                    <td>{{ employeur.arondissement }}</td>
+                    <td>{{ employeur.commune }}</td>
+                    <td>{{ employeur.qartier }}</td>
+                    <td>{{ employeur.address }}</td>
+                    <td>{{ employeur.postboxNo }}</td>
+                    <td>{{ employeur.telephone }}</td>
+                    <td>{{ employeur.email }}</td>
+                    <td>{{ employeur.website }}</td>
+                    <td>{{ employeur.zoneCss }}</td>
+                    <td>{{ employeur.zoneIpres }}</td>
+                    <td>{{ employeur.sectorCss }}</td>
+                    <td>{{ employeur.sectorIpres }}</td>
+                    <td>{{ employeur.agencyCss }}</td>
+                    <td>{{ employeur.agencyIpres }}</td>
+                    <td>{{ employeur.processFlowId }}</td>
+                    <td>{{ employeur.statutDossier }}</td>
+                    <td>{{ employeur.statutImmatriculation }}</td>
+                    <td>
+                        {{ employeur.user?.id }}
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/employeur', employeur.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/employeur', employeur.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(employeur)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="employeurs?.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

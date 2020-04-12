@@ -20,7 +20,7 @@ import com.secusociale.portail.service.soap.statutDossierImmatriculation.ObjectF
 public class StatutDossierImmatriculationService {
 	
 	
-	public Holder<CmGetStatusDossierImmatriculation> getStatutDossierImmatriculation (String idDossier) throws JAXBException, CmGetStatusDossierImmatriculationFault{
+	public Holder<CmGetStatusDossierImmatriculation> getStatutDossierImmatriculation (String idDossier) throws JAXBException {
 		
 		Holder<CmGetStatusDossierImmatriculation> statutDossierImmatriculation = new Holder<CmGetStatusDossierImmatriculation>();
 		
@@ -48,7 +48,11 @@ public class StatutDossierImmatriculationService {
 		prov.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, PortailConstant.USERNAME);
         prov.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, PortailConstant.PASSWORD);
 		
-        cmGetStatusDossierImmatriculationPortType.cmGetStatusDossierImmatriculation(statutDossierImmatriculation);
+        try {
+			cmGetStatusDossierImmatriculationPortType.cmGetStatusDossierImmatriculation(statutDossierImmatriculation);
+		} catch (CmGetStatusDossierImmatriculationFault e) {
+			throw new  RuntimeException(e.getFaultInfo().getServerMessage().getText(), e);
+		}
 		
 		return statutDossierImmatriculation;
 		

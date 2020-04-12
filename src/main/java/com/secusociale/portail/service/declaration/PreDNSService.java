@@ -34,7 +34,7 @@ public class PreDNSService {
 	
 	 
 	
-	public Holder<DeclarationModel> getPreDns(DeclarationModel preDnsInput) throws CmPresDnsFault, JAXBException, DatatypeConfigurationException   {
+	public Holder<DeclarationModel> getPreDns(DeclarationModel preDnsInput) throws JAXBException, DatatypeConfigurationException   {
 		
 		
 		Holder<CmPresDns> cmPreDns = new Holder<CmPresDns>();
@@ -100,7 +100,11 @@ public class PreDNSService {
 			prov.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, PortailConstant.USERNAME);
 	        prov.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, PortailConstant.PASSWORD);
 	        
-	        cmPresDnsPortType.cmPresDns(cmPreDns);
+	        try {
+				cmPresDnsPortType.cmPresDns(cmPreDns);
+			} catch (CmPresDnsFault e) {
+				throw new  RuntimeException(e.getFaultInfo().getServerMessage().getText(), e);			
+				}
 		
 		
 		//////////

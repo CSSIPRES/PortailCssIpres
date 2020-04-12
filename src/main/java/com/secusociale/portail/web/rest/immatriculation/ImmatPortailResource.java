@@ -23,20 +23,22 @@ import org.springframework.web.bind.annotation.RestController;
 import com.secusociale.portail.service.immatriculation.CertificatImmatriculationService;
 import com.secusociale.portail.service.immatriculation.ImmatPortailService;
 import com.secusociale.portail.service.immatriculation.StatutDossierImmatriculationService;
+import com.secusociale.portail.service.immatriculation.VerifierExistenceEmployeur;
 import com.secusociale.portail.service.soap.certificatImmatriculation.CmGetCertificatImmatriculation;
 import com.secusociale.portail.service.soap.certificatImmatriculation.CmGetCertificatImmatriculationFault;
+import com.secusociale.portail.service.soap.checkExistenceEmployeur.CmCheckExistenceEmployeur;
 import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATIONINBOUND;
 import com.secusociale.portail.service.soap.demandeImmatriculation.IMMATRICULATIONINBOUNDFault;
 import com.secusociale.portail.service.soap.statutDossierImmatriculation.CmGetStatusDossierImmatriculation;
 import com.secusociale.portail.service.soap.statutDossierImmatriculation.CmGetStatusDossierImmatriculationFault;
-import com.secusociale.portail.web.rest.ImmatriculationResource;
+//import com.secusociale.portail.web.rest.ImmatriculationResource;
 
 @RestController
 @RequestMapping("/api")
 public class ImmatPortailResource {
 
-	private final Logger log = LoggerFactory.getLogger(ImmatriculationResource.class);
-    private static final String ENTITY_NAME = "IMMATRICULATIONINBOUND";
+	//private final Logger log = LoggerFactory.getLogger(ImmatriculationResource.class);
+   // private static final String ENTITY_NAME = "IMMATRICULATIONINBOUND";
 
     @Autowired
    private ImmatPortailService immatPortailService ;
@@ -47,6 +49,9 @@ public class ImmatPortailResource {
 
     @Autowired
 	private CertificatImmatriculationService certificatImmatriculationService;
+    
+    @Autowired
+    private VerifierExistenceEmployeur verifierExistenceEmployeur;
 
 
 
@@ -55,7 +60,7 @@ public class ImmatPortailResource {
 
 	@PostMapping("/immatPortail")
     public Holder<IMMATRICULATIONINBOUND> createImmatriculationPortail(@RequestBody IMMATRICULATIONINBOUND immatriculation) throws URISyntaxException, IMMATRICULATIONINBOUNDFault, JAXBException {
-        log.debug("REST request to save Immatriculation : {}", ENTITY_NAME);
+       // log.debug("REST request to save Immatriculation : {}", ENTITY_NAME);
 
         Holder<IMMATRICULATIONINBOUND> immatriculationInbound = new Holder<IMMATRICULATIONINBOUND>();
 
@@ -97,21 +102,39 @@ public class ImmatPortailResource {
 		return certificatImmatriculation;
 
 	}
+	
+	@GetMapping("/checkExistenceEmployeur/{typeIdentifiant}/{numeroIdentifiant}")
+	Holder<CmCheckExistenceEmployeur> getExistenceEmployeur(@PathVariable String typeIdentifiant,@PathVariable String numeroIdentifiant) throws JAXBException, CmGetStatusDossierImmatriculationFault{
 
-    @PostMapping("/immatriculation-maintien-affiliation")
-    public Holder<MAINTAFFINBOUND> createImmatriculationMainAffiliation(@RequestBody MAINTAFFINBOUND.Input immatriculationMainAffiliation) throws URISyntaxException, MAINTAFFINBOUNDFault, JAXBException {
-	    log.debug("REST request to save Immatriculation : {}", ENTITY_NAME);
-        Holder<MAINTAFFINBOUND> immatriculationMaintienAffiliation = new Holder<MAINTAFFINBOUND>();
-        immatriculationMaintienAffiliation = immatPortailService.createImmatriculationMaintienAffiliation(immatriculationMainAffiliation);
-        return immatriculationMaintienAffiliation;
-    }
+		Holder<CmCheckExistenceEmployeur> cmCheckExistenceEmployeur = new Holder<CmCheckExistenceEmployeur>();
 
-    @PostMapping("/immatriculation-representant-diplomatique")
-    public Holder<IMMATREPDIPLO> createImmatriculationRepresentant(@RequestBody IMMATREPDIPLO.Input immatriculationRepresentant) throws URISyntaxException, IMMATREPDIPLOFault, JAXBException, MAINTAFFINBOUNDFault {
-        log.debug("REST request to save Immatriculation : {}", ENTITY_NAME);
-        Holder<IMMATREPDIPLO> immatriculationRepresentantOuput = new Holder<IMMATREPDIPLO>();
-        immatriculationRepresentantOuput = immatPortailService.createImmatriculationRepresentatnt(immatriculationRepresentant);
-        return immatriculationRepresentantOuput;
-    }
+		cmCheckExistenceEmployeur = verifierExistenceEmployeur.verifierExistenceEmployeur(typeIdentifiant, numeroIdentifiant) ;
+
+
+		return cmCheckExistenceEmployeur;
+
+	}
+
+	/*
+	 * @PostMapping("/immatriculation-maintien-affiliation") public
+	 * Holder<MAINTAFFINBOUND> createImmatriculationMainAffiliation(@RequestBody
+	 * MAINTAFFINBOUND.Input immatriculationMainAffiliation) throws
+	 * URISyntaxException, MAINTAFFINBOUNDFault, JAXBException {
+	 * //log.debug("REST request to save Immatriculation : {}", ENTITY_NAME);
+	 * Holder<MAINTAFFINBOUND> immatriculationMaintienAffiliation = new
+	 * Holder<MAINTAFFINBOUND>(); immatriculationMaintienAffiliation =
+	 * immatPortailService.createImmatriculationMaintienAffiliation(
+	 * immatriculationMainAffiliation); return immatriculationMaintienAffiliation; }
+	 * 
+	 * @PostMapping("/immatriculation-representant-diplomatique") public
+	 * Holder<IMMATREPDIPLO> createImmatriculationRepresentant(@RequestBody
+	 * IMMATREPDIPLO.Input immatriculationRepresentant) throws URISyntaxException,
+	 * IMMATREPDIPLOFault, JAXBException, MAINTAFFINBOUNDFault { //
+	 * log.debug("REST request to save Immatriculation : {}", ENTITY_NAME);
+	 * Holder<IMMATREPDIPLO> immatriculationRepresentantOuput = new
+	 * Holder<IMMATREPDIPLO>(); immatriculationRepresentantOuput =
+	 * immatPortailService.createImmatriculationRepresentatnt(
+	 * immatriculationRepresentant); return immatriculationRepresentantOuput; }
+	 */
 }
 

@@ -1,0 +1,169 @@
+{
+    "name": "Employeur",
+    "fields": [
+        {
+            "fieldName": "employerType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "typeEtablissement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "raisonSociale",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maisonMere",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "typeIdentifiant",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroIdentifiant",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "legalStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shortName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "businessSector",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mainLineOfBusiness",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noOfWorkersInGenScheme",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "noOfWorkersInBasicScheme",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "region",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "department",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "arondissement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "commune",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "qartier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postboxNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "website",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zoneCss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zoneIpres",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sectorCss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sectorIpres",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "agencyCss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "agencyIpres",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "processFlowId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "statutDossier",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "statutImmatriculation",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "demandeService",
+            "otherEntityRelationshipName": "employeur",
+            "relationshipName": "idDossier"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "documentUrl",
+            "otherEntityRelationshipName": "employeur",
+            "relationshipName": "document"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "employeur",
+            "relationshipName": "user",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200407163000",
+    "entityTableName": "employeur",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

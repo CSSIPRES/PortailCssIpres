@@ -19,7 +19,7 @@ import com.secusociale.portail.service.soap.certificatImmatriculation.ObjectFact
 @Service 
 public class CertificatImmatriculationService {
 	
-	public Holder<CmGetCertificatImmatriculation> getCertificatImmatriculation(String idDossier) throws JAXBException, CmGetCertificatImmatriculationFault{
+	public Holder<CmGetCertificatImmatriculation> getCertificatImmatriculation(String idDossier) throws JAXBException {
 		
 		Input input = new Input();
 		input.setIdDossier(idDossier);
@@ -48,7 +48,11 @@ public class CertificatImmatriculationService {
 	    prov.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, PortailConstant.USERNAME);
         prov.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, PortailConstant.PASSWORD);
         
-        cmGetCertificatImmatriculationPortType.cmGetCertificatImmatriculation(certificatImmatrication);   
+        try {
+			cmGetCertificatImmatriculationPortType.cmGetCertificatImmatriculation(certificatImmatrication);
+		} catch (CmGetCertificatImmatriculationFault e) {
+			throw new  RuntimeException(e.getFaultInfo().getServerMessage().getText(), e);
+		}   
 		
 		return certificatImmatrication;
 		
