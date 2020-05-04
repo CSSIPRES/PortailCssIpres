@@ -1,0 +1,350 @@
+  
+  onFileChange(evt: any) {
+    //debugger
+    /* wire up file reader */
+    const target: DataTransfer = <DataTransfer>(evt.target);
+    if (target.files.length == 1) {
+      const reader: FileReader = new FileReader();
+      reader.onload = (e: any) => {
+        /* read workbook */
+        const bstr: string = e.target.result;
+        const wb: XLSX.WorkBook = XLSX.read(bstr,  {type:'binary', cellDates:true, cellNF: false, cellText:false});
+        console.log(wb);
+        /* grab first sheet */
+        const wsname: string = wb.SheetNames[0];
+        const ws: XLSX.WorkSheet = wb.Sheets[wsname];
+        /* save data */
+        ws.A2.v = "numeroAssureSocial";
+        ws.B2.v = "nomEmploye";
+        ws.C2.v = "prenomEmploye";
+        ws.D2.v = "dateNaissance";
+        ws.E2.v = "typePieceIdentite";
+        ws.F2.v = "numPieceIdentite";
+        ws.G2.v = "natureContrat";
+        ws.H2.v = "dateEntree";
+        ws.I2.v = "dateSortie";
+        ws.J2.v = "motifSortie";
+        ws.K2.v = "totSalAssCssPf1";
+        ws.L2.v = "totSalAssCssAtmp1";
+        ws.M2.v = "totSalAssIpresRg1";
+        ws.N2.v = "totSalAssIpresRcc1";
+        ws.O2.v = "salaireBrut1";
+        ws.P2.v = "nombreJours1";
+        ws.Q2.v = "nombreHeures1";
+        ws.R2.v = "tempsTravail1";
+        ws.S2.v = "trancheTravail1";
+        ws.T2.v = "regimeGeneral1";
+        ws.U2.v = "regimCompCadre1";
+        ws.V2.v = "dateEffetRegimeCadre1";
+        ws.W2.v = "totSalAssCssPf2";
+        ws.X2.v = "totSalAssCssAtmp2";
+        ws.Y2.v = "totSalAssIpresRg2";
+        ws.Z2.v = "totSalAssIpresRcc2";
+        ws.AA2.v = "salaireBrut2";
+        ws.AB2.v = "nombreJours2";
+        ws.AC2.v = "nombreHeures2";
+        ws.AD2.v = "tempsTravail2";
+        ws.AE2.v = "trancheTravail2";
+        ws.AF2.v = "regimeGeneral2";
+        ws.AG2.v = "regimCompCadre2";
+        ws.AH2.v = "dateEffetRegimeCadre2";
+        ws.AI2.v = "totSalAssCssPf3";
+        ws.AJ2.v = "totSalAssCssAtmp3";
+        ws.AK2.v = "totSalAssIpresRg3";
+        ws.AL2.v = "totSalAssIpresRcc3";
+        ws.AM2.v = "salaireBrut3";
+        ws.AN2.v = "nombreJours3";
+        ws.AO2.v = "nombreHeures3";
+        ws.AP2.v = "tempsTravail3";
+        ws.AQ2.v = "trancheTravail3";
+        ws.AR2.v = "regimeGeneral3";
+        ws.AS2.v = "regimCompCadre3";
+        ws.AT2.v = "dateEffetRegimeCadre3";
+
+        this.data = <any>(XLSX.utils.sheet_to_json(ws, 
+          { raw: false,
+          dateNF: "YYYY-MM-DD",
+          header:1,
+          defval: "" ,
+          range:1
+      }));
+      };
+      reader.readAsBinaryString(target.files[0]);
+    }
+  }
+
+  
+
+  uploadfile() {
+    let keys = this.data.shift();
+    let resArr = this.data.map((e) => {
+      let obj = {};
+      keys.forEach((key, i) => {
+        obj[key] = e[i];
+
+        //console.log(key);
+        //console.log(keys);
+      });
+      return obj;
+     
+
+    });
+    
+    //console.log(resArr);
+    //resArr.forEach(function (value) {
+    //  console.log(value);
+    //})
+  
+    this.employeData = resArr;
+    console.log(this.employeData);
+  }
+}
+interface EmployeData {
+  [index: number]:  {
+    numeroAssureSocial:string,
+    nomEmploye:string,
+    prenomEmploye:string , 
+    dateNaissance:Date , 
+    typePieceIdentite:string,  
+    numPieceIdentite:string, 
+    natureContrat: string,
+    dateEntree: string,
+    dateSortie:string, 
+    motifSortie: string, 
+    totSalAssCssPf1: string, 
+    totSalAssCssAtmp1: string, 
+    totSalAssIpresRg1: string, 
+    totSalAssIpresRcc1: string, 
+    salaireBrut1: string, 
+    nombreJours1: string, 
+    nombreHeures1: string, 
+    tempsTravail1: string, 
+    trancheTravail1: string, 
+    regimeGeneral1: string, 
+    regimCompCadre1: string, 
+    dateEffetRegimeCadre1: string, 
+    totSalAssCssPf2:string,  
+    totSalAssCssAtmp2:string,
+    totSalAssIpresRg2: string,
+    totSalAssIpresRcc2:  string,
+    salaireBrut2: string,
+    nombreJours2: string,
+    nombreHeures2: string,
+    tempsTravail2:string, 
+    trancheTravail2: string,
+    regimeGeneral2: string,
+    regimCompCadre2: string,
+    dateEffetRegimeCadre2:string, 
+    totSalAssCssPf3: string,
+    totSalAssCssAtmp3: string,
+    totSalAssIpresRg3: string,
+    totSalAssIpresRcc3: string,
+    salaireBrut3: string,
+    nombreJours3: string,
+    nombreHeures3: string,
+    tempsTravail3: string,
+    trancheTravail3: string,
+    regimeGeneral3:string, 
+    regimCompCadre3: string,
+    dateEffetRegimeCadre3: string 
+};
+  
+
+  
+   
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+onFileChange(evt: any) {
+    //debugger
+    /* wire up file reader */
+    const target: DataTransfer = <DataTransfer>(evt.target);
+    if (target.files.length == 1) {
+      const reader: FileReader = new FileReader();
+      reader.onload = (e: any) => {
+        /* read workbook */
+        const bstr: string = e.target.result;
+        const wb: XLSX.WorkBook = XLSX.read(bstr, 
+           {type:'binary', 
+           cellDates:true, 
+           cellNF: false, 
+           cellText:false
+          });
+       // console.log(wb);
+        /* grab first sheet */
+        const wsname: string = wb.SheetNames[0];
+        const ws: XLSX.WorkSheet = wb.Sheets[wsname];
+        /* save data */
+        ws.A1.v = "rechercheEmploye";
+        ws.B1.v = "nomEmploye";
+        ws.C1.v = "prenomEmploye";
+        ws.D1.v = "sexe";
+        ws.E1.v = "etatCivil";
+        ws.F1.v = "dateNaissance";
+        ws.G1.v = "numRegNaiss";
+        ws.H1.v = "nomPere";
+        ws.I1.v = "prenomPere";
+        ws.J1.v = "nomMere";
+        ws.K1.v = "prenomMere";
+        ws.L1.v = "nationalite";
+        ws.M1.v = "typePieceIdentite";
+        ws.N1.v = "nin";
+        ws.O1.v = "ninCedeao";
+        ws.P1.v = "numPieceIdentite";
+        ws.Q1.v = "delivreLe";
+        ws.R1.v = "lieuDelivrance";
+        ws.S1.v = "expireLe";
+        ws.T1.v = "paysNaissance";
+        ws.U1.v = "villeNaissance";
+        ws.V1.v = "pays";
+        ws.W1.v = "region";
+        ws.X1.v = "departement";
+        ws.Y1.v = "arrondissement";
+        ws.Z1.v = "commune";
+        ws.AA1.v = "quartier";
+        ws.AB1.v = "adresse";
+        ws.AC1.v = "boitePostale";
+        ws.AD1.v = "typeMouvement";
+        ws.AE1.v = "natureContrat";
+        ws.AF1.v = "dateDebutContrat";
+        ws.AG1.v = "dateFinContrat";
+        ws.AH1.v = "profession";
+        ws.AI1.v = "emploi";
+        ws.AJ1.v = "ouiCadre";
+        ws.AK1.v = "conventionApplicable";
+        ws.AL1.v = "salaireContractuel";
+        ws.AM1.v = "tempsTravail";
+        ws.AN1.v = "categorie";
+       
+       
+
+        this.data = <any>(XLSX.utils.sheet_to_json(ws, 
+          { raw: false,
+          dateNF: "YYYY-MM-DD",
+          header:1,
+          defval: "" ,
+          range:0
+      }));
+      };
+      
+      reader.readAsBinaryString(target.files[0]);
+      console.log(this.data);
+    }
+  }
+
+  
+
+  uploadfile() {
+    
+    let keys = this.data.shift();
+    let resArr = this.data.map((e) => {
+      let obj = {};
+      keys.forEach((key, i) => {
+        obj[key] = e[i];
+        if(key = "rechercheEmploye"){
+          obj[key] = "";
+        }
+
+         
+
+
+
+         
+        
+        
+        //console.log(key);
+       // console.log(obj[key]);
+      });
+      return obj;
+     
+
+    });
+    
+    //console.log(resArr);
+    //resArr.forEach(function (value) {
+    //  console.log(value);
+    //})
+  
+    this.employeData = resArr;
+    console.log(this.employeData);
+  }
+
+
+
+}
+
+interface EmployeData {
+  [index: number]:  {
+    rechercheEmploye:string,
+    nomEmploye:string,
+    prenomEmploye:string , 
+    sexe:string,  
+    etatCivil:string,
+    dateNaissance:string ,  
+    numRegNaiss: string,
+    nomPere: string,
+    prenomPere:string, 
+    nomMere: string, 
+    prenomMere: string, 
+    nationalite: string, 
+    typePieceIdentite: string, 
+    nin: string, 
+    ninCedeao: string, 
+    numPieceIdentite: string, 
+    delivreLe: string, 
+    lieuDelivrance: string, 
+    expireLe: string, 
+    villeNaissance: string, 
+    paysNaissance: string, 
+    employeurPrec: string, 
+    pays: string, 
+    region:string,  
+    departement:string,
+    arrondissement: string,
+    commune:  string,
+    quartier: string,
+    adresse: string,
+    boitePostale: string,
+    typeMouvement:string, 
+    natureContrat: string,
+    dateDebutContrat: Date,
+    dateFinContrat: Date,
+    profession:string, 
+    emploi: string,
+    nonCadre: string,
+    ouiCadre: string,
+    conventionApplicable: string,
+    salaireContractuel: string,
+    tempsTravail: string,
+    categorie: string
+     
+};
+  
+
+  
+   
+  
+
+}
+
+
+
+
+
+
